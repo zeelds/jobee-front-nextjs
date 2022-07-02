@@ -1,7 +1,7 @@
 import styles from '../styles/Home.module.css'
 import { motion } from "framer-motion"
-import Image from 'next/image'
 import Head from 'next/head';
+import Logo from '../components/logo';
 
 export default function Start() {
 
@@ -15,11 +15,13 @@ export default function Start() {
 
             <main className={styles.main_yellow}>
 
-                <Image className={styles.img_logo} src="/jobee.png" alt="Jobee Logo" width={256} height={256} />
+                <div style={{marginRight: '280px', marginBottom: '15px'}}>
+                    <Logo />
+                </div>
 
                 <button className="btn btn-dark w-25 fw-bold" style={{ padding: '15px' }}>Começar</button>
 
-                <div className='text-dark' style={{cursor:'pointer', marginTop: '25px'}}>
+                <div className='text-dark' style={{ cursor: 'pointer', marginTop: '25px' }}>
                     <b>
                         Termos e Condições
                     </b>
