@@ -41,7 +41,7 @@ Trello, ágil, etc
 
 ## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Projeto
 
-#### ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Estrutura geral
+#### Estrutura geral
 
 React
 
@@ -79,11 +79,11 @@ React
 
         teste
 
-#### ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Arquivos chave
+#### Arquivos chave
 
-#### ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Funções e sub-rotinas
+#### Funções e sub-rotinas
 
-#### ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Variáveis e constantes
+#### Variáveis e constantes
 
 ## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Design
 
