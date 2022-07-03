@@ -62,27 +62,12 @@ Trello, ágil, etc
 
 #### Estrutura geral
 
-#### Arquivos chave
-
-#### Funções e sub-rotinas
-
-#### Variáveis e constantes
-
-## Design
-
-Se você deseja visualizar a prototipação do Jobee, você pode [clicar aqui](https://www.figma.com/file/0VBNvVmFYIClu6WMkC9UmG/Girl-React-%2F-Jobee?node-id=0%3A1) para ser redirecionado. 
-
-Em relação ao design, optamos pelo visual da abelha por se tratar de um animal conhecido pela cooperação e trabalho duro. Para Wright (2009): "As cores podem ser usadas como uma linguagem universal com a qual a maioria dos humanos pode se relacionar." Dessa forma, os tons predominantemente amarelos servem para causar um otimismo no usuário em relação a sua vida profissional.
-
-Em meio à prototipação da aplicação, intecionalmente fizemos a utilização de componentes gráficos planos e minimalistas de cores alternadas. Para alcançar tais características em nossas páginas, fizemos uso do framework [Bootstrap 5.2](https://getbootstrap.com/docs/5.2/getting-started/introduction/).
-
-As animações são com [Framer](https://google.com)
-ALERTA!^^
+React
 
 * Componentes
     * Smart
 
-        teste
+        components/smart
 
     * Dumb
 
@@ -93,6 +78,8 @@ ALERTA!^^
         /teste2.js: realiza tal tal tal função
 
     * Navbar
+
+        components/navbar.js: Exporta um componente funcional que retorna duas navbar bootstrap. A primeira comporta telas maiores e possui mais informações, já a segunda comporta apenas dispositivos móveis e contém menos informações.
 
 * Páginas
     * Main
@@ -110,6 +97,23 @@ ALERTA!^^
     * Carregamento
 
         teste
+
+#### Arquivos chave
+
+#### Funções e sub-rotinas
+
+#### Variáveis e constantes
+
+## Design
+
+Se você deseja visualizar a prototipação do Jobee, você pode [clicar aqui](https://www.figma.com/file/0VBNvVmFYIClu6WMkC9UmG/Girl-React-%2F-Jobee?node-id=0%3A1) para ser redirecionado. 
+
+Em relação ao design, optamos pelo visual da abelha por se tratar de um animal conhecido pela cooperação e trabalho duro. Para Wright (2009): "As cores podem ser usadas como uma linguagem universal com a qual a maioria dos humanos pode se relacionar." Dessa forma, os tons predominantemente amarelos servem para causar um otimismo no usuário em relação a sua vida profissional.
+
+Em meio à prototipação da aplicação, intecionalmente fizemos a utilização de componentes gráficos planos e minimalistas de cores alternadas. Para alcançar tais características em nossas páginas, fizemos uso do framework [Bootstrap 5.2](https://getbootstrap.com/docs/5.2/getting-started/introduction/).
+
+As animações são com [Framer](https://google.com)
+ALERTA!^^
 
 
 A maioria dos ícones vetoriais utilizados por todo o projeto podem ser encontrados no website [icons8](https://icons8.com.br/).
