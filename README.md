@@ -48,7 +48,8 @@ Jobee é uma plataforma virtual onde os usuários podem anunciar e solicitar ser
 
 ## Requisitos
 
-Levantamento de requisitos
+Segundo Sommerville, "Os requisitos de um sistema são as descrições do que o sistema deve fazer, os serviços que oferece e as restrições a seu funcionamento. Esses requisitos refletem as necessidades dos clientes para um sistema que serve a uma finalidade determinada, tais como controlar um dispositivo, colocar um pedido ou encontrar informações."
+ 
 
 #### Requisitos funcionais
 
@@ -119,6 +120,7 @@ ALERTA!^^
 A maioria dos ícones vetoriais utilizados por todo o projeto podem ser encontrados no website [icons8](https://icons8.com.br/).
 
 ## Referências bibliográficas
+- WRIGHT, Angela. The Colour Affects System of Colour Psychology. Londres, 2009.
 - ARUZZA, Cinzia; BHATTACHARYA, Tithi; FRASER, Nancy. Feminismo para os 99%: um manifesto. São Paulo: Boitempo, 2019. (Com até três autores)
 - KRENAK, Ailton. Ideias para adiar o fim do mundo. São Paulo: Companhia das Letras, 2019. (Com um autor)
 - DILGER, Gerhard et al. Descolonizar o imaginário: debates sobre pós-extrativismo e alternativas ao desenvolvimento. São Paulo: Fundação Roxa Luxemburgo, 2016. (Mais de três autores)
