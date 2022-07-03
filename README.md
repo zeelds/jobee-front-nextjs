@@ -1,9 +1,6 @@
 ![image](https://user-images.githubusercontent.com/98771718/177028102-a1b32563-d20a-4c3a-a20c-0c872d4802e8.png)
 
 ![image](https://i.imgur.com/22f5ZNF.png)
-
-## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Documentação
-
 <h4 align="center"> 
 	💼  Jobee 🐝 Em Andamento 🤝💼
 </h4>
