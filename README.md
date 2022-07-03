@@ -76,7 +76,7 @@ Em relação ao design, optamos pelo visual da abelha por se tratar de um animal
 
 Em meio a prototipação da aplicação, intecionalmente fizemos a utilização de componentes gráficos planos e minimalistas de alternadas cores. Para alcançar tais características em nossas páginas, fizemos uso do framework [Bootstrap 5.2](https://getbootstrap.com/docs/5.2/getting-started/introduction/).
 
-Os ícones vetoriais utilizados por todo o projeto foram retirados do [icons8](https://icons8.com.br/)
+Os ícones vetoriais utilizados por todo o projeto foram retirados do [icons8](https://icons8.com.br/).
 
 ## Referências bibliográficas
 - ARUZZA, Cinzia; BHATTACHARYA, Tithi; FRASER, Nancy. Feminismo para os 99%: um manifesto. São Paulo: Boitempo, 2019. (Com até três autores)
