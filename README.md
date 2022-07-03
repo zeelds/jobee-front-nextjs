@@ -65,4 +65,4 @@ fasdfasdfasd
 
 ## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Licença
 
-fasdfasd
+O projeto se encontra sob a licença [GPLv3]()
