@@ -2,7 +2,7 @@
 
 ![image](https://i.imgur.com/22f5ZNF.png)
 <h4 align="center"> 
-	💼  Jobee 🐝 Em Andamento 🤝💼
+	💼  Jobee 🤝 Em Andamento 💼
 </h4>
 
 <p align="center">
