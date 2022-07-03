@@ -6,11 +6,15 @@
 </h4>
 
 <p align="center">
- <a href="#">Tópico 1</a> •
- <a href="#">Tópico 2</a> •
- <a href="#">Tópico 3</a> • 
- <a href="#">Tópico 4</a> • 
- <a href="#">Tópico 5</a> 
+ <a href="#">Sobre</a> •
+ <a href="#">Funcionalidades</a> •
+ <a href="#">Modelo de Desenvolvimento</a> • 
+ <a href="#">Projeto</a> • 
+ <a href="#">Tecnologias</a> • 
+ <a href="#">Design</a> • 
+ <a href="#">Contribuidores</a> • 
+ <a href="#">Autores</a> • 
+ <a href="#">Licença</a>
 </p>
 
 Você pode baixar a documentação em PDF clicando [aqui](#).
