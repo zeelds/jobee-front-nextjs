@@ -1,8 +1,8 @@
 ![image](https://user-images.githubusercontent.com/98771718/177028102-a1b32563-d20a-4c3a-a20c-0c872d4802e8.png)
 
-![image](https://i.imgur.com/rVf57xs.png)
+![image](https://i.imgur.com/22f5ZNF.png)
 
-## Documentação
+## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Documentação
 
 Você pode baixar a documentação em PDF clicando [aqui](#).
 [Princípios de uma boa documentação](https://edisciplinas.usp.br/pluginfile.php/134335/mod_resource/content/1/Aula13_ArquiteturaSoftware_02_Documentacao.pdf)
@@ -46,28 +46,28 @@ Você pode baixar a documentação em PDF clicando [aqui](#).
 <!-- BLOG-POST-LIST:END -->
 </details>
 
-## Introdução
+## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Introdução
 
 Jobee é uma plataforma virtual onde os usuários podem anunciar e solicitar serviços do tipo trabalho informal. 
 
-## Requisitos
+## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Requisitos
 
 O levantamento de requisitos é importante...
 
 Podemos considerar que os requisitos de um sistema são: "As descrições do que o sistema deve fazer, os serviços que oferece e as restrições a seu funcionamento. Esses requisitos refletem as necessidades dos clientes para um sistema que serve a uma finalidade determinada, tais como controlar um dispositivo, colocar um pedido ou encontrar informações." (SOMMERVILLE, 2011, p. 57).
  
 
-#### Requisitos funcionais
+#### ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Requisitos funcionais
 
-#### Requisitos não funcionais
+#### ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Requisitos não funcionais
 
-## Modelo de desenvolvimento
+## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Modelo de desenvolvimento
 
 Trello, ágil, etc
 
-## Projeto
+## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Projeto
 
-#### Estrutura geral
+#### ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Estrutura geral
 
 React
 
@@ -105,13 +105,13 @@ React
 
         teste
 
-#### Arquivos chave
+#### ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Arquivos chave
 
-#### Funções e sub-rotinas
+#### ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Funções e sub-rotinas
 
-#### Variáveis e constantes
+#### ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Variáveis e constantes
 
-## Design
+## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Design
 
 Se você deseja visualizar a prototipação do Jobee, você pode [clicar aqui](https://www.figma.com/file/0VBNvVmFYIClu6WMkC9UmG/Girl-React-%2F-Jobee?node-id=0%3A1) para ser redirecionado. 
 
@@ -125,7 +125,7 @@ ALERTA!^^
 
 A maioria dos ícones vetoriais utilizados por todo o projeto podem ser encontrados no website [icons8](https://icons8.com.br/).
 
-## Referências bibliográficas
+## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Referências bibliográficas
 - WRIGHT, Angela. The Colour Affects System of Colour Psychology. Londres, 2009.
 - ARUZZA, Cinzia; BHATTACHARYA, Tithi; FRASER, Nancy. Feminismo para os 99%: um manifesto. São Paulo: Boitempo, 2019. (Com até três autores)
 - KRENAK, Ailton. Ideias para adiar o fim do mundo. São Paulo: Companhia das Letras, 2019. (Com um autor)
