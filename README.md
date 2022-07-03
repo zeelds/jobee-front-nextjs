@@ -31,9 +31,9 @@ O levantamento de requisitos é importante...
 Podemos considerar que os requisitos de um sistema são: "As descrições do que o sistema deve fazer, os serviços que oferece e as restrições a seu funcionamento. Esses requisitos refletem as necessidades dos clientes para um sistema que serve a uma finalidade determinada, tais como controlar um dispositivo, colocar um pedido ou encontrar informações." (SOMMERVILLE, 2011, p. 57).
  
 
-#### ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Requisitos funcionais
+#### Requisitos funcionais
 
-#### ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Requisitos não funcionais
+#### Requisitos não funcionais
 
 ## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Modelo de desenvolvimento
 
