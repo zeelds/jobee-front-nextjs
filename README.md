@@ -1,4 +1,4 @@
-![jobee doc](https://user-images.githubusercontent.com/98771718/177056319-a4c0d757-6afa-49f1-8a01-2467139db259.png)
+![jobee doc](https://user-images.githubusercontent.com/98771718/177056349-48e277c6-3477-4105-bcb0-c429a61e17aa.png)
 
 ![image](https://i.imgur.com/22f5ZNF.png)
 <h4 align="center"> 
