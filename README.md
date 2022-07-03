@@ -6,15 +6,15 @@
 </h4>
 
 <p align="center">
- <a href="#Sobre">Sobre</a> •
- <a href="#Funcionalidades">Funcionalidades</a> •
- <a href="#Modelo-de-Desenvolvimento">Modelo de Desenvolvimento</a> • 
- <a href="#Projeto">Projeto</a> • 
- <a href="#Tecnologias">Tecnologias</a> • 
- <a href="#Design">Design</a> • 
- <a href="#Contribuidores">Contribuidores</a> • 
- <a href="#Autores">Autores</a> • 
- <a href="#Licença">Licença</a>
+ <a href="#-Sobre">Sobre</a> •
+ <a href="#-Funcionalidades">Funcionalidades</a> •
+ <a href="#-Modelo-de-Desenvolvimento">Modelo de Desenvolvimento</a> • 
+ <a href="#-Projeto">Projeto</a> • 
+ <a href="#-Tecnologias">Tecnologias</a> • 
+ <a href="#-Design">Design</a> • 
+ <a href="#-Contribuidores">Contribuidores</a> • 
+ <a href="#-Autores">Autores</a> • 
+ <a href="#-Licença">Licença</a>
 </p>
 
 ## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Sobre
