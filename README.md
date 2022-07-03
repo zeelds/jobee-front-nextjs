@@ -50,7 +50,7 @@ Jobee é uma plataforma virtual onde os usuários podem anunciar e solicitar ser
 
 O levantamento de requisitos é importante...
 
-Podemos considerar que os requisitos de um sistema "São as descrições do que o sistema deve fazer, os serviços que oferece e as restrições a seu funcionamento. Esses requisitos refletem as necessidades dos clientes para um sistema que serve a uma finalidade determinada, tais como controlar um dispositivo, colocar um pedido ou encontrar informações." (SOMMERVILLE, 2011, p. 57).
+Podemos considerar que os requisitos de um sistema são: "As descrições do que o sistema deve fazer, os serviços que oferece e as restrições a seu funcionamento. Esses requisitos refletem as necessidades dos clientes para um sistema que serve a uma finalidade determinada, tais como controlar um dispositivo, colocar um pedido ou encontrar informações." (SOMMERVILLE, 2011, p. 57).
  
 
 #### Requisitos funcionais
