@@ -76,6 +76,9 @@ Em relação ao design, optamos pelo visual da abelha por se tratar de um animal
 
 Em meio à prototipação da aplicação, intecionalmente fizemos a utilização de componentes gráficos planos e minimalistas de cores alternadas. Para alcançar tais características em nossas páginas, fizemos uso do framework [Bootstrap 5.2](https://getbootstrap.com/docs/5.2/getting-started/introduction/).
 
+As animações são com [Framer](https://google.com)
+ALERTA!^^
+
 * Componentes
     * Smart
 
@@ -83,7 +86,11 @@ Em meio à prototipação da aplicação, intecionalmente fizemos a utilização
 
     * Dumb
 
-        teste
+        components/dumb
+        
+        /teste.js: realiza tal tal tal função
+        
+        /teste2.js: realiza tal tal tal função
 
     * Navbar
 
