@@ -44,7 +44,7 @@ Você pode baixar a documentação em PDF clicando [aqui](#).
 
 ## Introdução
 
-Introdução aqui
+Jobee é uma plataforma virtual onde os usuários podem anunciar e solicitar serviços do tipo trabalho informal. 
 
 ## Requisitos
 
@@ -70,7 +70,7 @@ Trello, ágil, etc
 
 ## Design
 
-Jobee é uma plataforma virtual onde os usuários podem anunciar e solicitar serviços do tipo trabalho informal. Em relação ao design, optamos pelo visual da abelha por se tratar de um animal conhecido pela cooperação e trabalho duro. As cores predominantemente amarelas servem para causar um otimismo no usuário em relação a sua vida profissional.
+Em relação ao design, optamos pelo visual da abelha por se tratar de um animal conhecido pela cooperação e trabalho duro. As cores predominantemente amarelas servem para causar um otimismo no usuário em relação a sua vida profissional.
 
 ## Referências bibliográficas
 - ARUZZA, Cinzia; BHATTACHARYA, Tithi; FRASER, Nancy. Feminismo para os 99%: um manifesto. São Paulo: Boitempo, 2019. (Com até três autores)
