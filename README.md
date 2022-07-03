@@ -79,7 +79,7 @@ React
 
     * Navbar
 
-        components/navbar.js: Exporta um componente funcional que retorna duas navbar bootstrap. A primeira comporta telas maiores e possui mais informações, já a segunda comporta apenas dispositivos móveis e contém menos informações.
+        components/navbar.js: Exporta um componente funcional que retorna duas navbar bootstrap. A primeira comporta telas maiores e exibe mais utilidades, já a segunda comporta apenas dispositivos móveis e preza por um visual menos robusto, dispensando algumas das utilidades das telas maiores.
 
 * Páginas
     * Main
