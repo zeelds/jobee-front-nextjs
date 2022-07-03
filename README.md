@@ -91,6 +91,8 @@ fasdfasdfasd
 
 ## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Licença
 
-O projeto se encontra sob a licença [GPLv3](https://github.com/Girl-React/jobee-front-nextjs/blob/main/LICENSE.md)
+O projeto se encontra sob a licença [GPLv3](https://github.com/Girl-React/jobee-front-nextjs/blob/main/LICENSE.md).
+
+![hr teste3](https://user-images.githubusercontent.com/98771718/177055927-ac86e480-8164-4ef9-99f5-852c1884e4a2.png)
 
 Agradecimento aqui embaixo
