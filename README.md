@@ -72,7 +72,7 @@ Trello, ágil, etc
 
 Se você deseja visualizar a prototipação do Jobee, você pode [clicar aqui](https://www.figma.com/file/0VBNvVmFYIClu6WMkC9UmG/Girl-React-%2F-Jobee?node-id=0%3A1) para ser redirecionado. 
 
-Em relação ao design, optamos pelo visual da abelha por se tratar de um animal conhecido pela cooperação e trabalho duro. As cores predominantemente amarelas servem para causar um otimismo no usuário em relação a sua vida profissional.
+Em relação ao design, optamos pelo visual da abelha por se tratar de um animal conhecido pela cooperação e trabalho duro. De acordo com *Angela Wright*, as cores podem ser usadas como uma linguagem universal com a qual a maioria dos humanos pode se relacionar. Dessa forma, os tons predominantemente amarelas servem para causar um otimismo no usuário em relação a sua vida profissional.
 
 Para alcançar componentes gráficos planos e minimalistas, fizemos uso do framework [Bootstrap 5.2](https://getbootstrap.com/docs/5.2/getting-started/introduction/).
 
