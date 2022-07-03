@@ -19,10 +19,10 @@
 Você pode baixar a documentação em PDF clicando [aqui](#).
 [Princípios de uma boa documentação](https://edisciplinas.usp.br/pluginfile.php/134335/mod_resource/content/1/Aula13_ArquiteturaSoftware_02_Documentacao.pdf)
 [Como escrever uma documentação de software](https://pt.wikihow.com/Escrever-Documenta%C3%A7%C3%A3o-de-Software)
+S
+## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Sobre
 
-## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Introdução
-
-Jobee é uma plataforma virtual onde os usuários podem anunciar e solicitar serviços do tipo trabalho informal. 
+🐝 Jobee é uma plataforma virtual onde os usuários podem anunciar e solicitar trabalho informal. 
 
 ## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Requisitos
 
