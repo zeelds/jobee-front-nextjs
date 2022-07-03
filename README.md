@@ -19,7 +19,9 @@ Você pode baixar a documentação em PDF clicando [aqui](#).
 S
 ## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Sobre
 
-🐝 Jobee é uma plataforma virtual onde os usuários podem anunciar e solicitar trabalho informal. 
+🐝 Jobee é uma plataforma para aproximar pessoas que buscam por oportunidades a pessoas e empresas que precisam de trabalhos não registrados de maneira segura e ágil.
+
+Projeto desenvolvido durante o **Start** oferecido pela Rede Cidadã. 
 
 ## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Funcionalidades
 
