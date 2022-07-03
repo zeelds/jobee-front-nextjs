@@ -1,6 +1,6 @@
 ![image](https://user-images.githubusercontent.com/98771718/177028102-a1b32563-d20a-4c3a-a20c-0c872d4802e8.png)
 
-<hr/>
+![image](https://i.imgur.com/rVf57xs.png)
 
 ## Documentação
 
