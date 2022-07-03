@@ -4,47 +4,21 @@
 
 ## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Documentação
 
+<h4 align="center"> 
+	💼  Jobee 🐝 Em Andamento 🤝💼
+</h4>
+
+<p align="center">
+ <a href="#">Tópico 1</a> •
+ <a href="#">Tópico 2</a> •
+ <a href="#">Tópico 3</a> • 
+ <a href="#">Tópico 4</a> • 
+ <a href="#">Tópico 5</a> 
+</p>
+
 Você pode baixar a documentação em PDF clicando [aqui](#).
 [Princípios de uma boa documentação](https://edisciplinas.usp.br/pluginfile.php/134335/mod_resource/content/1/Aula13_ArquiteturaSoftware_02_Documentacao.pdf)
 [Como escrever uma documentação de software](https://pt.wikihow.com/Escrever-Documenta%C3%A7%C3%A3o-de-Software)
-
-<details>
-    <summary>📚<b> Sumário</b></summary><br/>
-<!-- BLOG-POST-LIST:START -->
-
-* [Documentação](#)
-
-* [Introdução](#Introdução)
-    
-    * [Requisitos funcionais](#Requisitos-funcionais)
-
-    * [Requisitos não funcionais](#Requisitos-não-funcionais)
-
-* [Requisitos](#Requisitos)
-    * [Requisitos funcionais](#Requisitos-funcionais)
-
-    * [Requisitos não funcionais](#Requisitos-não-funcionais)
-
-* [Modelo de desenvolvimento](#)
-    * [Sub tópico](#)
-
-    * [Sub tópico](#)
-
-* [Projeto](#Projeto)
-    * [Estrutura geral](#Estrutura-geral)
-
-    * [Arquivos chave](#Arquivos-chave)
-
-    * [Funções e sub-rotinas](#Funções-e-sub-rotinas)
-
-    * [Variáveis e constantes](#Variáveis-e-constantes)
-
-* [Design](#Design)
-
-* [Referências bibliográficas](#Referências-bibliográficas)
-
-<!-- BLOG-POST-LIST:END -->
-</details>
 
 ## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Introdução
 
