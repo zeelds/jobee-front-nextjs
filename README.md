@@ -6,15 +6,15 @@
 </h4>
 
 <p align="center">
- <a href="#">Sobre</a> •
- <a href="#">Funcionalidades</a> •
- <a href="#">Modelo de Desenvolvimento</a> • 
- <a href="#">Projeto</a> • 
- <a href="#">Tecnologias</a> • 
- <a href="#">Design</a> • 
- <a href="#">Contribuidores</a> • 
- <a href="#">Autores</a> • 
- <a href="#">Licença</a>
+ <a href="#Sobre">Sobre</a> •
+ <a href="#Funcionalidades">Funcionalidades</a> •
+ <a href="#Modelo-de-Desenvolvimento">Modelo de Desenvolvimento</a> • 
+ <a href="#Projeto">Projeto</a> • 
+ <a href="#Tecnologias">Tecnologias</a> • 
+ <a href="#Design">Design</a> • 
+ <a href="#Contribuidores">Contribuidores</a> • 
+ <a href="#Autores">Autores</a> • 
+ <a href="#Licença">Licença</a>
 </p>
 
 ## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Sobre
@@ -45,31 +45,29 @@ testando
 
 > Veja o arquivo  [package.json]()
 
-#### **Server**  ([Node.js](https://nodejs.org/en/)  +  [TypeScript](https://www.typescriptlang.org/))
+#### **Server**  ([Node.js](https://nodejs.org/en/))
 
 -   **[Express](https://expressjs.com/)**
 -   **[CORS](https://expressjs.com/en/resources/middleware/cors.html)**
--   **[KnexJS](http://knexjs.org/)**
--   **[SQLite](https://github.com/mapbox/node-sqlite3)**
--   **[ts-node](https://github.com/TypeStrong/ts-node)**
+-   **[Sequelize](https://github.com/mapbox/node-sqlite3)**
+-   **[MySQL2](https://github.com/expressjs/multer)**
+-   **[Body-parser](https://github.com/expressjs/multer)**
 -   **[dotENV](https://github.com/motdotla/dotenv)**
 -   **[Multer](https://github.com/expressjs/multer)**
--   **[Celebrate](https://github.com/arb/celebrate)**
--   **[Joi](https://github.com/hapijs/joi)**
+-   **[Nodemailer](https://github.com/expressjs/multer)**
 
 > Veja o arquivo  [package.json](https://github.com/tgmarinho/README-ecoleta/blob/master/server/package.json)
 
 #### [](https://github.com/tgmarinho/Ecoleta#utilit%C3%A1rios)**Utilitários**
 
--   Protótipo:  **[Figma](https://www.figma.com/)**  →  **[Protótipo (Ecoleta)](https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28lB/Ecoleta)**
+-   Protótipo:  **[Figma](https://www.figma.com/)**  →  **[Protótipo (Jobee)](https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28lB/Ecoleta)**
 -   API:  **[IBGE API](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1)**  →  **[API de UFs](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1#api-UFs-estadosGet)**,  **[API de Municípios](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1#api-Municipios-estadosUFMunicipiosGet)**
--   Maps:  **[Leaflet](https://react-leaflet.js.org/en/)**
--   Editor:  **[Visual Studio Code](https://code.visualstudio.com/)**  → Extensions:  **[SQLite](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite)**
+-   Editor:  **[Visual Studio Code](https://code.visualstudio.com/)**
 -   Markdown:  **[StackEdit](https://stackedit.io/)**,  **[Markdown Emoji](https://gist.github.com/rxaviers/7360908)**
 -   Commit Conventional:  **[Commitlint](https://github.com/conventional-changelog/commitlint)**
 -   Teste de API:  **[Insomnia](https://insomnia.rest/)**
 -   Ícones:  **[icons8](https://google.com)**
--   Fontes:  **[Ubuntu](https://fonts.google.com/specimen/Ubuntu)**,  **[Roboto](https://fonts.google.com/specimen/Roboto)**
+-   Fontes:  **[Roboto](https://fonts.google.com/specimen/Roboto)**
 
 ## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Design
 
