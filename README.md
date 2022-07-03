@@ -47,7 +47,15 @@ fasdfasdfasd
 
 ## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Autores
 
-fasdfasd
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/raqsanta"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/98771718?v=4" width="100px;" alt=""/><br /><sub><b>Nome Sobrenome</b></sub></a><br /><a href="https://google.com.br/" title="Girl React">👨‍🚀</a></td>
+    <td align="center"><a href="https://github.com/"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/105078467?v=4" width="100px;" alt=""/><br /><sub><b>Antony Matheus</b></sub></a><br /><a href="https://google.com.br/" title="Girl React">👨‍🚀</a></td>
+    <td align="center"><a href="https://github.com/"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/101149582?v=4" width="100px;" alt=""/><br /><sub><b>Laryssa Kaylane</b></sub></a><br /><a href="https://google.com.br/" title="Girl React">👨‍🚀</a></td>
+    <td align="center"><a href="https://github.com/"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/104655761?v=4" width="100px;" alt=""/><br /><sub><b>Mariana Pereira</b></sub></a><br /><a href="https://google.com.br/" title="Girl React">🚀</a></td>
+    <td align="center"><a href="https://github.com/"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/102566766?v=4" width="100px;" alt=""/><br /><sub><b>Thayanne Stella</b></sub></a><br /><a href="https://google.com.br/" title="Girl React">🚀</a></td>
+  </tr>
+</table>
 
 ## Licença
 
