@@ -93,6 +93,6 @@ fasdfasdfasd
 
 O projeto se encontra sob a licença [GPLv3](https://github.com/Girl-React/jobee-front-nextjs/blob/main/LICENSE.md).
 
-Agradecimento aqui embaixo
+Desenvolvido com muito carinho por Girl React 💛
 
 ![hr teste3](https://user-images.githubusercontent.com/98771718/177055927-ac86e480-8164-4ef9-99f5-852c1884e4a2.png)
