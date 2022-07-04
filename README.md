@@ -74,16 +74,18 @@ testando
 Se você deseja visualizar a prototipação do Jobee, você pode [clicar aqui](https://www.figma.com/file/0VBNvVmFYIClu6WMkC9UmG/Girl-React-%2F-Jobee?node-id=0%3A1) para ser redirecionado. 
 
 **Web**
-
 <div style='display: inline-flex;'>
-	<img src='https://user-images.githubusercontent.com/98771718/177074319-53af867e-524b-45be-be87-11c557644cb2.png' style="width: 49%;">
-	<img src='https://user-images.githubusercontent.com/98771718/177074379-753a176f-d715-4193-a57e-057b593cc72f.png' style="width: 49%">
-<div>
-<img src='https://user-images.githubusercontent.com/98771718/177074402-573def9f-1a17-4982-9865-a8c7cd4474ae.png' width='850'>
+	<img src='https://user-images.githubusercontent.com/98771718/177074319-53af867e-524b-45be-be87-11c557644cb2.png' style="width: 30%;">
+	<img src='https://user-images.githubusercontent.com/98771718/177074379-753a176f-d715-4193-a57e-057b593cc72f.png' style="width: 30%">
+</div>
+<img src='https://user-images.githubusercontent.com/98771718/177074402-573def9f-1a17-4982-9865-a8c7cd4474ae.png' style="width: 30%">
 
 **Mobile**
-![image](https://user-images.githubusercontent.com/98771718/177074208-cdca2feb-ed35-4964-8c99-a0e4f9b223f5.png)
-![image](https://user-images.githubusercontent.com/98771718/177074283-b9744c7b-a032-425b-ad5c-1341efff4630.png)
+<div style='display: inline-flex;'>
+	<img src='https://user-images.githubusercontent.com/98771718/177074208-cdca2feb-ed35-4964-8c99-a0e4f9b223f5.png' style="width: 15%;">
+	<img src='https://user-images.githubusercontent.com/98771718/177075753-98da3674-d120-4f62-ae2e-7c86ba1587fe.png' style="width: 15%">
+	<img src='https://user-images.githubusercontent.com/98771718/177074283-b9744c7b-a032-425b-ad5c-1341efff4630.png' style="width: 15%">
+</div>
 
 ## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Contribuidores
 
