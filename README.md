@@ -77,7 +77,7 @@ Se você deseja visualizar a prototipação do Jobee, você pode [clicar aqui](h
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/raqsanta"><img style="border-radius: 50%;" src="[https://avatars.githubusercontent.com/u/62359000?v=4](https://avatars.githubusercontent.com/u/98771718?v=4)" width="100px;" alt=""/><br /><sub><b>Nome Sobrenome</b></sub></a><br />🐝</td>
+    <td align="center"><a href="https://github.com/raqsanta"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/98771718?v=4" width="100px;" alt=""/><br /><sub><b>Nome Sobrenome</b></sub></a><br />🐝</td>
   </tr>
 </table>
 
