@@ -73,6 +73,15 @@ testando
 
 Se você deseja visualizar a prototipação do Jobee, você pode [clicar aqui](https://www.figma.com/file/0VBNvVmFYIClu6WMkC9UmG/Girl-React-%2F-Jobee?node-id=0%3A1) para ser redirecionado. 
 
+**Web**
+![image](https://user-images.githubusercontent.com/98771718/177074319-53af867e-524b-45be-be87-11c557644cb2.png)
+![image](https://user-images.githubusercontent.com/98771718/177074379-753a176f-d715-4193-a57e-057b593cc72f.png)
+![image](https://user-images.githubusercontent.com/98771718/177074402-573def9f-1a17-4982-9865-a8c7cd4474ae.png)
+
+**Mobile**
+![image](https://user-images.githubusercontent.com/98771718/177074208-cdca2feb-ed35-4964-8c99-a0e4f9b223f5.png)
+![image](https://user-images.githubusercontent.com/98771718/177074283-b9744c7b-a032-425b-ad5c-1341efff4630.png)
+
 ## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Contribuidores
 
 <table>
