@@ -64,6 +64,7 @@ Se você deseja visualizar a organização do projeto em nosso Trello, você pod
 -   **[Sequelize](https://github.com/mapbox/node-sqlite3)**
 -   **[MySQL2](https://github.com/expressjs/multer)**
 -   **[Body-parser](https://github.com/expressjs/multer)**
+-   **[E-Mail Validator](https://www.npmjs.com/package/email-validator)**
 -   **[dotENV](https://github.com/motdotla/dotenv)**
 -   **[Multer](https://github.com/expressjs/multer)**
 -   **[Nodemailer](https://github.com/expressjs/multer)**
