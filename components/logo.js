@@ -6,18 +6,18 @@ export default function Logo() {
     return (
         <>
 
+            <div id='logo-default' className={styles.jb_default_logo}>
 
-            <div id='logo-default' className='text-dark' style={{ position: 'relative', display: 'inline-block'}}>
+                <img id='logo-image' className={styles.img_logo} src="/jobee.png" alt="Jobee Logo" width={256} height={256} />
 
-                <Image id='logo-image' className={styles.img_logo} src="/jobee.png" alt="Jobee Logo" width={256} height={256} />
+                <div className={styles.text_logo+' '}  id='logo-title'>
 
-                <div style={{ position: 'absolute', top: '4.5em', left: '11em' }} id='logo-title'>
-                    <a style={{ fontSize: '96px' }}>
+                    <span className={styles.text_logo}>
                         Jo<b>bee</b>
-                    </a>
-                    <a style={{ fontSize: '32px' }}>
+                    </span>
+                    <span className={styles.copyright_text_logo}>
                         ©
-                    </a>
+                    </span>
                 </div>
 
             </div>

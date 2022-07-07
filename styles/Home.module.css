@@ -1,3 +1,4 @@
+
 .container {
   padding: 0 2rem;
 }
@@ -45,9 +46,31 @@
   animation: breathing 6s ease-out infinite normal
 }
 
+.jb_default_logo {
+  position: relative;
+  display: flex;
+}
+
 .img_logo {
   color: black;
-  transform: scale(1);
+  position: absolute;
+  right: 13em;
+  bottom: -33%;
+}
+
+.text_logo {
+  color: #000000;
+  font-size: 96px;
+}
+
+.copyright_text_logo {
+  color: #000000;
+  font-size: 32px; 
+  
+}
+
+.mid_button {
+  width: 96px;
 }
 
 @keyframes breathing {

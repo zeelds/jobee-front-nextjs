@@ -15,11 +15,9 @@ export default function Start() {
 
             <main className={styles.main_yellow}>
 
-                <div style={{marginRight: '280px', marginBottom: '15px'}}>
-                    <Logo />
-                </div>
+                <Logo />
 
-                <button className="btn btn-dark w-25 fw-bold" style={{ padding: '15px' }}>Começar</button>
+                <button className={styles.mid_button + " btn btn-dark w-25 fw-bold p-3 text-break"} >Começar</button>
 
                 <div className='text-dark' style={{ cursor: 'pointer', marginTop: '25px' }}>
                     <b>
