@@ -1,6 +1,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { Dropdown } from 'react-bootstrap'
 import styles from '../styles/Navbar.module.css'
 
 export default function Navbar() {
@@ -11,10 +12,12 @@ export default function Navbar() {
                     <div className={styles.centered_bar + " navbar-brand"} href="#">
                         <Link href="/main">
                             <a>
-                                <Image width="64" height="64" id='logo-image' className={styles.navbar_brand + ' d-inline-block align-text-top'} src="/jobee.png" alt="Jobee Logo" />
+                                <div className={styles.navbar_brand}>
+                                    <Image width="64" height="64" id='logo-image' className='d-inline-block align-text-top' src="/jobee.png" alt="Jobee Logo" />
+                                </div>
                             </a>
                         </Link>
-                        <input className={styles.item_spacing + " form-control"} id="search-bar" placeholder="Tente buscar algo" />
+                        <input className={styles.item_spacing + " form-control"} id="search-bar" placeholder="🔍︎ Tente buscar algo" />
 
                     </div>
 
@@ -60,16 +63,26 @@ export default function Navbar() {
                             </div>
                         </Link>
 
-                        <Link href="/profile">
-                            <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
-                                <Image className={styles.item_icon} src="/icons/profile.png" width="32" height="32" />
-                                <br />
-                                Seu Perfil
-                            </div>
-                        </Link>
+                        <Dropdown>
+
+                            <Dropdown.Toggle variant="none" className={`${styles.dropdown_basic} ${styles.dropdown_no_padding}`} id="bootstrap-dropdown">
+                                <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
+                                    <Image className={styles.item_icon} src="/icons/profile.png" width="32" height="32" />
+                                    <br />
+                                    <span>Seu Perfil</span>
+                                </div>
+                            </Dropdown.Toggle>
+
+                            <Dropdown.Menu>
+                                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                            </Dropdown.Menu>
+
+                        </Dropdown>
+
 
                     </div>
-
 
                 </div>
             </nav>

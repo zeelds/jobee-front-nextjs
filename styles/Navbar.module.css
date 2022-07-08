@@ -14,7 +14,6 @@
 .navbar_brand {
     background-color: #F5C417;
     border-radius: 15%;
-    stroke: 2px #F5C417;
 }
 
 .item_spacing {
@@ -35,3 +34,10 @@
     display: inline-flex;
 }
 
+.dropdown_basic::after {
+    display: none !important;
+}
+
+.dropdown_no_padding {
+    padding: 0 !important;
+}

@@ -6,7 +6,7 @@ export default function FourOFour() {
     return (
 
         <motion.div
-            initial={{ opacity: 0, width: "100%" }}
+            initial={{ opacity: 0}}
             animate={{ opacity: "100%" }}
             exit={{ width: 0 }}
         >
