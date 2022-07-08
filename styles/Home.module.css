@@ -63,18 +63,6 @@
   font-size: 96px;
 }
 
-.article_big_title {
-  color: #000000;
-  font-size: 56px;
-  font-weight: bolder;
-}
-
-.article_med_title {
-  color: #000000;
-  font-size: 24px;
-  font-weight: 600;
-}
-
 .article_white_container {
   background-color: white;
   border:  25px solid #fff;

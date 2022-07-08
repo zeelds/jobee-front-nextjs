@@ -22,7 +22,9 @@ export default function Start() {
 
                 <Logo />
 
-                <button className={styles.mid_button + " btn btn-dark w-25 fw-bold p-3 text-break"} >Começar</button>
+                <Link href="/main">
+                    <button className={styles.mid_button + " btn btn-dark w-25 fw-bold p-3 text-break"} >Começar</button>
+                </Link>
 
                 <div className='text-dark' style={{ cursor: 'pointer', marginTop: '25px' }}>
                     <Link href="/terms">

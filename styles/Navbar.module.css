@@ -1,0 +1,22 @@
+.img_logo {
+    color: black;
+    position: absolute;
+    right: 13.3em;
+    bottom: -33%;
+  }
+
+.centered_bar {
+    margin-left: 20px;
+    align-items: center;
+    display: flex;
+}
+
+.navbar_brand {
+    background-color: #F5C417;
+    border-radius: 15%;
+    stroke: 2px #F5C417;
+}
+
+.item_spacing {
+    margin-left: 15px;
+}
