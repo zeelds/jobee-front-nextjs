@@ -20,3 +20,17 @@
 .item_spacing {
     margin-left: 15px;
 }
+
+.item_holder {
+    text-align: center;
+    font-size: 13px;
+}
+
+.item_icon {
+    
+}
+
+.display_flex {
+    display: inline-flex;
+}
+
