@@ -54,7 +54,7 @@
 .img_logo {
   color: black;
   position: absolute;
-  right: 13em;
+  right: 13.3em;
   bottom: -33%;
 }
 
@@ -63,10 +63,38 @@
   font-size: 96px;
 }
 
+.article_big_title {
+  color: #000000;
+  font-size: 56px;
+  font-weight: bolder;
+}
+
+.article_med_title {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.article_white_container {
+  background-color: white;
+  border:  25px solid #fff;
+}
+
+.center_text {
+  text-align: center;
+}
+
+.left_text {
+  text-align: left;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
 .copyright_text_logo {
   color: #000000;
   font-size: 32px; 
-  
 }
 
 .mid_button {
