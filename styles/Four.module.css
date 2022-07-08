@@ -1,0 +1,47 @@
+.main {
+    color: #F5C417;
+    background-color: #000000;
+    min-height: 100vh;
+    padding: 4rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.breathing_item {
+    animation: breathing 6s ease-out infinite normal;
+}
+
+  .big_text {
+    font-size: 96px;
+    font-weight: bold;
+  }
+
+  
+@keyframes breathing {
+    0% {
+      -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      transform: scale(0.8);
+    }
+  
+    25% {
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        transform: scale(0.7);
+      }
+  
+    100% {
+      -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      transform: scale(0.8);
+    }
+  }
