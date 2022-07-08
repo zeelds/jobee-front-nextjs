@@ -9,7 +9,11 @@ export default function Navbar() {
             <nav className="navbar bg-light shadow-sm d-none d-md-block">
                 <div className="container-fluid">
                     <div className={styles.centered_bar + " navbar-brand"} href="#">
-                        <Image width="64" height="64" id='logo-image' className={styles.navbar_brand + ' d-inline-block align-text-top'} src="/jobee.png" alt="Jobee Logo" />
+                        <Link href="/main">
+                            <a>
+                                <Image width="64" height="64" id='logo-image' className={styles.navbar_brand + ' d-inline-block align-text-top'} src="/jobee.png" alt="Jobee Logo" />
+                            </a>
+                        </Link>
                         <input className={styles.item_spacing + " form-control"} id="search-bar" placeholder="Tente buscar algo" />
 
                     </div>

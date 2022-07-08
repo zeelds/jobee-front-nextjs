@@ -11,6 +11,7 @@
   }
 
 .breathing_item {
+    text-align: center;
     animation: breathing 6s ease-out infinite normal;
 }
 
