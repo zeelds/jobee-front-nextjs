@@ -5,6 +5,8 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
+  
+.display_flex {
+  display: inline-flex;
+}

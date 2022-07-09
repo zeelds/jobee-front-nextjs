@@ -1,0 +1,14 @@
+.card_s_100 {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.card_s_75 {
+    width: 75%;
+    border-radius: 15px;
+}
+
+.card_s_50 {
+    width: 50%;
+    border-radius: 15px;
+}

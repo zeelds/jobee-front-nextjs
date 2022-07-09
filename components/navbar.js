@@ -39,14 +39,6 @@ export default function Navbar() {
                             </div>
                         </Link>
 
-                        <Link href="/pro">
-                            <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
-                                <Image className={styles.item_icon} src="/icons/briefcase.png" width="32" height="32" />
-                                <br />
-                                Seja Pro
-                            </div>
-                        </Link>
-
                         <Link href="/comments">
                             <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
                                 <Image className={styles.item_icon} src="/icons/balloon.png" width="32" height="32" />
@@ -81,6 +73,12 @@ export default function Navbar() {
 
                         </Dropdown>
 
+                        <Link href="/pro">
+                            <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item text-break'}>
+                                <br />
+                                Adquira PRO
+                            </div>
+                        </Link>
 
                     </div>
 
