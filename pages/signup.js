@@ -21,7 +21,7 @@ export default function SignUp() {
             <main className={styles.main_yellow}>
 
                 <div className='mb-5 float-start container'>
-                    <Link href='/start'>
+                    <Link href='/signin'>
                         <a>
                             <img className={styles.clickable} src='/arrow.png' />
                         </a>
