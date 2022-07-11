@@ -1,4 +1,5 @@
 import styles from '../styles/Home.module.css'
+import jobeestyles from '../styles/Jobee.module.css'
 import { motion } from "framer-motion"
 import Head from 'next/head';
 import Link from 'next/link'
@@ -25,18 +26,34 @@ export default function SignIn() {
                             <img className={styles.clickable} src='/arrow.png' />
                         </a>
                     </Link>
-                </div>
 
-                <Link href="/main">
-                    <button className={styles.mid_button + " btn btn-dark w-25 fw-bold p-3 text-break"} >Começar</button>
-                </Link>
+                    <br />
 
-                <div className='text-dark' style={{ cursor: 'pointer', marginTop: '25px' }}>
-                    <Link href="/terms">
-                        <b>
-                            Termos e Condições
-                        </b>
-                    </Link>
+                    <div className='container w-25 mt-5'>
+
+                        <h6 className='text-dark'><b>Login</b></h6>
+
+                        <form className='mt-4'>
+                            <div className="form-floating mb-3">
+                                <input type="email" className={jobeestyles.input_default + " form-control border"} id="floatingInput" placeholder="name@example.com" />
+                                <label htmlFor="floatingInput" className="text-dark">E-mail</label>
+                                <div id="emailHelp" className="form-text text-dark">Seu e-mail é um segredo nosso.</div>
+                            </div>
+
+                            <div className="form-floating mb-3">
+                                <input type="email" className={jobeestyles.input_default + " form-control border"} id="floatingInput" placeholder="name@example.com" />
+                                <label htmlFor="floatingInput" className="text-dark">Senha</label>
+                            </div>
+  
+                            <button type="submit" className={styles.mid_button + " btn btn-dark w-100 mb-3"}><b>Entrar</b></button>
+                       
+                            <button type="submit" className={styles.mid_button + " btn w-100 text-dark"}><b>Criar conta</b></button>
+                       
+                        </form>
+
+                    </div>
+
+
                 </div>
 
             </main>

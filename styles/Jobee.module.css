@@ -16,3 +16,8 @@
     background-color: #f34d84 !important;
     color: white !important;
   }
+
+  .input_default {
+    background-color: #F5C417 !important;
+    border: 3px solid black !important;
+  }

@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import Navbar from '../components/navbar'
 import Card from '../components/smart/card'
 import axios from 'axios'
+import Link from 'next/link'
 
 export default function Main() {
     return (
@@ -67,19 +68,23 @@ export default function Main() {
                             </div>
                         </Card>
 
-                        <Card class={cardstyles.card_s_100 + " card mb-3"}>
-                            <div className="card-body">
-                                <h4>Minha apresentação</h4>
-                                Olá eu sou a Dona Célia, esse é meu primeiro post na plataforma do Jobee. Espero que eu faça muitos amigos e descubra muitas oportunidades!
-                                <br />
-                                <div className='mt-3' style={{display: 'inline-flex'}}>
-                                    <span class={jobeestyles.premium_badge+" badge rounded-pill text-dark mx-1"}>PRO🌟</span>
-                                    <span class={jobeestyles.default_badge+" badge rounded-pill text-light mx-1"}>Costura</span>
-                                    <span class={jobeestyles.default_badge+" badge rounded-pill text-light mx-1"}>Idosa</span>
-                                    <span class={jobeestyles.default_badge+" badge rounded-pill text-light mx-1"}>Felicidade</span>
-                                </div>
-                            </div>
-                        </Card>
+                        <Link href="/404">
+                            <a>
+                                <Card class={cardstyles.card_s_100 + " card mb-3"}>
+                                    <div className="card-body">
+                                        <h4>Minha apresentação</h4>
+                                        Olá eu sou a Dona Célia, esse é meu primeiro post na plataforma do Jobee. Espero que eu faça muitos amigos e descubra muitas oportunidades!
+                                        <br />
+                                        <div className='mt-3' style={{ display: 'inline-flex' }}>
+                                            <span class={jobeestyles.premium_badge + " badge rounded-pill text-dark mx-1"}>PRO🌟</span>
+                                            <span class={jobeestyles.default_badge + " badge rounded-pill text-light mx-1"}>Costura</span>
+                                            <span class={jobeestyles.default_badge + " badge rounded-pill text-light mx-1"}>Idosa</span>
+                                            <span class={jobeestyles.default_badge + " badge rounded-pill text-light mx-1"}>Felicidade</span>
+                                        </div>
+                                    </div>
+                                </Card>
+                            </a>
+                        </Link>
 
                         <Card class={cardstyles.card_s_100 + " card mb-3"}>
                             <div className="card-body">
