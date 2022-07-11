@@ -89,6 +89,11 @@
   font-size: 32px; 
 }
 
+.bold_hr {
+  border: 2px solid #000;
+  opacity: 100%;
+}
+
 .mid_button {
   width: 96px;
 }

@@ -37,18 +37,19 @@ export default function SignIn() {
                             <div className="form-floating mb-3">
                                 <input type="email" className={jobeestyles.input_default + " form-control border"} id="floatingInput" placeholder="name@example.com" />
                                 <label htmlFor="floatingInput" className="text-dark">E-mail</label>
-                                <div id="emailHelp" className="form-text text-dark">Seu e-mail é um segredo nosso.</div>
                             </div>
 
                             <div className="form-floating mb-3">
                                 <input type="email" className={jobeestyles.input_default + " form-control border"} id="floatingInput" placeholder="name@example.com" />
                                 <label htmlFor="floatingInput" className="text-dark">Senha</label>
                             </div>
-  
+
                             <button type="submit" className={styles.mid_button + " btn btn-dark w-100 mb-3"}><b>Entrar</b></button>
-                       
-                            <button type="submit" className={styles.mid_button + " btn w-100 text-dark"}><b>Criar conta</b></button>
-                       
+
+                            <Link href="/signup">
+                                <button className={styles.mid_button + " btn w-100 text-dark"}><b>Criar conta</b></button>
+                            </Link>
+
                         </form>
 
                     </div>
