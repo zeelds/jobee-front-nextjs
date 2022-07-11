@@ -22,7 +22,7 @@ export default function Start() {
 
                 <Logo />
 
-                <Link href="/main">
+                <Link href="/signin">
                     <button className={styles.mid_button + " btn btn-dark w-25 fw-bold p-3 text-break"} >Começar</button>
                 </Link>
 

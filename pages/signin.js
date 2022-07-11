@@ -3,8 +3,17 @@ import jobeestyles from '../styles/Jobee.module.css'
 import { motion } from "framer-motion"
 import Head from 'next/head';
 import Link from 'next/link'
+import { useState } from 'react';
 
 export default function SignIn() {
+
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    function submitForm(e){
+        e.preventDefault()
+        console.log(email+' - '+password)
+    }
 
     return (
         <motion.div
@@ -33,14 +42,14 @@ export default function SignIn() {
 
                         <h6 className='text-dark'><b>Login</b></h6>
 
-                        <form className='mt-4'>
+                        <form className='mt-4' onSubmit={submitForm}>
                             <div className="form-floating mb-3">
-                                <input type="email" className={jobeestyles.input_default + " form-control border"} id="floatingInput" placeholder="name@example.com" />
+                                <input onChange={(e)=>setEmail(e.target.value)} type="email" className={jobeestyles.input_default + " text-dark form-control border"} id="email" />
                                 <label htmlFor="floatingInput" className="text-dark">E-mail</label>
                             </div>
 
                             <div className="form-floating mb-3">
-                                <input type="email" className={jobeestyles.input_default + " form-control border"} id="floatingInput" placeholder="name@example.com" />
+                                <input onChange={(e)=>setPassword(e.target.value)} type="password" className={jobeestyles.input_default + " text-dark form-control border"} id="password" />
                                 <label htmlFor="floatingInput" className="text-dark">Senha</label>
                             </div>
 
@@ -53,7 +62,6 @@ export default function SignIn() {
                         </form>
 
                     </div>
-
 
                 </div>
 

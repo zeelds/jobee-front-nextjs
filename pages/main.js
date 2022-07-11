@@ -50,23 +50,26 @@ export default function Main() {
 
                     <div className={cardstyles.card_s_100}>
 
-                        <Card class={cardstyles.card_s_100 + " card mb-3"}>
-                            <div className="card-body">
-
-                                <button onClick={() => {
-                                    axios.get('http://localhost:3001/', {
-                                        headers: {
-                                            "Content-Type": "application/json"
-                                        }
-                                    }).then((response) => {
-                                        console.log(response)
-                                    })
-                                }}>
-                                    Botão
-                                </button>
-
-                            </div>
-                        </Card>
+                    <Link href="/404">
+                            <a>
+                                <Card class={cardstyles.card_s_100 + " card mb-3"}>
+                                    <div className="card-body">
+                                        <h4>Vantagens do PRO</h4>
+                                        Você pode comprar PRO para ter várias vantagens.
+                                        <br />
+                                        - Teste
+                                        <br />
+                                        - Teste
+                                        <br />
+                                        - Teste
+                                        <br />
+                                        <div className='mt-3' style={{ display: 'inline-flex' }}>
+                                            <span class={jobeestyles.ad_badge + " badge rounded-pill text-dark mx-1"}>Anúncio📢</span>
+                                        </div>
+                                    </div>
+                                </Card>
+                            </a>
+                        </Link>
 
                         <Link href="/404">
                             <a>
@@ -85,6 +88,24 @@ export default function Main() {
                                 </Card>
                             </a>
                         </Link>
+
+                        <Card class={cardstyles.card_s_100 + " card mb-3"}>
+                            <div className="card-body">
+
+                                <button onClick={() => {
+                                    axios.get('http://localhost:3001/', {
+                                        headers: {
+                                            "Content-Type": "application/json"
+                                        }
+                                    }).then((response) => {
+                                        console.log(response)
+                                    })
+                                }}>
+                                    Botão
+                                </button>
+
+                            </div>
+                        </Card>
 
                         <Card class={cardstyles.card_s_100 + " card mb-3"}>
                             <div className="card-body">

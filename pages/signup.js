@@ -29,64 +29,61 @@ export default function SignUp() {
 
                     <br />
 
-                    <h6 className='text-dark' style={{ textAlign: 'center' }}><b>Cadastre-se</b></h6>
+                    <h6 className={styles.center_text + ' text-dark'}><b>Cadastre-se</b></h6>
 
-                    <div className='container w-75 mt-3 mb-3' style={{ textAlign: 'center' }}>
-
-                        <div style={{ display: 'inline-flex' }}>
-
+                    <div className={styles.center_text + ' container w-75 mt-3 mb-3'}>
+                        <div className="d-inline-flex">
                             <div>
-
                                 <form className='mt-4'>
                                     <div className="form-floating mb-3">
-                                        <input type="email" className={jobeestyles.input_default + " form-control border"} id="floatingInput" placeholder="name@example.com" />
+                                        <input type="name" className={jobeestyles.input_default + " form-control border text-dark"} id="floatingInput" placeholder="name@example.com" />
                                         <label htmlFor="floatingInput" className="text-dark">Nome</label>
                                     </div>
 
                                     <div className="form-floating mb-3">
-                                        <input type="email" defaultValue="01/01/2000" className={jobeestyles.input_default + " form-control border"} id="floatingInput" placeholder="name@example.com" />
+                                        <input type="birthday" defaultValue="01/01/2000" className={jobeestyles.input_default + " form-control border text-dark"} id="nascimento-campo" placeholder="name@example.com" />
                                         <label htmlFor="floatingInput" className="text-dark">Data de Nascimento</label>
                                     </div>
 
-                                    <div style={{ position: 'relative' }}>
-                                        <a className='text-dark' style={{ position: 'absolute', border: '2px solid #F5C417', backgroundColor: '#F5C417', left: '3%', bottom: '-236%' }}>Gênero</a>
-                                        <hr className={styles.bold_hr} />
+                                    <div className="form-floating mb-3">
+                                        <input type="cpf" id="cpf-campo" className={jobeestyles.input_default + " form-control border text-dark"} />
+                                        <label htmlFor="floatingInput" className="text-dark">CPF</label>
                                     </div>
 
+                                    <select className={jobeestyles.input_default + " form-select border text-dark"} aria-label="Default select example">
+                                        <option selected>Selecione um gênero</option>
+                                        <option value="1">Feminino</option>
+                                        <option value="2">Masculino</option>
+                                        <option value="3">Outros</option>
+                                        <option value="4">Prefiro não dizer</option>
+                                    </select>
                                 </form>
-
                             </div>
 
                             <div className='ms-5'>
-
                                 <form className='mt-4'>
                                     <div className="form-floating mb-3">
-                                        <input type="email" className={jobeestyles.input_default + " form-control border"} id="floatingInput" placeholder="name@example.com" />
+                                        <input type="email" className={jobeestyles.input_default + " form-control border text-dark"} id="floatingInput" placeholder="name@example.com" />
                                         <label htmlFor="floatingInput" className="text-dark">E-mail</label>
                                     </div>
 
                                     <div className="form-floating mb-3">
-                                        <input type="email" className={jobeestyles.input_default + " form-control border"} id="floatingInput" placeholder="name@example.com" />
+                                        <input type="password" className={jobeestyles.input_default + " form-control border text-dark"} id="floatingInput" placeholder="name@example.com" />
                                         <label htmlFor="floatingInput" className="text-dark">Senha</label>
                                     </div>
 
                                     <div className="form-floating mb-3">
-                                        <input type="email" className={jobeestyles.input_default + " form-control border"} id="floatingInput" placeholder="name@example.com" />
+                                        <input type="password" className={jobeestyles.input_default + " form-control border text-dark"} id="floatingInput" placeholder="name@example.com" />
                                         <label htmlFor="floatingInput" className="text-dark">Repetir Senha</label>
                                     </div>
-
                                 </form>
-
                             </div>
-
                         </div>
-
                     </div>
 
                     <div className='container w-25'>
-                        <button type="submit" className={styles.mid_button + " btn btn-dark w-100 mb-3"}><b>Criar Conta</b></button>
+                        <button type="submit" className={styles.mid_button + " btn btn-dark w-100 mt-3"}><b>Criar Conta</b></button>
                     </div>
-
 
                 </div>
 
