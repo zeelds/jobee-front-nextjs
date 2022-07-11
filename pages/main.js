@@ -1,7 +1,10 @@
 import styles from '../styles/Main.module.css'
 import cardstyles from '../styles/Card.module.css'
+import jobeestyles from '../styles/Jobee.module.css'
 import { motion } from "framer-motion"
 import Navbar from '../components/navbar'
+import Card from '../components/smart/card'
+import axios from 'axios'
 
 export default function Main() {
     return (
@@ -15,47 +18,89 @@ export default function Main() {
 
             <main className={styles.main_white}>
 
-                <div className={styles.display_flex+' container'}>
+                <div className={styles.display_flex + ' container'}>
 
                     <div>
 
-                        <div className={cardstyles.card_s_75 + " card"}>
-                            <img src="..." className="card-img-top" alt="..." />
+                        <Card class={cardstyles.card_s_75 + " card"} img="/avatar/komi.jpg">
                             <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
-                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                                <h4>Dona Célia</h4>
+                                <h6>Sobre mim</h6>
+                                <p>
+                                    Dona Célia é uma ótima costureira de 63 anos que tem um amor muito grande pelo que faz.
+                                </p>
+                                <h6>Qualificações</h6>
+                                <p>
+                                    Dona Célia é uma ótima costureira de 63 anos que tem um amor muito grande pelo que faz.
+                                </p>
+                                <div>
+                                    <button className={'btn ' + jobeestyles.btn_yellow}>
+                                        <b>Buscar Vagas</b>
+                                    </button>
+                                    <span className='ms-2 mx-2'>ou</span>
+                                    <button className={'btn ' + jobeestyles.btn_yellow}>
+                                        <b>Anunciar Vagas</b>
+                                    </button>
+                                </div>
                             </div>
-                        </div>
+                        </Card>
 
                     </div>
 
                     <div className={cardstyles.card_s_100}>
 
-                        <div className={cardstyles.card_s_100 + " card mb-3"}>
-                            <img src="..." className="card-img-top" alt="..." />
+                        <Card class={cardstyles.card_s_100 + " card mb-3"}>
                             <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
-                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" className="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
 
-                        <div className={cardstyles.card_s_100 + " card"}>
-                            <img src="..." className="card-img-top" alt="..." />
-                            <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
-                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                                <button onClick={() => {
+                                    axios.get('http://localhost:3001/', {
+                                        headers: {
+                                            "Content-Type": "application/json"
+                                        }
+                                    }).then((response) => {
+                                        console.log(response)
+                                    })
+                                }}>
+                                    Botão
+                                </button>
+
                             </div>
-                        </div>
+                        </Card>
+
+                        <Card class={cardstyles.card_s_100 + " card mb-3"}>
+                            <div className="card-body">
+                                <h4>Minha apresentação</h4>
+                                Olá eu sou a Dona Célia, esse é meu primeiro post na plataforma do Jobee. Espero que eu faça muitos amigos e descubra muitas oportunidades!
+                                <br />
+                                <div className='mt-3' style={{display: 'inline-flex'}}>
+                                    <span class={jobeestyles.premium_badge+" badge rounded-pill text-dark mx-1"}>PRO🌟</span>
+                                    <span class={jobeestyles.default_badge+" badge rounded-pill text-light mx-1"}>Costura</span>
+                                    <span class={jobeestyles.default_badge+" badge rounded-pill text-light mx-1"}>Idosa</span>
+                                    <span class={jobeestyles.default_badge+" badge rounded-pill text-light mx-1"}>Felicidade</span>
+                                </div>
+                            </div>
+                        </Card>
+
+                        <Card class={cardstyles.card_s_100 + " card mb-3"}>
+                            <div className="card-body">
+                                aloha
+                            </div>
+                        </Card>
+
+                        <Card class={cardstyles.card_s_100 + " card mb-3"}>
+                            <div className="card-body">
+                                tester
+                            </div>
+                        </Card>
 
                     </div>
 
 
                 </div>
 
+
             </main>
+
         </motion.div>
     )
 }

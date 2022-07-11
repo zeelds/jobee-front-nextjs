@@ -39,6 +39,10 @@
   background-color: #8064A2 !important;
 }
 
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: #F5C417 !important;
+}
+
 .img_breath {
   pointer-events: none;
   user-select: none;

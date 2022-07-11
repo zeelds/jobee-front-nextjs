@@ -1,0 +1,18 @@
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #F5C417 !important;
+  }
+
+  .btn_yellow, .btn_yellow:hover, .btn_yellow:active, .btn_yellow:visited {
+    background-color: #F5C417 !important;
+    width: 40%;
+  }
+
+  .premium_badge {
+    background-color: #874df3 !important;
+    color: white !important;
+  }
+
+  .default_badge {
+    background-color: #f34d84 !important;
+    color: white !important;
+  }
