@@ -6,6 +6,8 @@ import Link from 'next/link'
 
 export default function SignUp() {
 
+    
+
     return (
         <motion.div
             initial={{ opacity: 1, width: 0 }}
@@ -52,10 +54,10 @@ export default function SignUp() {
 
                                     <select className={jobeestyles.input_default + " form-select border text-dark"} aria-label="Default select example">
                                         <option selected>Selecione um gênero</option>
-                                        <option value="1">Feminino</option>
-                                        <option value="2">Masculino</option>
-                                        <option value="3">Outros</option>
-                                        <option value="4">Prefiro não dizer</option>
+                                        <option value="Feminino">Feminino</option>
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Outros">Outros</option>
+                                        <option value="Prefiro não dizer">Prefiro não dizer</option>
                                     </select>
                                 </form>
                             </div>

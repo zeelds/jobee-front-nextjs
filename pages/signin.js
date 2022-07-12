@@ -4,15 +4,29 @@ import { motion } from "framer-motion"
 import Head from 'next/head';
 import Link from 'next/link'
 import { useState } from 'react';
+import axios from 'axios'
+import {useRouter} from 'next/router'
 
 export default function SignIn() {
 
+    const router = useRouter()
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    function submitForm(e){
+    function submitForm(e) {
         e.preventDefault()
-        console.log(email+' - '+password)
+        axios.post('http://localhost:3001/client/auth', { email: email, password: password })
+            .then((response) => {
+
+                if (response.data.auth == false) {
+                    document.getElementById('status').textContent = response.data.message
+                    document.getElementById('status').classList.remove('d-none')
+                }
+                else if (response.data.auth == true) {
+                    router.push("/main")
+                }
+            })
+
     }
 
     return (
@@ -42,14 +56,27 @@ export default function SignIn() {
 
                         <h6 className='text-dark'><b>Login</b></h6>
 
+                        <span id="status" className='d-none'>
+                            Suas credenciais estão incorretas.
+                        </span>
+
                         <form className='mt-4' onSubmit={submitForm}>
+
                             <div className="form-floating mb-3">
-                                <input onChange={(e)=>setEmail(e.target.value)} type="email" className={jobeestyles.input_default + " text-dark form-control border"} id="email" />
+                                <input onChange={(e) => {
+                                    document.getElementById('status').classList.add('d-none')
+                                    setEmail(e.target.value)
+                                }
+                                } type="email" className={jobeestyles.input_default + " text-dark form-control border"} id="email" />
                                 <label htmlFor="floatingInput" className="text-dark">E-mail</label>
                             </div>
 
                             <div className="form-floating mb-3">
-                                <input onChange={(e)=>setPassword(e.target.value)} type="password" className={jobeestyles.input_default + " text-dark form-control border"} id="password" />
+                                <input onChange={(e) => {
+                                    document.getElementById('status').classList.add('d-none')
+                                    setPassword(e.target.value)
+                                }
+                                } type="password" className={jobeestyles.input_default + " text-dark form-control border"} id="password" />
                                 <label htmlFor="floatingInput" className="text-dark">Senha</label>
                             </div>
 
