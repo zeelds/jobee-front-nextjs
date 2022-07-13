@@ -67,8 +67,8 @@ export default function SignIn() {
                                     document.getElementById('status').classList.add('d-none')
                                     setEmail(e.target.value)
                                 }
-                                } type="email" className={jobeestyles.input_default + " text-dark form-control border"} id="email" />
-                                <label htmlFor="floatingInput" className="text-dark">E-mail</label>
+                                } type="email" className={jobeestyles.input_default + " text-dark form-control border"} id="email" placeholder="email" />
+                                <label htmlFor="email" className="text-dark">E-mail</label>
                             </div>
 
                             <div className="form-floating mb-3">
@@ -76,10 +76,11 @@ export default function SignIn() {
                                     document.getElementById('status').classList.add('d-none')
                                     setPassword(e.target.value)
                                 }
-                                } type="password" className={jobeestyles.input_default + " text-dark form-control border"} id="password" />
-                                <label htmlFor="floatingInput" className="text-dark">Senha</label>
-                            </div>
+                                } type="password" className={jobeestyles.input_default + " text-dark form-control border"} id="password" placeholder="pass" />
+                                <label htmlFor="password" className="text-dark">Senha</label>
+                            <span className={styles.clickable+' fw-bold text-dark'} style={{fontSize: '13px'}}>Esqueci a senha</span>
 
+                            </div>
                             <button type="submit" className={styles.mid_button + " btn btn-dark w-100 mb-3"}><b>Entrar</b></button>
 
                             <Link href="/signup">

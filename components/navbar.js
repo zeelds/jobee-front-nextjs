@@ -75,8 +75,9 @@ export default function Navbar() {
 
                         <Link href="/pro">
                             <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item text-break'}>
+                                <Image className={styles.item_icon} src="/icons/pro_user.gif" width="32" height="32" />
                                 <br />
-                                Adquira PRO
+                                <b>PRO</b>
                             </div>
                         </Link>
 
