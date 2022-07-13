@@ -54,7 +54,7 @@ export default function SignIn() {
 
                     <div className='container w-25 mt-5'>
 
-                        <h6 className='text-dark'><b>Login</b></h6>
+                        <h5 className='text-dark'><b>Login</b></h5>
 
                         <span id="status" className='d-none'>
                             Suas credenciais estão incorretas.
