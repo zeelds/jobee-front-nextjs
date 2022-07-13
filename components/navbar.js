@@ -27,31 +27,34 @@ export default function Navbar() {
                             <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
                                 <Image className={styles.item_icon} src="/icons/home.png" width="32" height="32" />
                                 <br />
-                                <span>Início</span>
+                                <b>Início</b>
                             </div>
                         </Link>
 
-                        <Link href="/connections">
+                        <Link href="/people">
                             <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
                                 <Image className={styles.item_icon} src="/icons/person.png" width="32" height="32" />
                                 <br />
-                                <span>Conexões</span>
+                                <b>Pessoas</b>
+                            </div>
+                        </Link>
+
+                        <Link href="/about">
+                            <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
+                                <Image className={styles.item_icon} src="/icons/about.png" width="32" height="32" />
+                                <br />
+                                <b>Sobre</b>
                             </div>
                         </Link>
 
                         <Link href="/comments">
-                            <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
-                                <Image className={styles.item_icon} src="/icons/balloon.png" width="32" height="32" />
+                            <div className={styles.item_holder + ' position-relative mx-lg-3 mx-md-1 mx-0 nav-item'}>
+                                <Image className={styles.item_icon} src="/icons/email.png" width="32" height="32" />
                                 <br />
-                                Comentários
-                            </div>
-                        </Link>
-
-                        <Link href="/comments">
-                            <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
-                                <Image className={styles.item_icon} src="/icons/bell.png" width="32" height="32" />
-                                <br />
-                                Notificações
+                                <b>Avisos</b>
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    99+
+                                </span>
                             </div>
                         </Link>
 
@@ -61,7 +64,7 @@ export default function Navbar() {
                                 <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
                                     <Image className={styles.item_icon} src="/icons/profile.png" width="32" height="32" />
                                     <br />
-                                    <span>Seu Perfil</span>
+                                    <b>Seu Perfil</b>
                                 </div>
                             </Dropdown.Toggle>
 

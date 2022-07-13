@@ -3,10 +3,17 @@ import jobeestyles from '../styles/Jobee.module.css'
 import { motion } from "framer-motion"
 import Head from 'next/head';
 import Link from 'next/link'
+import { useState } from 'react';
 
 export default function SignUp() {
 
-    
+    const [name, setName] = useState()
+    const [birthday, setBirthday] = useState()
+    const [cpf, setCPF] = useState()
+    const [gender, setGender] = useState()
+    const [email, setEmail] = useState()
+    const [password, setPassword] = useState()
+    const [repassword, setRepassword] = useState()
 
     return (
         <motion.div
