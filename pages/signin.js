@@ -5,7 +5,7 @@ import Head from 'next/head';
 import Link from 'next/link'
 import { useState } from 'react';
 import axios from 'axios'
-import {useRouter} from 'next/router'
+import { useRouter } from 'next/router'
 
 export default function SignIn() {
 
@@ -78,7 +78,7 @@ export default function SignIn() {
                                 }
                                 } type="password" className={jobeestyles.input_default + " text-dark form-control border"} id="password" placeholder="pass" />
                                 <label htmlFor="password" className="text-dark">Senha</label>
-                            <span className={styles.clickable+' fw-bold text-dark'} style={{fontSize: '13px'}}>Esqueci a senha</span>
+                                <span className={styles.clickable + ' fw-bold text-dark'} style={{ fontSize: '13px' }}>Esqueci a senha</span>
 
                             </div>
                             <button type="submit" className={styles.mid_button + " btn btn-dark w-100 mb-3"}><b>Entrar</b></button>

@@ -32,7 +32,7 @@ export default function Main() {
                                 </p>
                                 <h6>Qualificações</h6>
                                 <p>
-                                    Dona Célia é uma ótima costureira de 63 anos que tem um amor muito grande pelo que faz.
+                                    Esse usuário não inseriu nenhuma qualificação no momento.
                                 </p>
                                 <div>
                                     <button className={'btn ' + jobeestyles.btn_yellow}>
@@ -54,8 +54,8 @@ export default function Main() {
                             <a>
                                 <Card class={cardstyles.card_s_100 + " card mb-3"}>
                                     <div className="card-body">
-                                        <h4>Vantagens do PRO</h4>
-                                        Você pode comprar PRO para ter várias vantagens.
+                                        <h4>Assine o Jobee PRO</h4>
+                                        O Jobee PRO é uma assinatura mensal que oferece aos nossos clientes mais fiéis acesso exclusivo a recursos premium e personalizações de aplicativos por uma pequena taxa.
                                         <br />
                                         <div className='mt-3' style={{ display: 'inline-flex' }}>
                                             <span class={jobeestyles.ad_badge + " badge rounded-pill text-dark mx-1"}>Anúncio📢</span>
@@ -85,13 +85,11 @@ export default function Main() {
 
                         <Card class={cardstyles.card_s_100 + " card mb-3"}>
                             <div className="card-body">
-                                teste
                             </div>
                         </Card>
 
                         <Card class={cardstyles.card_s_100 + " card mb-3"}>
                             <div className="card-body">
-                                teste
                             </div>
                         </Card>
 

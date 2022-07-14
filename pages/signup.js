@@ -4,6 +4,8 @@ import { motion } from "framer-motion"
 import Head from 'next/head';
 import Link from 'next/link'
 import { useState } from 'react';
+import axios from 'axios'
+import NumberFormat from 'react-number-format'
 
 export default function SignUp() {
 
@@ -15,18 +17,31 @@ export default function SignUp() {
     const [password, setPassword] = useState()
     const [repassword, setRepassword] = useState()
 
-    function submitForm(){
-        const object = {
+    function submitForm() {
+        const dataForm = {
             name: name,
             birthday: birthday,
             cpf: cpf,
             gender: gender,
             email: email,
             password: password,
-            repassword: repassword
+            repassword: repassword,
+            unlettered: false,
+            pronouns: "Ele",
+            color_blindness: "Nenhum"
         }
 
-        console.log(object)
+        axios.post('http://localhost:3001/client/register', dataForm)
+            .then((response) => {
+
+                document.getElementById('status').textContent = response.data.message
+                document.getElementById('status').classList.remove('d-none')
+
+                if (response.data.auth == true) {
+                    router.push("/main")
+                }
+
+            })
     }
 
     return (
@@ -55,25 +70,58 @@ export default function SignUp() {
                     <h5 className={styles.center_text + ' text-dark'}><b>Cadastre-se</b></h5>
 
                     <div className={styles.center_text + ' container w-75 mt-3 mb-3'}>
+
+                        <span id="status" className='d-none'>
+                            Suas credenciais estão incorretas.
+                        </span>
+
+                        <br />
+
                         <div className="d-inline-flex">
                             <div>
                                 <form className='mt-4'>
                                     <div className="form-floating mb-3">
-                                        <input onChange={(e)=>setName(e.target.value)} type="name" className={jobeestyles.input_default + " form-control border text-dark"} id="floatingInput" placeholder="name@example.com" />
+                                        <input onChange={(e) => {
+                                            document.getElementById('status').classList.add('d-none')
+                                            setName(e.target.value)
+                                        }} type="name" className={jobeestyles.input_default + " form-control border text-dark"} id="floatingInput" placeholder="name@example.com" />
                                         <label htmlFor="floatingInput" className="text-dark">Nome</label>
                                     </div>
 
                                     <div className="form-floating mb-3">
-                                        <input onChange={(e)=>setBirthday(e.target.value)} type="birthday" defaultValue="01/01/2000" className={jobeestyles.input_default + " form-control border text-dark"} id="nascimento-campo" placeholder="name@example.com" />
-                                        <label htmlFor="floatingInput" className="text-dark">Data de Nascimento</label>
+                                        <NumberFormat
+                                            onChange={(e) => {
+                                                document.getElementById('status').classList.add('d-none')
+                                                setBirthday(e.target.value)
+                                            }}
+                                            format="##/##/####"
+                                            className={jobeestyles.input_default + " text-dark form-control border"}
+                                            placeholder="name@example.com"
+                                            type="birthday"
+                                            id="birthday-field"
+                                        />
+                                        <label htmlFor="birthday-field" className="text-dark">Data de Nascimento</label>
                                     </div>
 
                                     <div className="form-floating mb-3">
-                                        <input onChange={(e)=>setCPF(e.target.value)} type="cpf" id="cpf-campo" className={jobeestyles.input_default + " form-control border text-dark"} />
-                                        <label htmlFor="floatingInput" className="text-dark">CPF</label>
+                                        <NumberFormat
+                                            onChange={(e) => {
+                                                document.getElementById('status').classList.add('d-none')
+                                                setCPF(e.target.value)
+                                            }}
+                                            format="###.###.###-##"
+                                            className={jobeestyles.input_default + " text-dark form-control border"}
+                                            placeholder="name@example.com"
+                                            type="cpf"
+                                            id="cpf-field"
+                                        />
+                                        <label htmlFor="cpf-field" className="text-dark">CPF</label>
                                     </div>
 
-                                    <select onChange={(e)=>setGender(e.target.value)} className={jobeestyles.input_default + " form-select border text-dark"} aria-label="Default select example">
+                                    <select onChange={(e) => {
+                                        document.getElementById('status').classList.add('d-none')
+                                        setGender(e.target.value)
+                                    }} className={jobeestyles.input_default + " form-select border text-dark"} aria-label="Default select example">
                                         <option selected>Selecione um gênero</option>
                                         <option value="Feminino">Feminino</option>
                                         <option value="Masculino">Masculino</option>
@@ -86,17 +134,26 @@ export default function SignUp() {
                             <div className='ms-5'>
                                 <form className='mt-4'>
                                     <div className="form-floating mb-3">
-                                        <input onChange={(e)=>setEmail(e.target.value)} type="email" className={jobeestyles.input_default + " form-control border text-dark"} id="floatingInput" placeholder="name@example.com" />
+                                        <input onChange={(e) => {
+                                            document.getElementById('status').classList.add('d-none')
+                                            setEmail(e.target.value)
+                                        }} type="email" className={jobeestyles.input_default + " form-control border text-dark"} id="floatingInput" placeholder="name@example.com" />
                                         <label htmlFor="floatingInput" className="text-dark">E-mail</label>
                                     </div>
 
                                     <div className="form-floating mb-3">
-                                        <input onChange={(e)=>setPassword(e.target.value)} type="password" className={jobeestyles.input_default + " form-control border text-dark"} id="floatingInput" placeholder="name@example.com" />
+                                        <input onChange={(e) => {
+                                            document.getElementById('status').classList.add('d-none')
+                                            setPassword(e.target.value)
+                                        }} type="password" className={jobeestyles.input_default + " form-control border text-dark"} id="floatingInput" placeholder="name@example.com" />
                                         <label htmlFor="floatingInput" className="text-dark">Senha</label>
                                     </div>
 
                                     <div className="form-floating mb-3">
-                                        <input onChange={(e)=>setRepassword(e.target.value)} type="password" className={jobeestyles.input_default + " form-control border text-dark"} id="floatingInput" placeholder="name@example.com" />
+                                        <input onChange={(e) => {
+                                            document.getElementById('status').classList.add('d-none')
+                                            setRepassword(e.target.value)
+                                        }} type="password" className={jobeestyles.input_default + " form-control border text-dark"} id="floatingInput" placeholder="name@example.com" />
                                         <label htmlFor="floatingInput" className="text-dark">Repetir Senha</label>
                                     </div>
                                 </form>
