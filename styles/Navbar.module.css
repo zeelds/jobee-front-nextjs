@@ -51,7 +51,9 @@
     cursor: pointer;
 }
 
-.item_icon {}
+.item_icon {
+    mix-blend-mode: darken
+}
 
 .display_flex {
     display: inline-flex;
