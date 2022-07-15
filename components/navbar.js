@@ -52,7 +52,7 @@ export default function Navbar() {
                                 <Image className={styles.item_icon} src="/icons/email.png" width="32" height="32" />
                                 <br />
                                 <b>Avisos</b>
-                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                     99+
                                 </span>
                             </div>
@@ -68,10 +68,85 @@ export default function Navbar() {
                                 </div>
                             </Dropdown.Toggle>
 
-                            <Dropdown.Menu>
-                                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                            <Dropdown.Menu className={`${styles.dropdown_large}`}>
+                                <div className='container mb-3'>
+                                    <div className='mt-3'>
+
+                                        <img className={`mx-3 rounded-circle ${styles.dropdown_avatar}`} src="/avatar/komi.jpg" width="64" height="64" />
+
+                                        <div className="ms-3">
+                                            <b>Dona Célia</b>
+                                            <br />
+                                            <span>Técnica em n sei das quantas lorem ipsum mussum ipsum calcidis cacildis cacildis radiologia biologia matemática portugues</span>
+                                            <br />
+                                        </div>
+
+                                    </div>
+                                    <button className={`w-100 mt-2 btn btn-outline-dark ${styles.btn_border} ${styles.btn_nohover} rounded-pill`}>Visualizar perfil</button>
+
+                                    <div className="container">
+                                        <div className="row row-cols-3 mt-3">
+                                            <div className="col">
+                                                <Link href="/about">
+                                                    <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
+                                                        <Image className={styles.item_icon} src="/icons/about.png" width="32" height="32" />
+                                                        <br />
+                                                        <b>Acessibilidade</b>
+                                                    </div>
+                                                </Link>
+                                            </div>
+                                            <div className="col">
+                                                <Link href="/about">
+                                                    <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
+                                                        <Image className={styles.item_icon} src="/icons/about.png" width="32" height="32" />
+                                                        <br />
+                                                        <b>Idiomas</b>
+                                                    </div>
+                                                </Link>
+                                            </div>
+                                            <div className="col">
+                                                <Link href="/about">
+                                                    <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
+                                                        <Image className={styles.item_icon} src="/icons/about.png" width="32" height="32" />
+                                                        <br />
+                                                        <b>Configurações de Conta</b>
+                                                    </div>
+                                                </Link>
+                                            </div>
+                                        </div>
+
+                                        <div className="row row-cols-3 mt-3">
+                                            <div className="col">
+                                                <Link href="/about">
+                                                    <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
+                                                        <Image className={styles.item_icon} src="/icons/about.png" width="32" height="32" />
+                                                        <br />
+                                                        <b>Privacidade</b>
+                                                    </div>
+                                                </Link>
+                                            </div>
+                                            <div className="col">
+                                                <Link href="/about">
+                                                    <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
+                                                        <Image className={styles.item_icon} src="/icons/about.png" width="32" height="32" />
+                                                        <br />
+                                                        <b>Ajuda</b>
+                                                    </div>
+                                                </Link>
+                                            </div>
+                                            <div className="col">
+                                                <Link href="/about">
+                                                    <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
+                                                        <Image className={styles.item_icon} src="/icons/about.png" width="32" height="32" />
+                                                        <br />
+                                                        <b>Sair</b>
+                                                    </div>
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </Dropdown.Menu>
 
                         </Dropdown>

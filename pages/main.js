@@ -26,11 +26,11 @@ export default function Main() {
                         <Card class={cardstyles.card_s_75 + " card"} img="/avatar/komi.jpg">
                             <div className="card-body">
                                 <h4>Dona Célia</h4>
-                                <h6>Sobre mim</h6>
+                                <h6><b>Sobre mim</b></h6>
                                 <p>
                                     Dona Célia é uma ótima costureira de 63 anos que tem um amor muito grande pelo que faz.
                                 </p>
-                                <h6>Qualificações</h6>
+                                <h6><b>Qualificações</b></h6>
                                 <p>
                                     Esse usuário não inseriu nenhuma qualificação no momento.
                                 </p>
@@ -58,7 +58,7 @@ export default function Main() {
                                         O Jobee PRO é uma assinatura mensal que oferece aos nossos clientes mais fiéis acesso exclusivo a recursos premium e personalizações de aplicativos por uma pequena taxa.
                                         <br />
                                         <div className='mt-3' style={{ display: 'inline-flex' }}>
-                                            <span class={jobeestyles.ad_badge + " badge rounded-pill text-dark mx-1"}>Anúncio📢</span>
+                                            <span className={jobeestyles.ad_badge + " badge rounded-pill text-dark mx-1"}>Anúncio📢</span>
                                         </div>
                                     </div>
                                 </Card>
@@ -73,10 +73,10 @@ export default function Main() {
                                         Olá eu sou a Dona Célia, esse é meu primeiro post na plataforma do Jobee. Espero que eu faça muitos amigos e descubra muitas oportunidades!
                                         <br />
                                         <div className='mt-3' style={{ display: 'inline-flex' }}>
-                                            <span class={jobeestyles.premium_badge + " badge rounded-pill text-dark mx-1"}>PRO🌟</span>
-                                            <span class={jobeestyles.default_badge + " badge rounded-pill text-light mx-1"}>Costura</span>
-                                            <span class={jobeestyles.default_badge + " badge rounded-pill text-light mx-1"}>Idosa</span>
-                                            <span class={jobeestyles.default_badge + " badge rounded-pill text-light mx-1"}>Felicidade</span>
+                                            <span className={jobeestyles.premium_badge + " badge rounded-pill text-dark mx-1"}>PRO🌟</span>
+                                            <span className={jobeestyles.default_badge + " badge rounded-pill text-light mx-1"}>Costura</span>
+                                            <span className={jobeestyles.default_badge + " badge rounded-pill text-light mx-1"}>Idosa</span>
+                                            <span className={jobeestyles.default_badge + " badge rounded-pill text-light mx-1"}>Felicidade</span>
                                         </div>
                                     </div>
                                 </Card>
