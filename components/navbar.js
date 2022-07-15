@@ -72,7 +72,7 @@ export default function Navbar() {
                                 <div className='container mb-3'>
                                     <div className='mt-3'>
 
-                                        <img className={`mx-3 rounded-circle ${styles.dropdown_avatar}`} src="/avatar/komi.jpg" width="64" height="64" />
+                                        <img className={`mx-3 rounded-circle ${styles.dropdown_avatar}`} src="/avatar/komi.jpg" width="128" height="128" />
 
                                         <div className="ms-3">
                                             <b>Dona Célia</b>
