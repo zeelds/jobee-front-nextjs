@@ -5,4 +5,6 @@
 
 .reveal_oninput {
     position: absolute;
+    background-color: #F5C417;
+    padding: 2px
 }

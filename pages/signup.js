@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { useState } from 'react';
 import axios from 'axios'
 import NumberFormat from 'react-number-format'
+import Revealer from '../components/smart/revealer';
 
 export default function SignUp() {
 
@@ -61,7 +62,7 @@ export default function SignUp() {
                 <div className='mb-5 float-start container'>
                     <Link href='/signin'>
                         <a>
-                            <img className={styles.clickable+' '+styles.fixed_arrow} src='/arrow.png' />
+                            <img className={styles.clickable + ' ' + styles.fixed_arrow} src='/arrow.png' />
                         </a>
                     </Link>
 
@@ -141,21 +142,18 @@ export default function SignUp() {
                                         <label htmlFor="floatingInput" className="text-dark">E-mail</label>
                                     </div>
 
-                                    <div className="form-floating mb-3">
-                                        <input onChange={(e) => {
-                                            document.getElementById('status').classList.add('d-none')
-                                            setPassword(e.target.value)
-                                        }} type="password" className={jobeestyles.input_default + " form-control border text-dark"} id="floatingInput" placeholder="name@example.com" />
-                                        <label htmlFor="floatingInput" className="text-dark">Senha</label>
-                                    </div>
+                                    <Revealer revId="password-field" onChange={(e) => {
+                                        document.getElementById('status').classList.add('d-none')
+                                        setPassword(e.target.value)
+                                    }}
+                                    />
 
-                                    <div className="form-floating mb-3">
-                                        <input onChange={(e) => {
-                                            document.getElementById('status').classList.add('d-none')
-                                            setRepassword(e.target.value)
-                                        }} type="password" className={jobeestyles.input_default + " form-control border text-dark"} id="floatingInput" placeholder="name@example.com" />
-                                        <label htmlFor="floatingInput" className="text-dark">Repetir Senha</label>
-                                    </div>
+                                    <Revealer field="Repetir senha" revId="repassword-field" onChange={(e) => {
+                                        document.getElementById('status').classList.add('d-none')
+                                        setRepassword(e.target.value)
+                                    }}
+                                    />
+
                                 </form>
                             </div>
                         </div>

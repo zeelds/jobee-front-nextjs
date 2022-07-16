@@ -8,6 +8,7 @@ import { useState } from 'react';
 import axios from 'axios'
 import { useRouter } from 'next/router'
 import Reveal from '../components/reveal'
+import Revealer from '../components/smart/revealer';
 
 export default function SignIn() {
 
@@ -73,21 +74,11 @@ export default function SignIn() {
                                 <label htmlFor="email" className="text-dark">E-mail</label>
                             </div>
 
-                            <div className="form-floating mb-3">
-                                <input onChange={(e) => {
-                                    document.getElementById('status').classList.add('d-none')
-                                    setPassword(e.target.value)
-                                }
-                                } type="password" className={jobeestyles.input_default + " text-dark form-control border"} id="passwordField" placeholder="pass" />
-                             
-                                <div className={revealstyles.reveal_oninput} style={{top: '20%', left: '80%'}}>
-                                    <Reveal variant="F5C417" elemTarget={"passwordField"} />
-                                </div>
-
-                                <button className="btn"></button>
-                                <label htmlFor="password" className="text-dark">Senha</label>
-                                <span className={styles.clickable + ' fw-bold text-dark float-start'} style={{ fontSize: '13px' }}>Esqueci a senha</span>
-                            </div>
+                            <Revealer revId="pass_revealer-" onChange={(e) => {
+                                document.getElementById('status').classList.add('d-none')
+                                setPassword(e.target.value)
+                            }}
+                            />
 
                             <button type="submit" className={styles.mid_button + " btn btn-dark w-100 mb-3"}><b>Entrar</b></button>
 
