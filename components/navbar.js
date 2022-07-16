@@ -89,7 +89,7 @@ export default function Navbar() {
                                             <div className="col">
                                                 <Link href="/about">
                                                     <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
-                                                        <Image className={styles.item_icon} src="/icons/about.png" width="32" height="32" />
+                                                        <Image className={styles.item_icon} src="/icons/accessibility.png" width="32" height="32" />
                                                         <br />
                                                         <b>Acessibilidade</b>
                                                     </div>
@@ -98,7 +98,7 @@ export default function Navbar() {
                                             <div className="col">
                                                 <Link href="/about">
                                                     <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
-                                                        <Image className={styles.item_icon} src="/icons/about.png" width="32" height="32" />
+                                                        <Image className={styles.item_icon} src="/icons/language.png" width="32" height="32" />
                                                         <br />
                                                         <b>Idiomas</b>
                                                     </div>
@@ -107,7 +107,7 @@ export default function Navbar() {
                                             <div className="col">
                                                 <Link href="/about">
                                                     <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
-                                                        <Image className={styles.item_icon} src="/icons/about.png" width="32" height="32" />
+                                                        <Image className={styles.item_icon} src="/icons/gear.png" width="32" height="32" />
                                                         <br />
                                                         <b>Configurações de Conta</b>
                                                     </div>
@@ -119,7 +119,7 @@ export default function Navbar() {
                                             <div className="col">
                                                 <Link href="/about">
                                                     <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
-                                                        <Image className={styles.item_icon} src="/icons/about.png" width="32" height="32" />
+                                                        <Image className={styles.item_icon} src="/icons/lock.gif" width="32" height="32" />
                                                         <br />
                                                         <b>Privacidade</b>
                                                     </div>
@@ -128,7 +128,7 @@ export default function Navbar() {
                                             <div className="col">
                                                 <Link href="/about">
                                                     <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
-                                                        <Image className={styles.item_icon} src="/icons/about.png" width="32" height="32" />
+                                                        <Image className={styles.item_icon} src="/icons/help.png" width="32" height="32" />
                                                         <br />
                                                         <b>Ajuda</b>
                                                     </div>
@@ -137,7 +137,7 @@ export default function Navbar() {
                                             <div className="col">
                                                 <Link href="/about">
                                                     <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
-                                                        <Image className={styles.item_icon} src="/icons/about.png" width="32" height="32" />
+                                                        <Image className={styles.item_icon} src="/icons/exit.png" width="32" height="32" />
                                                         <br />
                                                         <b>Sair</b>
                                                     </div>
