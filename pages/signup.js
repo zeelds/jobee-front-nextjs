@@ -32,17 +32,19 @@ export default function SignUp() {
             color_blindness: "Nenhum"
         }
 
-        axios.post('http://localhost:3001/client/register', dataForm)
-            .then((response) => {
+        console.log(dataForm)
 
-                document.getElementById('status').textContent = response.data.message
-                document.getElementById('status').classList.remove('d-none')
+         axios.post('http://localhost:3001/client/register', dataForm)
+             .then((response) => {
 
-                if (response.data.auth == true) {
-                    router.push("/main")
-                }
+                 document.getElementById('status').textContent = response.data.message
+                 document.getElementById('status').classList.remove('d-none')
 
-            })
+                 if (response.data.auth == true) {
+                     router.push("/main")
+                 }
+
+             })
     }
 
     return (

@@ -35,7 +35,6 @@
 }
 
 .btn_nohover:hover {
-    border: 3px solid black;
     background-color: white !important;
     color: black !important;
     transition: border .2s;

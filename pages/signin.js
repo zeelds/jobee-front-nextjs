@@ -18,17 +18,17 @@ export default function SignIn() {
 
     function submitForm(e) {
         e.preventDefault()
-        // axios.post('http://localhost:3001/client/auth', { email: email, password: password })
-        //     .then((response) => {
+         axios.post('http://localhost:3001/client/auth', { email: email, password: password })
+             .then((response) => {
 
-        //         if (response.data.auth == false) {
-        //             document.getElementById('status').textContent = response.data.message
-        //             document.getElementById('status').classList.remove('d-none')
-        //         }
-        //         else if (response.data.auth == true) {
-        //             router.push("/main")
-        //         }
-        //     })
+                 if (response.data.auth == false) {
+                     document.getElementById('status').textContent = response.data.message
+                     document.getElementById('status').classList.remove('d-none')
+                 }
+                 else if (response.data.auth == true) {
+                     router.push("/main")
+                 }
+             })
 
     }
 
