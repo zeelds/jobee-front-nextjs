@@ -2,3 +2,7 @@
     mix-blend-mode: darken;
     cursor: pointer;
 }
+
+.reveal_oninput {
+    position: absolute;
+}

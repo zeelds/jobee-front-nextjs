@@ -1,4 +1,5 @@
 import styles from '../styles/Home.module.css'
+import revealstyles from '../styles/Reveal.module.css'
 import jobeestyles from '../styles/Jobee.module.css'
 import { motion } from "framer-motion"
 import Head from 'next/head';
@@ -47,7 +48,7 @@ export default function SignIn() {
                 <div className='mb-5 float-start container'>
                     <Link href='/start'>
                         <a>
-                            <img className={styles.clickable+' '+styles.fixed_arrow} src='/arrow.png' />
+                            <img className={styles.clickable + ' ' + styles.fixed_arrow} src='/arrow.png' />
                         </a>
                     </Link>
 
@@ -78,14 +79,18 @@ export default function SignIn() {
                                     setPassword(e.target.value)
                                 }
                                 } type="password" className={jobeestyles.input_default + " text-dark form-control border"} id="passwordField" placeholder="pass" />
+                             
+                                <div className={revealstyles.reveal_oninput} style={{top: '20%', left: '80%'}}>
+                                    <Reveal variant="F5C417" elemTarget={"passwordField"} />
+                                </div>
+
                                 <button className="btn"></button>
                                 <label htmlFor="password" className="text-dark">Senha</label>
-                                <Reveal elemTarget={"passwordField"} />
+                                <span className={styles.clickable + ' fw-bold text-dark float-start'} style={{ fontSize: '13px' }}>Esqueci a senha</span>
                             </div>
-                            <span className={styles.clickable + ' fw-bold text-dark'} style={{ fontSize: '13px' }}>Esqueci a senha</span>
 
                             <button type="submit" className={styles.mid_button + " btn btn-dark w-100 mb-3"}><b>Entrar</b></button>
-                           
+
                             <Link href="/signup">
                                 <button className={styles.mid_button + " btn w-100 text-dark"}><b>Criar conta</b></button>
                             </Link>
