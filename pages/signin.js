@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { useState } from 'react';
 import axios from 'axios'
 import { useRouter } from 'next/router'
+import Reveal from '../components/reveal'
 
 export default function SignIn() {
 
@@ -15,17 +16,17 @@ export default function SignIn() {
 
     function submitForm(e) {
         e.preventDefault()
-        axios.post('http://localhost:3001/client/auth', { email: email, password: password })
-            .then((response) => {
+        // axios.post('http://localhost:3001/client/auth', { email: email, password: password })
+        //     .then((response) => {
 
-                if (response.data.auth == false) {
-                    document.getElementById('status').textContent = response.data.message
-                    document.getElementById('status').classList.remove('d-none')
-                }
-                else if (response.data.auth == true) {
-                    router.push("/main")
-                }
-            })
+        //         if (response.data.auth == false) {
+        //             document.getElementById('status').textContent = response.data.message
+        //             document.getElementById('status').classList.remove('d-none')
+        //         }
+        //         else if (response.data.auth == true) {
+        //             router.push("/main")
+        //         }
+        //     })
 
     }
 
@@ -76,13 +77,15 @@ export default function SignIn() {
                                     document.getElementById('status').classList.add('d-none')
                                     setPassword(e.target.value)
                                 }
-                                } type="password" className={jobeestyles.input_default + " text-dark form-control border"} id="password" placeholder="pass" />
+                                } type="password" className={jobeestyles.input_default + " text-dark form-control border"} id="passwordField" placeholder="pass" />
+                                <button className="btn"></button>
                                 <label htmlFor="password" className="text-dark">Senha</label>
-                                <span className={styles.clickable + ' fw-bold text-dark'} style={{ fontSize: '13px' }}>Esqueci a senha</span>
-
+                                <Reveal elemTarget={"passwordField"} />
                             </div>
-                            <button type="submit" className={styles.mid_button + " btn btn-dark w-100 mb-3"}><b>Entrar</b></button>
+                            <span className={styles.clickable + ' fw-bold text-dark'} style={{ fontSize: '13px' }}>Esqueci a senha</span>
 
+                            <button type="submit" className={styles.mid_button + " btn btn-dark w-100 mb-3"}><b>Entrar</b></button>
+                           
                             <Link href="/signup">
                                 <button className={styles.mid_button + " btn w-100 text-dark"}><b>Criar conta</b></button>
                             </Link>
