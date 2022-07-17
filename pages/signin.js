@@ -1,5 +1,6 @@
 import styles from '../styles/Home.module.css'
 import revealstyles from '../styles/Reveal.module.css'
+import responsive from '../styles/Responsive.module.css'
 import jobeestyles from '../styles/Jobee.module.css'
 import { motion } from "framer-motion"
 import Head from 'next/head';
@@ -55,7 +56,7 @@ export default function SignIn() {
 
                     <br />
 
-                    <div className='container w-25 mt-5'>
+                    <div className={`container mt-5 ${responsive.w50_on_sm} ${responsive.w25_on_lg}`}>
 
                         <h5 className='text-dark'><b>Login</b></h5>
 
@@ -63,7 +64,7 @@ export default function SignIn() {
                             Suas credenciais estão incorretas.
                         </span>
 
-                        <form className='mt-4' onSubmit={submitForm}>
+                        <form className={`mt-4`} onSubmit={submitForm}>
 
                             <div className="form-floating mb-3">
                                 <input onChange={(e) => {

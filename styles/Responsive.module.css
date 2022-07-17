@@ -4,7 +4,7 @@
 
 @media (max-width: 755px) {
     .hide_on_sm {
-        display: none;
+        display: none !important;
     }
 
     .center_on_sm {
@@ -16,10 +16,48 @@
     .show_on_sm {
         display: block;
     }
+
     .badge_on_sm {
         width: 12px;
         height: 12px;
         font-size: 7.5px;
+    }
+
+    .prelative_on_sm {
+        position: relative !important;
+        right: 0;
+        bottom: 0;
+        display: block;
+    }
+    .center_about {
+        display: inline-flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .w170f_on_sm {
+        width: 170px !important;
+        height: 170px !important;
+    }
+    .w25_on_sm {
+        width: 25% !important;
+    }
+    .w50_on_sm {
+        width: 50% !important;
+    }
+    .w75_on_sm {
+        width: 75% !important;
+    }
+    .w100_on_sm {
+        width: 100vw !important;
+    }
+    .dblock_on_sm {
+        display: block !important;
+    }
+    .no_ms_on_sm {
+        margin-left: 0 !important;
+    }
+    .m25_on_sm {
+        margin: 25% !important;
     }
 }
 
@@ -28,4 +66,17 @@
         width: 30% !important;
     }
 
+    .smaller_25_on_lg {
+        width: 25% !important;
+    }
+
+    .w25_on_lg {
+        width: 25% !important;
+    }
+}
+
+@media (min-width: 1530px) {
+    .smaller_25_on_lg {
+        width: 18% !important;
+    }
 }

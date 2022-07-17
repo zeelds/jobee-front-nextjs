@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import Head from 'next/head';
 import Logo from '../components/logo';
 import Link from 'next/link'
+import responsive from '../styles/Responsive.module.css'
 
 export default function Start() {
 
@@ -23,10 +24,10 @@ export default function Start() {
                 <Logo />
 
                 <Link href="/signin">
-                    <button className={styles.mid_button + " btn btn-dark w-25 fw-bold p-3 text-break"} >Começar</button>
+                    <button className={styles.mid_button + " btn btn-dark w-50 fw-bold p-3 text-break " + responsive.smaller_25_on_lg} >Começar</button>
                 </Link>
 
-                <div className={styles.clickable+' text-dark mt-4'}>
+                <div className={styles.clickable + ' text-dark mt-4'}>
                     <Link href="/terms">
                         <b>
                             Termos e Condições

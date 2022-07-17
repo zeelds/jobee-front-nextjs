@@ -1,9 +1,15 @@
-import { motion } from "framer-motion"
+import { motion, useViewportScroll } from "framer-motion"
 import styles from '../styles/Home.module.css'
 import Head from 'next/head';
 import Link from 'next/link'
+import { useState } from "react";
 
 export default function Terms() {
+
+    const { scrollYProgress } = useViewportScroll();
+    const [opacity, setOpacity] = useState(0)
+
+    scrollYProgress.onChange((e) => setOpacity(e*20))
 
     return (
         <motion.div
@@ -21,7 +27,9 @@ export default function Terms() {
                 <div className='mb-5 float-start container'>
                     <Link href='/start'>
                         <a>
-                            <img className={styles.clickable + ' ' + styles.fixed_arrow} src='/arrow.png' />
+                            <motion.img
+                                animate={{opacity: 1-opacity}}
+                                className={styles.clickable + ' ' + styles.fixed_arrow} src='/arrow.png' />
                         </a>
                     </Link>
                 </div>

@@ -63,7 +63,7 @@ export default function Navbar() {
                             </div>
                         </Link>
 
-                        <Dropdown className="mx-3">
+                        <Dropdown onClick={()=>console.log('teste')} className="mx-3">
 
                             <Dropdown.Toggle as={"div"} variant="none" className={`${styles.dropdown_basic} ${styles.dropdown_no_padding}`} id="bootstrap-dropdown">
                                 <div className={styles.item_holder + ' av-item'}>
@@ -73,7 +73,7 @@ export default function Navbar() {
                                 </div>
                             </Dropdown.Toggle>
 
-                            <Dropdown.Menu show className={`${styles.dropdown_large}`}>
+                            <Dropdown.Menu className={`${styles.dropdown_large} ${responsive.hide_on_sm}`}>
                                 <div className='container mb-3'>
                                     <div className='mt-3'>
 

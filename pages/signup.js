@@ -1,5 +1,6 @@
 import styles from '../styles/Home.module.css'
 import jobeestyles from '../styles/Jobee.module.css'
+import responsive from '../styles/Responsive.module.css'
 import { motion } from "framer-motion"
 import Head from 'next/head';
 import Link from 'next/link'
@@ -80,7 +81,7 @@ export default function SignUp() {
 
                         <br />
 
-                        <div className="d-inline-flex">
+                        <div className={"d-inline-flex "+responsive.dblock_on_sm}>
                             <div>
                                 <form className='mt-4'>
                                     <div className="form-floating mb-3">
@@ -134,7 +135,7 @@ export default function SignUp() {
                                 </form>
                             </div>
 
-                            <div className='ms-5'>
+                            <div className={'ms-5 '+responsive.no_ms_on_sm}>
                                 <form className='mt-4'>
                                     <div className="form-floating mb-3">
                                         <input onChange={(e) => {
@@ -161,7 +162,7 @@ export default function SignUp() {
                         </div>
                     </div>
 
-                    <div className='container w-25'>
+                    <div className={'container w-25 '+responsive.w75_on_sm}>
                         <button type="submit" onClick={submitForm} className={styles.mid_button + " btn btn-dark w-100 mt-3"}><b>Criar Conta</b></button>
                     </div>
 
