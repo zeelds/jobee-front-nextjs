@@ -40,7 +40,7 @@ export default function About() {
                                         <div className={`${styles.about_text_overlay} container`}>
                                             <h5>Thayanne Stella</h5>
                                             <p style={{ fontSize: '12px' }}>É uma desenvolvedora front-end alto-astral, criativa, entusiasta de design, organizada e engraçada.</p>
-                                            <a href="https://github.com/raqsanta" target="_blank" className="btn btn-dark rounded-pill">Conhecer</a>
+                                            <a href="https://github.com/thayannestella" target="_blank" className="btn btn-dark rounded-pill">Conhecer</a>
                                         </div>
                                     </div>
                                 </div>
@@ -50,7 +50,7 @@ export default function About() {
                                         <div className={`${styles.about_text_overlay} container`}>
                                             <h5>Laryssa Kaylane</h5>
                                             <p style={{ fontSize: '12px' }}>Olá! Sou desenvolvedora front-end e estudante de nutrição. Amo os animais, tecnologia e sou bastante perfeccionista.</p>
-                                            <a href="https://github.com/raqsanta" target="_blank" className="btn btn-dark rounded-pill">Conhecer</a>
+                                            <a href="https://github.com/larysilvaak" target="_blank" className="btn btn-dark rounded-pill">Conhecer</a>
                                         </div>
                                     </div>
                                 </div>
@@ -62,7 +62,7 @@ export default function About() {
                                         <div className={`${styles.about_text_overlay} container`}>
                                             <h5>Antony Matheus</h5>
                                             <p style={{ fontSize: '12px' }}>Sou um desenvolvedor front-end determinado. Gosto de pesquisar, aprender e praticar. Amo passear com meu cachorro.</p>
-                                            <a href="https://github.com/raqsanta" target="_blank" className="btn btn-dark rounded-pill">Conhecer</a>
+                                            <a href="https://github.com/AntonyMatheus" target="_blank" className="btn btn-dark rounded-pill">Conhecer</a>
                                         </div>
                                     </div>
                                 </div>
@@ -72,7 +72,7 @@ export default function About() {
                                         <div className={`${styles.about_text_overlay} container`}>
                                             <h5>Mariana Pereira</h5>
                                             <p style={{ fontSize: '12px' }}>Desenvolvedora focada em front-end e técnica em redes de computadores. Eu adoro gatos, café e um bom notebook.</p>
-                                            <a href="https://github.com/raqsanta" target="_blank" className="btn btn-dark rounded-pill">Conhecer</a>
+                                            <a href="https://github.com/zeelds" target="_blank" className="btn btn-dark rounded-pill">Conhecer</a>
                                         </div>
                                     </div>
                                 </div>
