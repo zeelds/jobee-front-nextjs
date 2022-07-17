@@ -3,6 +3,7 @@ import cardstyles from '../../styles/Card.module.css'
 import jobeestyles from '../../styles/Jobee.module.css'
 import { motion } from "framer-motion"
 import Navbar from '../../components/navbar'
+import responsive from '../../styles/Responsive.module.css'
 import Card from '../../components/smart/card'
 import Link from 'next/link'
 
@@ -18,7 +19,7 @@ export default function Accessibility() {
 
                 <Navbar />
 
-                <main className={styles.main_white + ' container w-25'}>
+                <main className={styles.main_white + ' container w-75 '+responsive.smaller_on_lg}>
 
                     <div className={'text-center'}>
 
@@ -27,7 +28,6 @@ export default function Accessibility() {
                         <a>
                             Configure a acessibilidade para obter uma melhor experiência
                         </a>
-
 
                         <div class="form-floating mt-3 mb-3">
                             <select class="form-select" id="floatingSelect" aria-label="Floating label select example">

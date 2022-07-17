@@ -1,0 +1,31 @@
+.show_on_sm {
+    display: none;
+}
+
+@media (max-width: 755px) {
+    .hide_on_sm {
+        display: none;
+    }
+
+    .center_on_sm {
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .show_on_sm {
+        display: block;
+    }
+    .badge_on_sm {
+        width: 12px;
+        height: 12px;
+        font-size: 7.5px;
+    }
+}
+
+@media (min-width: 900px) {
+    .smaller_on_lg {
+        width: 30% !important;
+    }
+
+}

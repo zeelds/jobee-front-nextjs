@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { Dropdown } from 'react-bootstrap'
 import { useSearch } from '../pages/_app'
 import styles from '../styles/Navbar.module.css'
-
+import responsive from '../styles/Responsive.module.css'
 
 export default function Navbar() {
 
@@ -12,9 +12,10 @@ export default function Navbar() {
 
     return (
         <div>
-            <nav className="navbar bg-light shadow-sm d-none d-md-block">
-                <div className="container-fluid">
-                    <div className={styles.centered_bar + " navbar-brand"} href="#">
+            <nav className="navbar bg-light shadow-sm">
+                <div className={"container-fluid mt-1"}>
+
+                    <div className={styles.centered_bar + " navbar-brand " + responsive.hide_on_sm} href="#">
                         <Link href="/main">
                             <a>
                                 <div className={styles.navbar_brand}>
@@ -23,57 +24,56 @@ export default function Navbar() {
                             </a>
                         </Link>
                         <input onChange={(e) => setSearch(e.target.value)} defaultValue={search} className={styles.item_spacing + " form-control"} id="search-bar" placeholder="🔍︎ Tente buscar algo" />
-
                     </div>
 
-                    <div className='d-flex'>
+                    <div className={'d-flex ' + responsive.center_on_sm}>
 
                         <Link href="/main">
-                            <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
+                            <div className={styles.item_holder + ' mx-3 nav-item'}>
                                 <Image className={styles.item_icon} src="/icons/home.png" width="32" height="32" />
                                 <br />
-                                <b>Início</b>
+                                <b className={responsive.hide_on_sm}>Início</b>
                             </div>
                         </Link>
 
                         <Link href="/people">
-                            <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
+                            <div className={styles.item_holder + ' mx-3 nav-item'}>
                                 <Image className={styles.item_icon} src="/icons/person.png" width="32" height="32" />
                                 <br />
-                                <b>Pessoas</b>
+                                <b className={responsive.hide_on_sm}>Pessoas</b>
                             </div>
                         </Link>
 
                         <Link href="/about">
-                            <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
+                            <div className={styles.item_holder + ' mx-3 nav-item'}>
                                 <Image className={styles.item_icon} src="/icons/about.png" width="32" height="32" />
                                 <br />
-                                <b>Sobre</b>
+                                <b className={responsive.hide_on_sm}>Sobre</b>
                             </div>
                         </Link>
 
                         <Link href="/inbox">
-                            <div className={styles.item_holder + ' position-relative mx-lg-3 mx-md-1 mx-0 nav-item'}>
+                            <div className={styles.item_holder + ' position-relative mx-3 nav-item'}>
                                 <Image className={styles.item_icon} src="/icons/email.png" width="32" height="32" />
                                 <br />
-                                <b>Avisos</b>
-                                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                <b className={responsive.hide_on_sm}>Avisos</b>
+                                <span className={`position-absolute top-0 start-100 ${responsive.badge_on_sm} translate-middle badge rounded-pill bg-danger`}>
                                     !
                                 </span>
                             </div>
                         </Link>
 
-                        <Dropdown>
+                        <Dropdown className="mx-3">
 
-                            <Dropdown.Toggle variant="none" className={`${styles.dropdown_basic} ${styles.dropdown_no_padding}`} id="bootstrap-dropdown">
-                                <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
+                            <Dropdown.Toggle as={"div"} variant="none" className={`${styles.dropdown_basic} ${styles.dropdown_no_padding}`} id="bootstrap-dropdown">
+                                <div className={styles.item_holder + ' av-item'}>
                                     <Image className={styles.item_icon} src="/icons/profile.png" width="32" height="32" />
                                     <br />
-                                    <b>Seu Perfil</b>
+                                    <b className={responsive.hide_on_sm}>Seu Perfil</b>
                                 </div>
                             </Dropdown.Toggle>
 
-                            <Dropdown.Menu className={`${styles.dropdown_large}`}>
+                            <Dropdown.Menu show className={`${styles.dropdown_large}`}>
                                 <div className='container mb-3'>
                                     <div className='mt-3'>
 
@@ -164,7 +164,7 @@ export default function Navbar() {
                             <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item text-break'}>
                                 <Image className={styles.item_icon} src="/icons/pro_user.gif" width="32" height="32" />
                                 <br />
-                                <b>PRO</b>
+                                <b className={responsive.hide_on_sm}>PRO</b>
                             </div>
                         </Link>
 
