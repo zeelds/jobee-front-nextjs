@@ -8,8 +8,8 @@ import styles from '../styles/Navbar.module.css'
 
 export default function Navbar() {
 
-    const {search, setSearch} = useSearch()
-    
+    const { search, setSearch } = useSearch()
+
     return (
         <div>
             <nav className="navbar bg-light shadow-sm d-none d-md-block">
@@ -22,7 +22,7 @@ export default function Navbar() {
                                 </div>
                             </a>
                         </Link>
-                        <input onChange={(e)=>setSearch(e.target.value)} defaultValue={search} className={styles.item_spacing + " form-control"} id="search-bar" placeholder="🔍︎ Tente buscar algo" />
+                        <input onChange={(e) => setSearch(e.target.value)} defaultValue={search} className={styles.item_spacing + " form-control"} id="search-bar" placeholder="🔍︎ Tente buscar algo" />
 
                     </div>
 
@@ -87,7 +87,11 @@ export default function Navbar() {
                                         </div>
 
                                     </div>
-                                    <button className={`w-100 mt-2 btn btn-outline-dark ${styles.btn_border} ${styles.btn_nohover} rounded-pill`}>Visualizar perfil</button>
+                                    <Link href="/people">
+                                        <a>
+                                            <button className={`w-100 mt-2 btn btn-outline-dark ${styles.btn_border} ${styles.btn_nohover} rounded-pill`}>Visualizar perfil</button>
+                                        </a>
+                                    </Link>
 
                                     <div className="container">
                                         <div className="row row-cols-3 mt-3">

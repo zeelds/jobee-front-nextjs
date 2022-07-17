@@ -10,3 +10,7 @@
 .display_flex {
   display: inline-flex;
 }
+
+.small_text {
+  font-size: 12px;
+}
