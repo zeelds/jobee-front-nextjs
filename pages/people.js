@@ -6,7 +6,7 @@ import Navbar from '../components/navbar'
 import Card from '../components/smart/card'
 import Link from 'next/link'
 
-export default function Help() {
+export default function People() {
     return (
         <div className="bg-light">
 

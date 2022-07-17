@@ -2,9 +2,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Dropdown } from 'react-bootstrap'
+import { useSearch } from '../pages/_app'
 import styles from '../styles/Navbar.module.css'
 
+
 export default function Navbar() {
+
+    const {search, setSearch} = useSearch()
+    
     return (
         <div>
             <nav className="navbar bg-light shadow-sm d-none d-md-block">
@@ -17,7 +22,7 @@ export default function Navbar() {
                                 </div>
                             </a>
                         </Link>
-                        <input className={styles.item_spacing + " form-control"} id="search-bar" placeholder="🔍︎ Tente buscar algo" />
+                        <input onChange={(e)=>setSearch(e.target.value)} defaultValue={search} className={styles.item_spacing + " form-control"} id="search-bar" placeholder="🔍︎ Tente buscar algo" />
 
                     </div>
 
@@ -47,7 +52,7 @@ export default function Navbar() {
                             </div>
                         </Link>
 
-                        <Link href="/comments">
+                        <Link href="/inbox">
                             <div className={styles.item_holder + ' position-relative mx-lg-3 mx-md-1 mx-0 nav-item'}>
                                 <Image className={styles.item_icon} src="/icons/email.png" width="32" height="32" />
                                 <br />
@@ -87,7 +92,7 @@ export default function Navbar() {
                                     <div className="container">
                                         <div className="row row-cols-3 mt-3">
                                             <div className="col">
-                                                <Link href="/about">
+                                                <Link href="/account/accessibility">
                                                     <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
                                                         <Image className={styles.item_icon} src="/icons/accessibility.png" width="32" height="32" />
                                                         <br />
@@ -96,7 +101,7 @@ export default function Navbar() {
                                                 </Link>
                                             </div>
                                             <div className="col">
-                                                <Link href="/about">
+                                                <Link href="/account/language">
                                                     <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
                                                         <Image className={styles.item_icon} src="/icons/language.png" width="32" height="32" />
                                                         <br />
@@ -105,7 +110,7 @@ export default function Navbar() {
                                                 </Link>
                                             </div>
                                             <div className="col">
-                                                <Link href="/about">
+                                                <Link href="/account/configurations">
                                                     <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
                                                         <Image className={styles.item_icon} src="/icons/gear.png" width="32" height="32" />
                                                         <br />
@@ -117,7 +122,7 @@ export default function Navbar() {
 
                                         <div className="row row-cols-3 mt-3">
                                             <div className="col">
-                                                <Link href="/about">
+                                                <Link href="/account/privacy">
                                                     <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
                                                         <Image className={styles.item_icon} src="/icons/lock.gif" width="32" height="32" />
                                                         <br />
@@ -126,7 +131,7 @@ export default function Navbar() {
                                                 </Link>
                                             </div>
                                             <div className="col">
-                                                <Link href="/about">
+                                                <Link href="/help">
                                                     <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
                                                         <Image className={styles.item_icon} src="/icons/help.png" width="32" height="32" />
                                                         <br />
@@ -135,7 +140,7 @@ export default function Navbar() {
                                                 </Link>
                                             </div>
                                             <div className="col">
-                                                <Link href="/about">
+                                                <Link href="/signin">
                                                     <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
                                                         <Image className={styles.item_icon} src="/icons/exit.png" width="32" height="32" />
                                                         <br />

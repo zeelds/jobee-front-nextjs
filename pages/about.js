@@ -22,9 +22,9 @@ export default function About() {
                             </a>
                         </Link>
 
-                        <div class="container">
-                            <div class="row">
-                                <div class={`col ${styles.about_container}`}>
+                        <div className="container">
+                            <div className="row">
+                                <div className={`col ${styles.about_container}`}>
                                     <img className={styles.about_avatar} src="/about/raqsanta.png" />
                                     <div className={`${styles.about_overlay}`}>
                                         <div className={`${styles.about_text_overlay} container`}>
@@ -34,7 +34,7 @@ export default function About() {
                                         </div>
                                     </div>
                                 </div>
-                                <div class={`col ${styles.about_container}`}>
+                                <div className={`col ${styles.about_container}`}>
                                     <img className={styles.about_avatar} width="256" height="256" src="/about/thayanne.png" />
                                     <div className={`${styles.about_overlay}`}>
                                         <div className={`${styles.about_text_overlay} container`}>
@@ -44,7 +44,7 @@ export default function About() {
                                         </div>
                                     </div>
                                 </div>
-                                <div class={`col ${styles.about_container}`}>
+                                <div className={`col ${styles.about_container}`}>
                                     <img className={styles.about_avatar} width="256" height="256" src="/about/laryssa.png" />
                                     <div className={`${styles.about_overlay}`}>
                                         <div className={`${styles.about_text_overlay} container`}>
@@ -55,8 +55,8 @@ export default function About() {
                                     </div>
                                 </div>
                             </div>
-                            <div class="row mt-3">
-                                <div class={`col ${styles.about_container}`}>
+                            <div className="row mt-3">
+                                <div className={`col ${styles.about_container}`}>
                                     <img className={styles.about_avatar} width="256" height="256" src="/about/antony.png" />
                                     <div className={`${styles.about_overlay}`}>
                                         <div className={`${styles.about_text_overlay} container`}>
@@ -66,7 +66,7 @@ export default function About() {
                                         </div>
                                     </div>
                                 </div>
-                                <div class={`col ${styles.about_container}`}>
+                                <div className={`col ${styles.about_container}`}>
                                     <img className={styles.about_avatar} width="256" height="256" src="/about/mariana.png" />
                                     <div className={`${styles.about_overlay}`}>
                                         <div className={`${styles.about_text_overlay} container`}>
@@ -76,7 +76,7 @@ export default function About() {
                                         </div>
                                     </div>
                                 </div>
-                                <div class={`col ${styles.about_container}`}>
+                                <div className={`col ${styles.about_container}`}>
                                     <img className={styles.about_avatar} width="256" height="256" src="/about/gr.png" />
                                     <div className={`${styles.about_overlay}`}>
                                         <div className={`${styles.about_text_overlay} container`}>

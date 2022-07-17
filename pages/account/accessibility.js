@@ -1,12 +1,12 @@
-import styles from '../styles/Main.module.css'
-import cardstyles from '../styles/Card.module.css'
-import jobeestyles from '../styles/Jobee.module.css'
+import styles from '../../styles/Main.module.css'
+import cardstyles from '../../styles/Card.module.css'
+import jobeestyles from '../../styles/Jobee.module.css'
 import { motion } from "framer-motion"
-import Navbar from '../components/navbar'
-import Card from '../components/smart/card'
+import Navbar from '../../components/navbar'
+import Card from '../../components/smart/card'
 import Link from 'next/link'
 
-export default function Help() {
+export default function Accessibility() {
     return (
         <div className="bg-light">
 
