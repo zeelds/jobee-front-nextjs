@@ -20,12 +20,32 @@ export default function Language() {
 
                 <main className={styles.main_white}>
 
-                    <div className={styles.display_flex + ' container'}>
+                    <div className={'container'}>
 
-                        fdsafsdfasd
+                        <h5 className="mb-4"><b>Idiomas</b></h5>
+
+                        <a>
+                            Adicione um idioma para ler e digitar neste idioma
+                        </a>
+
+                        <div class="w-75">
+
+                            <div class="form-floating">
+                                <select class="form-select mt-2 mb-2" id="floatingSelect" aria-label="Floating label select example">
+                                    <option selected>Brasil (Português)</option>
+                                </select>
+                                <label for="floatingSelect">Localidade</label>
+                            </div>
+
+                            <div class="form-floating">
+                                <textarea disabled className="form-control h-100 overflow-hidden" placeholder="Leave a comment here" id="floatingTextarea2">
+                                    O incentivo ao avanço tecnológico, assim como a estrutura atual da organização pode nos levar a considerar a reestruturação dos paradigmas corporativos.
+                                </textarea>
+                                <label for="floatingTextarea2">Texto fictício</label>
+                            </div>
+                        </div>
 
                     </div>
-
 
                 </main>
 

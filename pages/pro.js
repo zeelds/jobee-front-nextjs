@@ -37,6 +37,7 @@ export default function Help() {
                                         <p className={styles.small_text}>
                                             A versão padrão do Jobee para usuários comuns.
                                         </p>
+
                                         <h3>R$0</h3>
 
                                         <ul class="list-group text-start">

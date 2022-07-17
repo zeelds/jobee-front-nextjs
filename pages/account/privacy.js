@@ -20,9 +20,18 @@ export default function Privacy() {
 
                 <main className={styles.main_white}>
 
-                    <div className={styles.display_flex + ' container'}>
+                    <div className="container">
 
-                        fdsafsdfasd
+                        Seus dados estão seguros conosco, nós fazemos isso e isso com seus dados.
+
+                        Mas se você não quiser
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Eu desejo não compartilhar os meus dados pessoais de uso.
+                                </label>
+                        </div>
 
                     </div>
 
