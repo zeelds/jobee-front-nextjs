@@ -1,12 +1,12 @@
-import styles from '../styles/Main.module.css'
-import cardstyles from '../styles/Card.module.css'
-import jobeestyles from '../styles/Jobee.module.css'
+import styles from '../../styles/Main.module.css'
+import cardstyles from '../../styles/Card.module.css'
+import jobeestyles from '../../styles/Jobee.module.css'
 import { motion } from "framer-motion"
-import Navbar from '../components/navbar'
-import Card from '../components/smart/card'
+import Navbar from '../../components/navbar'
+import Card from '../../components/smart/card'
 import Link from 'next/link'
 
-//Abre o perfil do usuário
+//Ele abre um perfil em específico
 
 export default function People() {
     return (
@@ -24,7 +24,7 @@ export default function People() {
 
                     <div className={styles.display_flex + ' container'}>
 
-                        seu perfil
+                        fdsafsdfasd
 
                     </div>
 
