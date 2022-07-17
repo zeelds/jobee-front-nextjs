@@ -6,6 +6,7 @@ import Navbar from '../components/navbar'
 import Card from '../components/smart/card'
 import axios from 'axios'
 import Link from 'next/link'
+import responsive from '../styles/Responsive.module.css'
 
 export default function Main(props) {
 
@@ -19,13 +20,13 @@ export default function Main(props) {
 
                 <Navbar />
 
-                <main className={styles.main_white}>
+                <main className={styles.main_white+' '+responsive.p1em_on_sm}>
 
-                    <div className={styles.display_flex + ' container'}>
+                    <div className={styles.display_flex + ' container '+responsive.dblock_on_sm}>
 
                         <div>
 
-                            <Card class={cardstyles.card_s_75 + " card"} img="/avatar/komi.jpg">
+                            <Card class={cardstyles.card_s_75 + " card mb-3 "+responsive.w100_on_sm} img="/avatar/komi.jpg">
                                 <div className="card-body">
                                     <h4>Dona Célia</h4>
                                     <h6><b>Sobre mim</b></h6>
@@ -71,35 +72,35 @@ export default function Main(props) {
                                 <a>
                                     <Card class={cardstyles.card_s_100 + " card mb-3"}>
                                         <div className="card-body">
-                                            <h4>Minha apresentação</h4>
-                                            Olá eu sou a Dona Célia, esse é meu primeiro post na plataforma do Jobee. Espero que eu faça muitos amigos e descubra muitas oportunidades!
+                                            <h4>Assine o Jobee PRO</h4>
+                                            O Jobee PRO é uma assinatura mensal que oferece aos nossos clientes mais fiéis acesso exclusivo a recursos premium e personalizações de aplicativos por uma pequena taxa.
                                             <br />
                                             <div className='mt-3' style={{ display: 'inline-flex' }}>
-                                                <span className={jobeestyles.premium_badge + " badge rounded-pill text-dark mx-1"}>PRO🌟</span>
-                                                <span className={jobeestyles.default_badge + " badge rounded-pill text-light mx-1"}>Costura</span>
-                                                <span className={jobeestyles.default_badge + " badge rounded-pill text-light mx-1"}>Idosa</span>
-                                                <span className={jobeestyles.default_badge + " badge rounded-pill text-light mx-1"}>Felicidade</span>
+                                                <span className={jobeestyles.ad_badge + " badge rounded-pill text-dark mx-1"}>Anúncio📢</span>
                                             </div>
                                         </div>
                                     </Card>
                                 </a>
                             </Link>
 
-                            <Card class={cardstyles.card_s_100 + " card mb-3"}>
-                                <div className="card-body">
-                                </div>
-                            </Card>
-
-                            <Card class={cardstyles.card_s_100 + " card mb-3"}>
-                                <div className="card-body">
-                                </div>
-                            </Card>
+                            <Link href="/404">
+                                <a>
+                                    <Card class={cardstyles.card_s_100 + " card mb-3"}>
+                                        <div className="card-body">
+                                            <h4>Assine o Jobee PRO</h4>
+                                            O Jobee PRO é uma assinatura mensal que oferece aos nossos clientes mais fiéis acesso exclusivo a recursos premium e personalizações de aplicativos por uma pequena taxa.
+                                            <br />
+                                            <div className='mt-3' style={{ display: 'inline-flex' }}>
+                                                <span className={jobeestyles.ad_badge + " badge rounded-pill text-dark mx-1"}>Anúncio📢</span>
+                                            </div>
+                                        </div>
+                                    </Card>
+                                </a>
+                            </Link>
 
                         </div>
 
-
                     </div>
-
 
                 </main>
 

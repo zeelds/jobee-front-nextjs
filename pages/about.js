@@ -31,7 +31,7 @@ export default function About() {
                             </a>
                         </Link>
 
-                        <div className={"mt-5 "+responsive.m25_on_sm}>
+                        <div className={"mt-5 "+responsive.m25l_on_sm}>
                             <div className={"row"}>
                                 <div className={`col mb-2 ${styles.about_container}`}>
                                     <img className={styles.about_avatar + ' ' + responsive.w170f_on_sm} src="/about/raqsanta.png" />

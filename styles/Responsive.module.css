@@ -48,7 +48,7 @@
         width: 75% !important;
     }
     .w100_on_sm {
-        width: 100vw !important;
+        width: 100% !important;
     }
     .dblock_on_sm {
         display: block !important;
@@ -56,8 +56,11 @@
     .no_ms_on_sm {
         margin-left: 0 !important;
     }
-    .m25_on_sm {
-        margin: 25% !important;
+    .m25l_on_sm {
+        margin-left: 25% !important;
+    }
+    .p1em_on_sm {
+        padding: 1em 0 !important;
     }
 }
 
