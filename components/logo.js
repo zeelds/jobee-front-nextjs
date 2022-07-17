@@ -9,7 +9,7 @@ export default function Logo() {
 
             <div id='logo-default' className={styles.jb_default_logo+' '+responsive.prelative_on_sm}>
 
-                <img id='logo-image' className={styles.img_logo+' '+responsive.prelative_on_sm} src="/jobee.png" alt="Jobee Logo" width={256} height={256} />
+                <img id='logo-image' className={styles.img_logo+' '+responsive.prelative_on_sm+' '+responsive.hide_on_sm} src="/jobee.png" alt="Jobee Logo" width={256} height={256} />
 
                 <br />
 

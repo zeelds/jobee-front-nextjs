@@ -9,7 +9,7 @@ export default function Terms() {
     const { scrollYProgress } = useViewportScroll();
     const [opacity, setOpacity] = useState(0)
 
-    scrollYProgress.onChange((e) => setOpacity(e*20))
+    scrollYProgress.onChange((e) => setOpacity(e*200))
 
     return (
         <motion.div

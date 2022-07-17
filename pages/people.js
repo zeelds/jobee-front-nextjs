@@ -1,5 +1,6 @@
 import styles from '../styles/Main.module.css'
 import cardstyles from '../styles/Card.module.css'
+import responsive from '../styles/Responsive.module.css'
 import jobeestyles from '../styles/Jobee.module.css'
 import { motion } from "framer-motion"
 import Navbar from '../components/navbar'
@@ -20,11 +21,33 @@ export default function People() {
 
                 <Navbar />
 
-                <main className={styles.main_white}>
+                <main className={styles.main_white + ' ' + responsive.p1em_on_sm}>
 
-                    <div className={styles.display_flex + ' container'}>
+                    <div className={"d-flex justify-content-center container w-75 " + responsive.dblock_on_sm}>
 
-                        seu perfil
+                        <Card class={cardstyles.card_s_50 + " card mb-3 me-2 " + responsive.w100_on_sm} img="/avatar/komi.jpg">
+                            <div className="card-body">
+
+                                <h4>Dona Célia</h4>
+                                <h6><b>Sobre mim</b></h6>
+                                <p>
+                                    Dona Célia é uma ótima costureira de 63 anos que tem um amor muito grande pelo que faz.
+                                </p>
+                                <h6><b>Qualificações</b></h6>
+                                <p>
+                                    Esse usuário não inseriu nenhuma qualificação no momento.
+                                </p>
+
+                            </div>
+                        </Card>
+
+                        <Card class={cardstyles.card_s_50 + " card mb-3 " + responsive.w100_on_sm}>
+                            <div className="card-body">
+
+                                Gummi bears chocolate cake brownie lollipop lollipop sweet roll candy I love gummi bears. Cotton candy liquorice liquorice cake chocolate cake. Jelly-o chocolate cake jelly beans jelly bear claw tootsie roll jujubes. Cookie powder halvah lollipop danish sweet roll pastry topping candy canes. I love jelly-o bear claw topping jelly beans. Muffin I love pudding chocolate candy canes donut. Brownie brownie dessert cupcake wafer I love. Brownie cheesecake chocolate jujubes tiramisu candy canes pie.
+
+                            </div>
+                        </Card>
 
                     </div>
 
