@@ -30,7 +30,7 @@ export default function About() {
                                         <div className={`${styles.about_text_overlay} container`}>
                                             <h5>Thulio Alves</h5>
                                             <p style={{ fontSize: '12px' }}>Sou um desenvolvedor web e entusiasta de TI. Gosto de Matrix, gatos e design. :P</p>
-                                            <button className="btn btn-dark rounded-pill">Conhecer</button>
+                                            <a href="https://github.com/raqsanta" target="_blank" className="btn btn-dark rounded-pill">Conhecer</a>
                                         </div>
                                     </div>
                                 </div>
@@ -40,7 +40,7 @@ export default function About() {
                                         <div className={`${styles.about_text_overlay} container`}>
                                             <h5>Thayanne Stella</h5>
                                             <p style={{ fontSize: '12px' }}>É uma desenvolvedora front-end alto-astral, criativa, entusiasta de design, organizada e engraçada.</p>
-                                            <button className="btn btn-dark rounded-pill">Conhecer</button>
+                                            <a href="https://github.com/raqsanta" target="_blank" className="btn btn-dark rounded-pill">Conhecer</a>
                                         </div>
                                     </div>
                                 </div>
@@ -50,7 +50,7 @@ export default function About() {
                                         <div className={`${styles.about_text_overlay} container`}>
                                             <h5>Laryssa Kaylane</h5>
                                             <p style={{ fontSize: '12px' }}>Olá! Sou desenvolvedora front-end e estudante de nutrição. Amo os animais, tecnologia e sou bastante perfeccionista.</p>
-                                            <button className="btn btn-dark rounded-pill">Conhecer</button>
+                                            <a href="https://github.com/raqsanta" target="_blank" className="btn btn-dark rounded-pill">Conhecer</a>
                                         </div>
                                     </div>
                                 </div>
@@ -62,7 +62,7 @@ export default function About() {
                                         <div className={`${styles.about_text_overlay} container`}>
                                             <h5>Antony Matheus</h5>
                                             <p style={{ fontSize: '12px' }}>Sou um desenvolvedor front-end determinado. Gosto de pesquisar, aprender e praticar. Amo passear com meu cachorro.</p>
-                                            <button className="btn btn-dark rounded-pill">Conhecer</button>
+                                            <a href="https://github.com/raqsanta" target="_blank" className="btn btn-dark rounded-pill">Conhecer</a>
                                         </div>
                                     </div>
                                 </div>
@@ -72,7 +72,7 @@ export default function About() {
                                         <div className={`${styles.about_text_overlay} container`}>
                                             <h5>Mariana Pereira</h5>
                                             <p style={{ fontSize: '12px' }}>Desenvolvedora focada em front-end e técnica em redes de computadores. Eu adoro gatos, café e um bom notebook.</p>
-                                            <button className="btn btn-dark rounded-pill">Conhecer</button>
+                                            <a href="https://github.com/raqsanta" target="_blank" className="btn btn-dark rounded-pill">Conhecer</a>
                                         </div>
                                     </div>
                                 </div>
@@ -82,7 +82,7 @@ export default function About() {
                                         <div className={`${styles.about_text_overlay} container`}>
                                             <h5>Girl React</h5>
                                             <p style={{ fontSize: '12px' }}>Time de desenvolvedores web com uma assinatura inclusiva em suas soluções.</p>
-                                            <button className="btn btn-dark rounded-pill">Conhecer</button>
+                                            <a href="https://github.com/girl-react" target="_blank" className="btn btn-dark rounded-pill">Conhecer</a>
                                         </div>
                                     </div>
                                 </div>
