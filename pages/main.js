@@ -8,8 +8,20 @@ import axios from 'axios'
 import Link from 'next/link'
 import responsive from '../styles/Responsive.module.css'
 import Head from 'next/head'
+import Multiselect from 'multiselect-react-dropdown';
 
 export default function Main(props) {
+
+    const msConfig = {
+        options: [
+            { name: 'PRO🌟', id: 1 }, 
+            { name: 'Pedreiro', id: 2 },
+            { name: 'Costura', id: 3 },
+            { name: 'Desenvolvimento', id: 4 },
+            { name: 'Design', id: 5 },
+        ],
+        selectedValue: [{ name: 'PRO🌟', id: 1 }]
+    };
 
     return (
         <div className="bg-light">
@@ -68,25 +80,35 @@ export default function Main(props) {
 
                             <Card class={cardstyles.card_s_100 + " card mb-3"}>
                                 <div className="card-body">
-                                    <div class="form-floating mb-3">
-                                        <input type="email" readonly class="form-control-plaintext" id="floatingEmptyPlaintextInput" placeholder="Dê um título" />
+                                    <div className="form-floating mb-3">
+                                        <input type="email" className="form-control-plaintext" id="floatingEmptyPlaintextInput" placeholder="Dê um título" />
                                     </div>
-                                    <div class="form-floating mb-3">
-                                        <textarea type="email" readonly class="form-control-plaintext" id="floatingEmptyPlaintextInput" placeholder="O que está acontecendo?" />
+                                    <div className="form-floating mb-3">
+                                        <textarea type="email" className="form-control-plaintext" id="floatingEmptyPlaintextInput" placeholder="O que está acontecendo?" />
                                     </div>
-                                    <div class="form-floating mt-3">
-                                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                                            <option selected>Selecione tags</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                        </select>
-                                        <label for="floatingSelect">Tags</label>
-                                    </div>
-                                    <div className='mt-2 mb-2' style={{ display: 'inline-flex' }}>
-                                        <span className={jobeestyles.ad_badge + " badge rounded-pill text-dark mx-1"}>Anúncio📢</span>
-                                    </div>
-                                    <br />
+                                    <Multiselect
+                                        placeholder="Tags"
+                                        className="mb-3"
+                                        options={msConfig.options}
+                                        selectedValues={msConfig.selectedValue}
+                                        displayValue="name"
+                                        style={{
+                                            chips: {
+                                                background: 'black',
+                                            },
+                                            multiselectContainer: {
+                                                color: 'white'
+                                            },
+                                            option: {
+                                                color: 'black',
+                                                background: 'white'
+                                            },
+                                            searchBox: {
+                                                border: 'none',
+                                                'border-bottom': '1px solid black',
+                                            }
+                                        }}
+                                    />
                                     <button className="btn btn-dark me-2">
                                         <b>Enviar</b>
                                     </button>
