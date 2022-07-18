@@ -1,4 +1,5 @@
 
+import Router from 'next/router'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Dropdown } from 'react-bootstrap'
@@ -36,7 +37,7 @@ export default function Navbar() {
                             </div>
                         </Link>
 
-                        <Link href="/people">
+                        <Link href="/people/2342389192">
                             <div className={styles.item_holder + ' mx-3 nav-item'}>
                                 <Image className={styles.item_icon} src="/icons/person.png" width="32" height="32" />
                                 <br />
@@ -63,7 +64,11 @@ export default function Navbar() {
                             </div>
                         </Link>
 
-                        <Dropdown onClick={()=>console.log('teste')} className="mx-3">
+                        <Dropdown onClick={()=>{
+                            if(screen.width < 755){
+                                Router.push('/profile')
+                            }
+                        }} className="mx-3">
 
                             <Dropdown.Toggle as={"div"} variant="none" className={`${styles.dropdown_basic} ${styles.dropdown_no_padding}`} id="bootstrap-dropdown">
                                 <div className={styles.item_holder + ' av-item'}>

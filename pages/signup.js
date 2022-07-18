@@ -35,17 +35,29 @@ export default function SignUp() {
 
         console.log(dataForm)
 
-         axios.post('http://localhost:3001/client/register', dataForm)
-             .then((response) => {
+        axios.post('http://localhost:3001/client/register', dataForm)
+            .then((response) => {
 
-                 document.getElementById('status').textContent = response.data.message
-                 document.getElementById('status').classList.remove('d-none')
+                const allErrors = response.data.errors || []
+                const errorMessage = []
 
-                 if (response.data.auth == true) {
-                     router.push("/main")
-                 }
+                allErrors.forEach((elem) => {
+                    errorMessage.push(elem.content)
+                })
+                
+                if(errorMessage.length) {
+                    document.getElementById('status').textContent = errorMessage.join(' ')
+                }else{
+                    document.getElementById('status').textContent = response.data.message
+                }
 
-             })
+                document.getElementById('status').classList.remove('d-none')
+
+                if (response.data.auth == true) {
+                    router.push("/main")
+                }
+
+            })
     }
 
     return (
@@ -81,7 +93,7 @@ export default function SignUp() {
 
                         <br />
 
-                        <div className={"d-inline-flex "+responsive.dblock_on_sm}>
+                        <div className={"d-inline-flex " + responsive.dblock_on_sm}>
                             <div>
                                 <form className='mt-4'>
                                     <div className="form-floating mb-3">
@@ -135,7 +147,7 @@ export default function SignUp() {
                                 </form>
                             </div>
 
-                            <div className={'ms-5 '+responsive.no_ms_on_sm}>
+                            <div className={'ms-5 ' + responsive.no_ms_on_sm}>
                                 <form className='mt-4'>
                                     <div className="form-floating mb-3">
                                         <input onChange={(e) => {
@@ -162,7 +174,7 @@ export default function SignUp() {
                         </div>
                     </div>
 
-                    <div className={'container w-25 '+responsive.w75_on_sm}>
+                    <div className={'container w-25 ' + responsive.w75_on_sm}>
                         <button type="submit" onClick={submitForm} className={styles.mid_button + " btn btn-dark w-100 mt-3"}><b>Criar Conta</b></button>
                     </div>
 

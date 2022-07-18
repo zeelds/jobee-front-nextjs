@@ -20,13 +20,13 @@ export default function Main(props) {
 
                 <Navbar />
 
-                <main className={styles.main_white+' '+responsive.p1em_on_sm}>
+                <main className={styles.main_white + ' ' + responsive.p1em_on_sm}>
 
-                    <div className={styles.display_flex + ' container '+responsive.dblock_on_sm}>
+                    <div className={styles.display_flex + ' container ' + responsive.dblock_on_sm}>
 
                         <div>
 
-                            <Card class={cardstyles.card_s_75 + " card mb-3 "+responsive.w100_on_sm} img="/avatar/komi.jpg">
+                            <Card class={cardstyles.card_s_75 + " card mb-3 " + responsive.w100_on_sm} img="/avatar/komi.jpg">
                                 <div className="card-body">
                                     <h4>Dona Célia</h4>
                                     <h6><b>Sobre mim</b></h6>
@@ -37,15 +37,12 @@ export default function Main(props) {
                                     <p>
                                         Esse usuário não inseriu nenhuma qualificação no momento.
                                     </p>
-                                    <div>
-                                        <button className={'btn ' + jobeestyles.btn_yellow}>
-                                            <b>Buscar Vagas</b>
-                                        </button>
-                                        <span className='ms-2 mx-2'>ou</span>
-                                        <button className={'btn ' + jobeestyles.btn_yellow}>
-                                            <b>Anunciar Vagas</b>
-                                        </button>
-                                    </div>
+                                    <button className={'btn w-100 ' + jobeestyles.btn_yellow}>
+                                        <b>Escrever artigo</b>
+                                    </button>
+                                    <button className={'btn w-100 '}>
+                                        <b>Buscar vagas</b>
+                                    </button>
                                 </div>
                             </Card>
 
