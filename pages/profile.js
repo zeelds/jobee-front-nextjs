@@ -30,7 +30,7 @@ export default function Profile() {
                         <div className='mt-3'>
 
                             <div className="d-inline-flex w-100 mb-3">
-                                <input onChange={(e) => setSearch(e.target.value)} defaultValue={search} className={styles.item_spacing + " form-control rounded-0"} id="search-bar" placeholder="🔍︎ Tente buscar algo" />
+                                <input onChange={(e) => setSearch(e.target.value)} value={search} className={styles.item_spacing + " form-control rounded-0"} id="search-bar" placeholder="🔍︎ Tente buscar algo" />
                                 <button className="btn btn-dark rounded-0">Pesquisar</button>
                             </div>
 

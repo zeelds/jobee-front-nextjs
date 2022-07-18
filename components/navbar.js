@@ -24,7 +24,7 @@ export default function Navbar() {
                                 </div>
                             </a>
                         </Link>
-                        <input onChange={(e) => setSearch(e.target.value)} defaultValue={search} className={styles.item_spacing + " form-control"} id="search-bar" placeholder="🔍︎ Tente buscar algo" />
+                        <input onChange={(e) => setSearch(e.target.value)} value={search} className={styles.item_spacing + " form-control"} id="search-bar" placeholder="🔍︎ Tente buscar algo" />
                     </div>
 
                     <div className={'d-flex ' + responsive.center_on_sm}>
