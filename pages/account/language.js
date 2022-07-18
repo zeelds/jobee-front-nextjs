@@ -1,6 +1,7 @@
 import styles from '../../styles/Main.module.css'
 import cardstyles from '../../styles/Card.module.css'
 import jobeestyles from '../../styles/Jobee.module.css'
+import responsive from '../../styles/Responsive.module.css'
 import { motion } from "framer-motion"
 import Navbar from '../../components/navbar'
 import Card from '../../components/smart/card'
@@ -28,20 +29,20 @@ export default function Language() {
                             Adicione um idioma para ler e digitar neste idioma
                         </a>
 
-                        <div class="w-75">
+                        <div className="w-75">
 
-                            <div class="form-floating">
-                                <select class="form-select mt-2 mb-2" id="floatingSelect" aria-label="Floating label select example">
+                            <div className="form-floating">
+                                <select className="form-select mt-2 mb-2" id="floatingSelect" aria-label="Floating label select example">
                                     <option selected>Brasil (Português)</option>
                                 </select>
-                                <label for="floatingSelect">Localidade</label>
+                                <label htmlFor="floatingSelect">Localidade</label>
                             </div>
 
-                            <div class="form-floating">
+                            <div className="form-floating">
                                 <textarea disabled className="form-control h-100 overflow-hidden" placeholder="Leave a comment here" id="floatingTextarea2">
                                     O incentivo ao avanço tecnológico, assim como a estrutura atual da organização pode nos levar a considerar a reestruturação dos paradigmas corporativos.
                                 </textarea>
-                                <label for="floatingTextarea2">Texto fictício</label>
+                                <label htmlFor="floatingTextarea2">Texto fictício</label>
                             </div>
                         </div>
 

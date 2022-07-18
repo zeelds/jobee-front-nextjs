@@ -102,7 +102,7 @@ export default function Main(props) {
                                             },
                                             optionContainer: { // To change css for option container 
                                                 position: 'absolute',
-                                                maxHeight: '10.5vh',
+                                                maxHeight: '90px',
                                                 width: '100%'
                                             },
                                             option: {
