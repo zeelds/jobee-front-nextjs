@@ -21,6 +21,7 @@
 
 .dropdown_large {
     width: 710% !important;
+
 }
 
 .dropdown_avatar {
@@ -59,6 +60,10 @@
 }
 
 .dropdown_basic::after {
+    display: none !important;
+}
+
+.dropdown_basic::before {
     display: none !important;
 }
 

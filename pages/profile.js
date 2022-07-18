@@ -7,8 +7,11 @@ import Navbar from '../components/navbar'
 import Card from '../components/smart/card'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useSearch } from './_app'
 
 export default function Profile() {
+
+    const { search, setSearch } = useSearch()
 
     return (
         <div className="bg-light">
@@ -25,6 +28,13 @@ export default function Profile() {
 
                     <div className='container mb-3'>
                         <div className='mt-3'>
+
+                            <div className="d-inline-flex w-100 mb-3">
+                                <input onChange={(e) => setSearch(e.target.value)} defaultValue={search} className={styles.item_spacing + " form-control rounded-0"} id="search-bar" placeholder="🔍︎ Tente buscar algo" />
+                                <button className="btn btn-dark rounded-0">Pesquisar</button>
+                            </div>
+
+                            <br />
 
                             <img className={`mx-3 rounded-circle ${navstyles.dropdown_avatar}`} src="/avatar/komi.jpg" width="128" height="128" />
 

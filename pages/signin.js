@@ -40,11 +40,6 @@ export default function SignIn() {
             exit={{ width: 0 }}
         >
 
-            <Head>
-                <link href='http://fonts.googleapis.com/css?family=Roboto'
-                    rel='stylesheet' type='text/css' />
-            </Head>
-
             <main className={styles.main_yellow}>
 
                 <div className='mb-5 float-start container'>

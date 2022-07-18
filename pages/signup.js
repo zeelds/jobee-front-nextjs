@@ -44,10 +44,10 @@ export default function SignUp() {
                 allErrors.forEach((elem) => {
                     errorMessage.push(elem.content)
                 })
-                
-                if(errorMessage.length) {
+
+                if (errorMessage.length) {
                     document.getElementById('status').textContent = errorMessage.join(' ')
-                }else{
+                } else {
                     document.getElementById('status').textContent = response.data.message
                 }
 
@@ -66,11 +66,6 @@ export default function SignUp() {
             animate={{ width: "100%" }}
             exit={{ width: 0 }}
         >
-
-            <Head>
-                <link href='http://fonts.googleapis.com/css?family=Roboto'
-                    rel='stylesheet' type='text/css' />
-            </Head>
 
             <main className={styles.main_yellow}>
 

@@ -64,11 +64,11 @@ export default function Navbar() {
                             </div>
                         </Link>
 
-                        <Dropdown onClick={()=>{
+                        <Dropdown className={`${styles.dropdown_basic} ${styles.dropdown_no_padding} mx-3`} drop="start" onClick={()=>{
                             if(screen.width < 755){
                                 Router.push('/profile')
                             }
-                        }} className="mx-3">
+                        }}>
 
                             <Dropdown.Toggle as={"div"} variant="none" className={`${styles.dropdown_basic} ${styles.dropdown_no_padding}`} id="bootstrap-dropdown">
                                 <div className={styles.item_holder + ' av-item'}>

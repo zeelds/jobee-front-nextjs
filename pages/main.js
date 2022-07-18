@@ -7,6 +7,7 @@ import Card from '../components/smart/card'
 import axios from 'axios'
 import Link from 'next/link'
 import responsive from '../styles/Responsive.module.css'
+import Head from 'next/head'
 
 export default function Main(props) {
 

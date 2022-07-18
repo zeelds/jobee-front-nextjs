@@ -4,8 +4,11 @@ import Head from 'next/head';
 import Logo from '../components/logo';
 import Link from 'next/link'
 import responsive from '../styles/Responsive.module.css'
+import Router from 'next/router';
 
 export default function Start() {
+
+    const isLogged = true //localStorage.getItem("token")
 
     return (
         <motion.div
@@ -14,18 +17,17 @@ export default function Start() {
             exit={{ width: 0 }}
         >
 
-            <Head>
-                <link href='http://fonts.googleapis.com/css?family=Roboto'
-                    rel='stylesheet' type='text/css' />
-            </Head>
-
             <main className={styles.main_yellow}>
 
                 <Logo />
 
-                <Link href="/signin">
-                    <button className={styles.mid_button + " btn btn-dark w-50 fw-bold p-3 text-break " + responsive.smaller_25_on_lg} >Começar</button>
-                </Link>
+                <button onClick={() => {
+                    if (isLogged) {
+                        Router.push('/main')
+                    } else {
+                        Router.push('signin')
+                    }
+                }} className={styles.mid_button + " btn btn-dark w-50 fw-bold p-3 text-break " + responsive.smaller_25_on_lg} >Começar</button>
 
                 <div className={styles.clickable + ' text-dark mt-4'}>
                     <Link href="/terms">
