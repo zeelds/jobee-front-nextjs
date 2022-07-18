@@ -14,7 +14,7 @@ export default function Main(props) {
 
     const msConfig = {
         options: [
-            { name: 'PRO🌟', id: 1 }, 
+            { name: 'PRO🌟', id: 1 },
             { name: 'Pedreiro', id: 2 },
             { name: 'Costura', id: 3 },
             { name: 'Desenvolvimento', id: 4 },
@@ -88,10 +88,11 @@ export default function Main(props) {
                                     </div>
                                     <Multiselect
                                         placeholder="Tags"
-                                        className="mb-3"
+                                        className={`mb-3 ${responsive.responsive_select}`}
                                         options={msConfig.options}
                                         selectedValues={msConfig.selectedValue}
                                         displayValue="name"
+                                        selectionLimit="4"
                                         style={{
                                             chips: {
                                                 background: 'black',
@@ -99,9 +100,14 @@ export default function Main(props) {
                                             multiselectContainer: {
                                                 color: 'white'
                                             },
+                                            optionContainer: { // To change css for option container 
+                                                position: 'absolute',
+                                                maxHeight: '10.5vh',
+                                                width: '100%'
+                                            },
                                             option: {
                                                 color: 'black',
-                                                background: 'white'
+                                                background: 'white',
                                             },
                                             searchBox: {
                                                 border: 'none',
