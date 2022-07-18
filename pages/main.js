@@ -56,7 +56,7 @@ export default function Main(props) {
                                     <Card class={cardstyles.card_s_100 + " card mb-3"}>
                                         <div className="card-body">
                                             <h4>Assine o Jobee PRO</h4>
-                                            O Jobee PRO é uma assinatura mensal que oferece aos nossos clientes mais fiéis acesso exclusivo a recursos premium e personalizações de aplicativos por uma pequena taxa.
+                                            O Jobee PRO é uma experiência adquirida por pagamento único que oferece aos nossos clientes mais fiéis acesso exclusivo a recursos premium e personalizações adicionais.
                                             <br />
                                             <div className='mt-3' style={{ display: 'inline-flex' }}>
                                                 <span className={jobeestyles.ad_badge + " badge rounded-pill text-dark mx-1"}>Anúncio📢</span>
@@ -66,35 +66,37 @@ export default function Main(props) {
                                 </a>
                             </Link>
 
-                            <Link href="/404">
-                                <a>
-                                    <Card class={cardstyles.card_s_100 + " card mb-3"}>
-                                        <div className="card-body">
-                                            <h4>Assine o Jobee PRO</h4>
-                                            O Jobee PRO é uma assinatura mensal que oferece aos nossos clientes mais fiéis acesso exclusivo a recursos premium e personalizações de aplicativos por uma pequena taxa.
-                                            <br />
-                                            <div className='mt-3' style={{ display: 'inline-flex' }}>
-                                                <span className={jobeestyles.ad_badge + " badge rounded-pill text-dark mx-1"}>Anúncio📢</span>
-                                            </div>
-                                        </div>
-                                    </Card>
-                                </a>
-                            </Link>
+                            <Card class={cardstyles.card_s_100 + " card mb-3"}>
+                                <div className="card-body">
+                                    <div class="form-floating mb-3">
+                                        <input type="email" readonly class="form-control-plaintext" id="floatingEmptyPlaintextInput" placeholder="Dê um título" />
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <textarea type="email" readonly class="form-control-plaintext" id="floatingEmptyPlaintextInput" placeholder="O que está acontecendo?" />
+                                    </div>
+                                    <div class="form-floating mt-3">
+                                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                            <option selected>Selecione tags</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                        <label for="floatingSelect">Tags</label>
+                                    </div>
+                                    <div className='mt-2 mb-2' style={{ display: 'inline-flex' }}>
+                                        <span className={jobeestyles.ad_badge + " badge rounded-pill text-dark mx-1"}>Anúncio📢</span>
+                                    </div>
+                                    <br />
+                                    <button className="btn btn-dark me-2">
+                                        <b>Enviar</b>
+                                    </button>
+                                    <a className="btn rounded-pill border border-dark border-2">
 
-                            <Link href="/404">
-                                <a>
-                                    <Card class={cardstyles.card_s_100 + " card mb-3"}>
-                                        <div className="card-body">
-                                            <h4>Assine o Jobee PRO</h4>
-                                            O Jobee PRO é uma assinatura mensal que oferece aos nossos clientes mais fiéis acesso exclusivo a recursos premium e personalizações de aplicativos por uma pequena taxa.
-                                            <br />
-                                            <div className='mt-3' style={{ display: 'inline-flex' }}>
-                                                <span className={jobeestyles.ad_badge + " badge rounded-pill text-dark mx-1"}>Anúncio📢</span>
-                                            </div>
-                                        </div>
-                                    </Card>
-                                </a>
-                            </Link>
+                                        <b>200</b>
+
+                                    </a>
+                                </div>
+                            </Card>
 
                         </div>
 
