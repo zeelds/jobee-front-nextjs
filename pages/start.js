@@ -1,14 +1,14 @@
 import styles from '../styles/Home.module.css'
 import { motion } from "framer-motion"
-import Head from 'next/head';
 import Logo from '../components/logo';
 import Link from 'next/link'
 import responsive from '../styles/Responsive.module.css'
 import Router from 'next/router';
+import { axiosInstance } from '../config/axios';
 
 export default function Start() {
 
-    const isLogged = true //localStorage.getItem("token")
+    const isLogged = localStorage.getItem("token")
 
     return (
         <motion.div

@@ -6,10 +6,12 @@ import { motion } from "framer-motion"
 import Head from 'next/head';
 import Link from 'next/link'
 import { useState } from 'react';
-import axios from 'axios'
 import { useRouter } from 'next/router'
 import Reveal from '../components/reveal'
 import Revealer from '../components/smart/revealer';
+import { axiosInstance } from '../config/axios'
+
+console.log(axiosInstance)
 
 export default function SignIn() {
 
@@ -19,17 +21,17 @@ export default function SignIn() {
 
     function submitForm(e) {
         e.preventDefault()
-         axios.post('http://localhost:3001/client/auth', { email: email, password: password })
-             .then((response) => {
+        axiosInstance.post('/client/auth', { email: email, password: password })
+            .then((response) => {
 
-                 if (response.data.auth == false) {
-                     document.getElementById('status').textContent = response.data.message
-                     document.getElementById('status').classList.remove('d-none')
-                 }
-                 else if (response.data.auth == true) {
-                     router.push("/main")
-                 }
-             })
+                if (response.data.auth == false) {
+                    document.getElementById('status').textContent = response.data.message
+                    document.getElementById('status').classList.remove('d-none')
+                }
+                else if (response.data.auth == true) {
+                    router.push("/main")
+                }
+            })
 
     }
 

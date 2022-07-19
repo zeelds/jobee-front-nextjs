@@ -10,7 +10,7 @@ import pronounFix from '../../utils/pronounFix'
 import { useState } from 'react'
 
 export default function Accessibility() {
-
+ 
     const [accessibility, setAccessibility] = useState({
         pronouns: 'Ele/Dele',
         color_blindness: 'Nenhum',

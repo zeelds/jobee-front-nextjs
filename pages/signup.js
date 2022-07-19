@@ -5,9 +5,9 @@ import { motion } from "framer-motion"
 import Head from 'next/head';
 import Link from 'next/link'
 import { useState } from 'react';
-import axios from 'axios'
 import NumberFormat from 'react-number-format'
 import Revealer from '../components/smart/revealer';
+import { axiosInstance } from '../config/axios';
 
 export default function SignUp() {
 
@@ -35,7 +35,7 @@ export default function SignUp() {
 
         console.log(dataForm)
 
-        axios.post('http://localhost:3001/client/register', dataForm)
+        axiosInstance.post('/client/register', dataForm)
             .then((response) => {
 
                 const allErrors = response.data.errors || []
