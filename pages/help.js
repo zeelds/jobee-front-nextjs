@@ -7,6 +7,7 @@ import Card from '../components/smart/card'
 import Link from 'next/link'
 
 export default function Help() {
+
     return (
         <div className="bg-light">
 
@@ -22,7 +23,9 @@ export default function Help() {
 
                     <div className={styles.display_flex + ' container'}>
 
-                        fdsafsdfasd
+                        <a color-theme="Deuteranopia">
+                            Cor de testes
+                        </a>
 
                     </div>
 

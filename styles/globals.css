@@ -11,6 +11,14 @@ a {
   text-decoration: none;
 }
 
+a[color-theme="Protanopia"] {
+  color: rgb(86, 74, 255) !important
+} 
+
+a[color-theme="Deuteranopia"] {
+  color: rgb(255, 74, 74) !important
+}
+
 a:hover {
   color: inherit;
 }

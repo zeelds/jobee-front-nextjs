@@ -51,6 +51,9 @@
     .w100_on_sm {
         width: 100% !important;
     }
+    .vh50_on_sm {
+        height: 20vh !important;
+    }
     .dblock_on_sm {
         display: block !important;
     }

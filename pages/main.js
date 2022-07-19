@@ -1,6 +1,7 @@
 import styles from '../styles/Main.module.css'
 import cardstyles from '../styles/Card.module.css'
 import jobeestyles from '../styles/Jobee.module.css'
+import badgestyles from '../styles/Badges.module.css'
 import { motion } from "framer-motion"
 import Navbar from '../components/navbar'
 import Card from '../components/smart/card'
@@ -9,18 +10,66 @@ import Link from 'next/link'
 import responsive from '../styles/Responsive.module.css'
 import Head from 'next/head'
 import Multiselect from 'multiselect-react-dropdown';
+import { useState } from 'react'
 
 export default function Main(props) {
 
+    const [writtenArticle, setWrittenArticle] = useState({
+        title: '',
+        content: '',
+        tags: []
+    })
+
+    function submitArticle(e){
+        e.preventDefault()
+
+        console.log(writtenArticle)
+
+    }
+
     const msConfig = {
         options: [
-            { name: 'PRO🌟', id: 1 },
-            { name: 'Pedreiro', id: 2 },
-            { name: 'Costura', id: 3 },
-            { name: 'Desenvolvimento', id: 4 },
-            { name: 'Design', id: 5 },
-        ],
-        selectedValue: [{ name: 'PRO🌟', id: 1 }]
+            { name: 'Diversão', id: 0, theme: "common" },
+            { name: 'Pintor', id: 1, theme: "common" },
+            { name: 'Pedreiro', id: 2, theme: "common" },
+            { name: 'Costura', id: 3, theme: "common" },
+            { name: 'Desenvolvedor', id: 4, theme: "common" },
+            { name: 'Designer Gráfico', id: 5, theme: "common" },
+            { name: 'Cabeleleiro', id: 6, theme: "common" },
+            { name: 'Trancista', id: 7, theme: "common" },
+            { name: 'Vaga', id: 8, theme: "common" },
+            { name: 'Designer Gráfico', id: 9, theme: "common" },
+            { name: 'Designer Web', id: 10, theme: "common" },
+            { name: 'Designer de Moda', id: 11, theme: "common" },
+            { name: 'Designer de Interiores', id: 12, theme: "common" },
+            { name: 'Designer de Unhas', id: 13, theme: "common" },
+            { name: 'Manicure', id: 14, theme: "common" },
+            { name: 'Pedicure', id: 15, theme: "common" },
+            { name: 'Cuidador Infantil', id: 16, theme: "common" },
+            { name: 'Cuidador de Idosos', id: 17, theme: "common" },
+            { name: 'Artes Visuais', id: 18, theme: "common" },
+            { name: 'Marketing', id: 19, theme: "common" },
+            { name: 'Servente', id: 20, theme: "common" },
+            { name: 'Vendedor', id: 21, theme: "common" },
+            { name: 'Feirante', id: 22, theme: "common" },
+            { name: 'Doméstica', id: 23, theme: "common" },
+            { name: 'Panfleteiro', id: 24, theme: "common" },
+            { name: 'Cozinheiro', id: 25, theme: "common" },
+            { name: 'Entregador', id: 26, theme: "common" },
+            { name: 'Motorista', id: 27, theme: "common" },
+            { name: 'Criador de Conteúdo', id: 28, theme: "common" },
+            { name: 'PCD 👨‍🦽', id: 29, theme: "common" },
+            { name: 'LGBTQIA+ 🌈', id: 30, theme: "common" },
+            { name: '#BlackLivesMatter ✊🏿', id: 31, theme: "common" },
+            { name: 'Porteiro', id: 32, theme: "common" },
+            { name: 'Vigia', id: 33, theme: "common" },
+            { name: 'Economista', id: 34, theme: "common" },
+            { name: 'Ator', id: 35, theme: "common" },
+            { name: 'Restaurante', id: 36, theme: "common" },
+            { name: 'Atendente', id: 37, theme: "common" },
+            { name: 'Cantor', id: 38, theme: "common" },
+            { name: 'Músico', id: 39, theme: "common" },
+        ]
     };
 
     return (
@@ -35,7 +84,7 @@ export default function Main(props) {
 
                 <main className={styles.main_white + ' ' + responsive.p1em_on_sm}>
 
-                    <div className={styles.display_flex + ' container ' + responsive.dblock_on_sm}>
+                    <div className={styles.display_flex + ' container mb-5 ' + responsive.dblock_on_sm}>
 
                         <div>
 
@@ -63,15 +112,18 @@ export default function Main(props) {
 
                         <div className={cardstyles.card_s_100}>
 
-                            <Link href="/404">
+                            <Link href="/pro">
                                 <a>
                                     <Card class={cardstyles.card_s_100 + " card mb-3"}>
                                         <div className="card-body">
                                             <h4>Assine o Jobee PRO</h4>
                                             O Jobee PRO é uma experiência adquirida por pagamento único que oferece aos nossos clientes mais fiéis acesso exclusivo a recursos premium e personalizações adicionais.
                                             <br />
-                                            <div className='mt-3' style={{ display: 'inline-flex' }}>
+                                            <div className='mt-3'>
                                                 <span className={jobeestyles.ad_badge + " badge rounded-pill text-dark mx-1"}>Anúncio📢</span>
+                                                <span className={badgestyles.badge_bg_rainbow+ " badge rounded-pill text-dark mx-1"}>LGBTQIA+ 🌈</span>
+                                                <span className={badgestyles.badge_bg_rainbow+ " badge rounded-pill text-dark mx-1"}>PCD 👨‍🦽</span>
+                                                <span className={badgestyles.badge_bg_rainbow+ " badge rounded-pill text-dark mx-1"}>#BlackLivesMatter ✊🏿</span>
                                             </div>
                                         </div>
                                     </Card>
@@ -81,29 +133,38 @@ export default function Main(props) {
                             <Card class={cardstyles.card_s_100 + " card mb-3"}>
                                 <div className="card-body">
                                     <div className="form-floating mb-3">
-                                        <input type="email" className="form-control-plaintext" id="floatingEmptyPlaintextInput" placeholder="Dê um título" />
+                                        <input 
+                                        maxLength={60}
+                                        onChange={(e)=>setWrittenArticle({...writtenArticle, title: e.target.value})} value={writtenArticle.title} type="email" className="form-control-plaintext" id="floatingEmptyPlaintextInput" placeholder="Dê um título" />
                                     </div>
                                     <div className="form-floating mb-3">
-                                        <textarea type="email" className="form-control-plaintext" id="floatingEmptyPlaintextInput" placeholder="O que está acontecendo?" />
+                                        <textarea 
+                                        maxLength={200}
+                                        onChange={(e)=>setWrittenArticle({...writtenArticle, content: e.target.value})} value={writtenArticle.content} type="email" className="form-control-plaintext" id="floatingEmptyPlaintextInput" placeholder="O que está acontecendo?" />
                                     </div>
                                     <Multiselect
+                                        onSelect={(e)=>setWrittenArticle({...writtenArticle, tags: e})}
+                                        onRemove={(e)=>setWrittenArticle({...writtenArticle, tags: e})}
                                         placeholder="Tags"
                                         className={`mb-3 ${responsive.responsive_select}`}
                                         options={msConfig.options}
-                                        selectedValues={msConfig.selectedValue}
                                         displayValue="name"
                                         selectionLimit="4"
+                                        emptyRecordMsg="Nenhuma tag foi encontrada."
                                         style={{
                                             chips: {
                                                 background: 'black',
+                                                fontWeight: '700'
                                             },
                                             multiselectContainer: {
                                                 color: 'white'
                                             },
                                             optionContainer: { // To change css for option container 
                                                 position: 'absolute',
-                                                maxHeight: '90px',
-                                                width: '100%'
+                                                maxHeight: '115px',
+                                                width: '100%',
+                                                background: 'white',
+                                                color: 'black'
                                             },
                                             option: {
                                                 color: 'black',
@@ -115,12 +176,12 @@ export default function Main(props) {
                                             }
                                         }}
                                     />
-                                    <button className="btn btn-dark me-2">
+                                    <button onClick={submitArticle} className="btn btn-dark me-2">
                                         <b>Enviar</b>
                                     </button>
                                     <a className="btn rounded-pill border border-dark border-2">
 
-                                        <b>200</b>
+                                        <b>{200-writtenArticle.content.length}</b>
 
                                     </a>
                                 </div>
