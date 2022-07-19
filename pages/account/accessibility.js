@@ -6,8 +6,17 @@ import Navbar from '../../components/navbar'
 import responsive from '../../styles/Responsive.module.css'
 import Card from '../../components/smart/card'
 import Link from 'next/link'
+import pronounFix from '../../utils/pronounFix'
+import { useState } from 'react'
 
 export default function Accessibility() {
+
+    const [accessibility, setAccessibility] = useState({
+        pronouns: 'Ele/Dele',
+        color_blindness: 'Nenhum',
+        unlettered: false
+    })
+
     return (
         <div className="bg-light">
 
@@ -30,10 +39,10 @@ export default function Accessibility() {
                         </a>
 
                         <div class="form-floating mt-3 mb-3">
-                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                                <option selected>Ele/Dele</option>
-                                <option value="1">Ela/Dela</option>
-                                <option value="2">Elu/Delu</option>
+                            <select onChange={(e)=>setAccessibility({...accessibility, pronouns: e.target.value })} value={accessibility.pronouns} class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                <option value="Ele/Dele">Ele/Dele</option>
+                                <option value="Ela/Dela">Ela/Dela</option>
+                                <option value="Elu/Delu">Elu/Delu</option>
                             </select>
                             <label for="floatingSelect">Pronome de Preferência</label>
                         </div>
@@ -53,9 +62,9 @@ export default function Accessibility() {
                         </div>
 
                         <div class="form-check float-start">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                            <input onChange={()=>setAccessibility({...accessibility, unlettered: !accessibility.unlettered})} checked={accessibility.unlettered} class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                             <label class="form-check-label" for="flexCheckDefault">
-                                Eu sou iliterado
+                                Eu sou {pronounFix(accessibility.pronouns, 'iliterado/iliterada/iliterade')}
                             </label>
                         </div>
 
@@ -65,7 +74,6 @@ export default function Accessibility() {
                         <button className="w-100 btn mt-2"><b>Descartar</b></button>
 
                     </div>
-
 
                 </main>
 
