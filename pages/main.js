@@ -29,9 +29,9 @@ const articles = [
         title: 'JoJo',
         content: 'Luva de Pedreiro',
         tags: [
-            { name: 'PCD 👨‍🦽', id: 29, theme: "common" },
-            { name: 'LGBTQIA+ 🌈', id: 30, theme: "common" },
-            { name: '#BlackLivesMatter ✊🏿', id: 31, theme: "common" },
+            { name: 'Entregador', id: 29, theme: "common" },
+            { name: 'Diversão', id: 30, theme: "common" },
+            { name: 'Animação', id: 31, theme: "common" },
             { name: 'Porteiro', id: 32, theme: "common" }
         ]
     },
