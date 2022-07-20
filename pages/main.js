@@ -12,6 +12,19 @@ import Multiselect from 'multiselect-react-dropdown';
 import { useState } from 'react'
 import { axiosInstance } from '../config/axios'
 
+const articles = [
+    {
+        title: 'Escrevendo teste',
+        content: 'Alo',
+        tags: [
+            { name: 'PCD 👨‍🦽', id: 29, theme: "common" },
+            { name: 'LGBTQIA+ 🌈', id: 30, theme: "common" },
+            { name: '#BlackLivesMatter ✊🏿', id: 31, theme: "common" },
+            { name: 'Porteiro', id: 32, theme: "common" }
+        ]
+    }
+]
+
 export default function Main(props) {
 
     return (
@@ -74,6 +87,12 @@ export default function Main(props) {
 
                             <WriteArticle />
 
+                            {articles.map((article) => {
+                                return (
+                                    <ShowArticle title={article.title} content={article.content} tags={article.tags} />
+                                )
+                            })}
+
                         </div>
 
                     </div>
@@ -83,6 +102,31 @@ export default function Main(props) {
             </motion.div>
         </div>
     )
+}
+
+export const ShowArticle = (props) => {
+
+    return (
+        <Link href="/article/5431">
+            <a>
+                <Card class={cardstyles.card_s_100 + " card mb-3"}>
+                    <div className="card-body">
+                        <h4>{props.title}</h4>
+                        {props.content}
+                        <br />
+                        <div className='mt-3'>
+                            {props.tags.map((tag) => {
+                                return (
+                                    <span className={badgestyles.badge_bg_rainbow + " badge rounded-pill text-dark mx-1"}>{tag.name}</span>
+                                )
+                            })}
+                        </div>
+                    </div>
+                </Card>
+            </a>
+        </Link>
+    )
+
 }
 
 export const WriteArticle = () => {
