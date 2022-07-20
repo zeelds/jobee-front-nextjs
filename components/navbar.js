@@ -6,11 +6,18 @@ import { Dropdown } from 'react-bootstrap'
 import { useSearch } from '../pages/_app'
 import styles from '../styles/Navbar.module.css'
 import responsive from '../styles/Responsive.module.css'
-import { logout } from '../config/auth'
+import { isAuth, logout } from '../config/auth'
+import { useEffect } from 'react'
 
 export default function Navbar() {
 
     const { search, setSearch } = useSearch()
+
+    useEffect(()=>{
+        if(!isAuth()){
+            Router.push('/start')
+        }
+    },[])
 
     return (
         <div>
