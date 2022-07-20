@@ -14,6 +14,7 @@ import { axiosInstance } from '../config/axios'
 
 const articles = [
     {
+        id: 1,
         title: 'Escrevendo teste',
         content: 'Alo',
         tags: [
@@ -22,7 +23,18 @@ const articles = [
             { name: '#BlackLivesMatter ✊🏿', id: 31, theme: "common" },
             { name: 'Porteiro', id: 32, theme: "common" }
         ]
-    }
+    },
+    {
+        id: 2,
+        title: 'JoJo',
+        content: 'Luva de Pedreiro',
+        tags: [
+            { name: 'PCD 👨‍🦽', id: 29, theme: "common" },
+            { name: 'LGBTQIA+ 🌈', id: 30, theme: "common" },
+            { name: '#BlackLivesMatter ✊🏿', id: 31, theme: "common" },
+            { name: 'Porteiro', id: 32, theme: "common" }
+        ]
+    },
 ]
 
 export default function Main(props) {
@@ -89,7 +101,7 @@ export default function Main(props) {
 
                             {articles.map((article) => {
                                 return (
-                                    <ShowArticle title={article.title} content={article.content} tags={article.tags} />
+                                    <ShowArticle id={article.id} title={article.title} content={article.content} tags={article.tags} />
                                 )
                             })}
 
@@ -107,7 +119,7 @@ export default function Main(props) {
 export const ShowArticle = (props) => {
 
     return (
-        <Link href="/article/5431">
+        <Link href={"/article/"+props.id}>
             <a>
                 <Card class={cardstyles.card_s_100 + " card mb-3"}>
                     <div className="card-body">
