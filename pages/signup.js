@@ -4,10 +4,12 @@ import responsive from '../styles/Responsive.module.css'
 import { motion } from "framer-motion"
 import Head from 'next/head';
 import Link from 'next/link'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import NumberFormat from 'react-number-format'
 import Revealer from '../components/smart/revealer';
 import { axiosInstance } from '../config/axios';
+import Router from 'next/router';
+import { isAuth } from '../config/auth';
 
 export default function SignUp() {
 
@@ -18,6 +20,12 @@ export default function SignUp() {
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
     const [repassword, setRepassword] = useState()
+
+    useEffect(() => {
+        if (isAuth()) {
+            Router.push('/main')
+        }
+    }, [])
 
     function submitForm() {
         const dataForm = {

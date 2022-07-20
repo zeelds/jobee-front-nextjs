@@ -96,10 +96,10 @@ export const WriteArticle = () => {
     function submitArticle(e) {
         e.preventDefault()
 
-        axiosInstance.post('/article/create-article', {...writtenArticle, status: 'publicado'})
-        .then((response)=>{
-            console.log(response)
-        })
+        axiosInstance.post('/article/create-article', { ...writtenArticle, status: 'publicado' })
+            .then((response) => {
+                console.log(response)
+            })
 
     }
 
@@ -145,6 +145,19 @@ export const WriteArticle = () => {
             { name: 'Atendente', id: 37, theme: "common" },
             { name: 'Cantor', id: 38, theme: "common" },
             { name: 'Músico', id: 39, theme: "common" },
+            { name: 'Barbeiro', id: 40, theme: "common" },
+            { name: 'Informática', id: 41, theme: "common" },
+            { name: 'Eletricista', id: 42, theme: "common" },
+            { name: 'Encanador', id: 43, theme: "common" },
+            { name: 'Mecânico', id: 44, theme: "common" },
+            { name: 'COVID-19 😷', id: 45, theme: "common" },
+            { name: 'Coach', id: 46, theme: "common" },
+            { name: 'Enfermagem', id: 47, theme: "common" },
+            { name: 'Atleta', id: 48, theme: "common" },
+            { name: 'Ilustração', id: 49, theme: "common" },
+            { name: 'Animação', id: 50, theme: "common" },
+            { name: 'Fotografia', id: 51, theme: "common" },
+            { name: 'Teatro', id: 51, theme: "common" },
         ]
     };
 

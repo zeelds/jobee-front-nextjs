@@ -5,10 +5,9 @@ import Link from 'next/link'
 import responsive from '../styles/Responsive.module.css'
 import Router from 'next/router';
 import { axiosInstance } from '../config/axios';
+import { isAuth } from '../config/auth';
 
 export default function Start() {
-
-    const isLogged = localStorage.getItem("token")
 
     return (
         <motion.div
@@ -22,7 +21,7 @@ export default function Start() {
                 <Logo />
 
                 <button onClick={() => {
-                    if (isLogged) {
+                    if (isAuth()) {
                         Router.push('/main')
                     } else {
                         Router.push('signin')

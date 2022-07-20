@@ -5,19 +5,24 @@ import jobeestyles from '../styles/Jobee.module.css'
 import { motion } from "framer-motion"
 import Head from 'next/head';
 import Link from 'next/link'
-import { useState } from 'react';
-import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react';
+import Router, { useRouter } from 'next/router'
 import Reveal from '../components/reveal'
 import Revealer from '../components/smart/revealer';
 import { axiosInstance } from '../config/axios'
-
-console.log(axiosInstance)
+import { isAuth, login } from '../config/auth'
 
 export default function SignIn() {
 
     const router = useRouter()
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+
+    useEffect(() => {
+        if (isAuth()) {
+            Router.push('/main')
+        }
+    }, [])
 
     function submitForm(e) {
         e.preventDefault()
@@ -29,6 +34,7 @@ export default function SignIn() {
                     document.getElementById('status').classList.remove('d-none')
                 }
                 else if (response.data.auth == true) {
+                    login(response.data.token)
                     router.push("/main")
                 }
             })

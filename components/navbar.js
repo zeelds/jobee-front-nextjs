@@ -6,6 +6,7 @@ import { Dropdown } from 'react-bootstrap'
 import { useSearch } from '../pages/_app'
 import styles from '../styles/Navbar.module.css'
 import responsive from '../styles/Responsive.module.css'
+import { logout } from '../config/auth'
 
 export default function Navbar() {
 
@@ -64,8 +65,8 @@ export default function Navbar() {
                             </div>
                         </Link>
 
-                        <Dropdown className={`${styles.dropdown_basic} ${styles.dropdown_no_padding} mx-3`} drop="start" onClick={()=>{
-                            if(screen.width < 755){
+                        <Dropdown className={`${styles.dropdown_basic} ${styles.dropdown_no_padding} mx-3`} drop="start" onClick={() => {
+                            if (screen.width < 755) {
                                 Router.push('/profile')
                             }
                         }}>
@@ -149,13 +150,14 @@ export default function Navbar() {
                                                 </Link>
                                             </div>
                                             <div className="col">
-                                                <Link href="/signin">
-                                                    <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
-                                                        <Image className={styles.item_icon} src="/icons/exit.png" width="32" height="32" />
-                                                        <br />
-                                                        <b>Sair</b>
-                                                    </div>
-                                                </Link>
+                                                <div onClick={() => {
+                                                    logout()
+                                                    Router.push('/start')
+                                                }} className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
+                                                    <Image className={styles.item_icon} src="/icons/exit.png" width="32" height="32" />
+                                                    <br />
+                                                    <b>Sair</b>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
