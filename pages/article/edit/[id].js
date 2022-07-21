@@ -116,7 +116,7 @@ export default function EditArticle() {
                                     }}
                                 />
                                 <button onClick={submitArticle} className="btn btn-dark me-2">
-                                    <b>Enviar</b>
+                                    <b>Editar</b>
                                 </button>
                                 <a className="btn rounded-pill border border-dark border-2">
 
