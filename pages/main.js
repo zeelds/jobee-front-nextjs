@@ -102,11 +102,17 @@ export default function Main(props) {
 export const ShowArticle = (props) => {
 
     return (
-        <Link href={"/article/" + props.id}>
+        <Link href={"/find-article/" + props.id}>
             <a>
                 <Card class={cardstyles.card_s_100 + " card mb-3"}>
                     <div className="card-body">
-                        <h4>{props.title}</h4>
+                        <h4>{props.title}
+                            <Link href={"/article/edit/" + props.id}>
+                                <svg className="ms-2 bi bi-pencil-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+                                </svg>
+                            </Link>
+                        </h4>
                         {props.content}
                         <br />
                         <div className='mt-3'>
@@ -133,6 +139,64 @@ export const ShowArticle = (props) => {
 
 }
 
+export const msConfig = {
+    options: [
+        { name: 'Diversão', id: 0, theme: "common" },
+        { name: 'Pintor', id: 1, theme: "common" },
+        { name: 'Pedreiro', id: 2, theme: "common" },
+        { name: 'Costura', id: 3, theme: "common" },
+        { name: 'Desenvolvedor', id: 4, theme: "common" },
+        { name: 'Designer Gráfico', id: 5, theme: "common" },
+        { name: 'Cabeleleiro', id: 6, theme: "common" },
+        { name: 'Trancista', id: 7, theme: "common" },
+        { name: 'Vaga', id: 8, theme: "common" },
+        { name: 'Designer Gráfico', id: 9, theme: "common" },
+        { name: 'Designer Web', id: 10, theme: "common" },
+        { name: 'Designer de Moda', id: 11, theme: "common" },
+        { name: 'Designer de Interiores', id: 12, theme: "common" },
+        { name: 'Designer de Unhas', id: 13, theme: "common" },
+        { name: 'Manicure', id: 14, theme: "common" },
+        { name: 'Pedicure', id: 15, theme: "common" },
+        { name: 'Cuidador Infantil', id: 16, theme: "common" },
+        { name: 'Cuidador de Idosos', id: 17, theme: "common" },
+        { name: 'Artes Visuais', id: 18, theme: "common" },
+        { name: 'Marketing', id: 19, theme: "common" },
+        { name: 'Servente', id: 20, theme: "common" },
+        { name: 'Vendedor', id: 21, theme: "common" },
+        { name: 'Feirante', id: 22, theme: "common" },
+        { name: 'Doméstica', id: 23, theme: "common" },
+        { name: 'Panfleteiro', id: 24, theme: "common" },
+        { name: 'Cozinheiro', id: 25, theme: "common" },
+        { name: 'Entregador', id: 26, theme: "common" },
+        { name: 'Motorista', id: 27, theme: "common" },
+        { name: 'Criador de Conteúdo', id: 28, theme: "common" },
+        { name: 'PCD 👨‍🦽', id: 29, theme: "common" },
+        { name: 'LGBTQIA+ 🌈', id: 30, theme: "common" },
+        { name: '#BlackLivesMatter ✊🏿', id: 31, theme: "common" },
+        { name: 'Porteiro', id: 32, theme: "common" },
+        { name: 'Vigia', id: 33, theme: "common" },
+        { name: 'Economista', id: 34, theme: "common" },
+        { name: 'Ator', id: 35, theme: "common" },
+        { name: 'Restaurante', id: 36, theme: "common" },
+        { name: 'Atendente', id: 37, theme: "common" },
+        { name: 'Cantor', id: 38, theme: "common" },
+        { name: 'Músico', id: 39, theme: "common" },
+        { name: 'Barbeiro', id: 40, theme: "common" },
+        { name: 'Informática', id: 41, theme: "common" },
+        { name: 'Eletricista', id: 42, theme: "common" },
+        { name: 'Encanador', id: 43, theme: "common" },
+        { name: 'Mecânico', id: 44, theme: "common" },
+        { name: 'COVID-19 😷', id: 45, theme: "common" },
+        { name: 'Coach', id: 46, theme: "common" },
+        { name: 'Enfermagem', id: 47, theme: "common" },
+        { name: 'Atleta', id: 48, theme: "common" },
+        { name: 'Ilustração', id: 49, theme: "common" },
+        { name: 'Animação', id: 50, theme: "common" },
+        { name: 'Fotografia', id: 51, theme: "common" },
+        { name: 'Teatro', id: 51, theme: "common" },
+    ]
+};
+
 export const WriteArticle = (props) => {
 
     const articles = props.articles
@@ -158,64 +222,6 @@ export const WriteArticle = (props) => {
             })
 
     }
-
-    const msConfig = {
-        options: [
-            { name: 'Diversão', id: 0, theme: "common" },
-            { name: 'Pintor', id: 1, theme: "common" },
-            { name: 'Pedreiro', id: 2, theme: "common" },
-            { name: 'Costura', id: 3, theme: "common" },
-            { name: 'Desenvolvedor', id: 4, theme: "common" },
-            { name: 'Designer Gráfico', id: 5, theme: "common" },
-            { name: 'Cabeleleiro', id: 6, theme: "common" },
-            { name: 'Trancista', id: 7, theme: "common" },
-            { name: 'Vaga', id: 8, theme: "common" },
-            { name: 'Designer Gráfico', id: 9, theme: "common" },
-            { name: 'Designer Web', id: 10, theme: "common" },
-            { name: 'Designer de Moda', id: 11, theme: "common" },
-            { name: 'Designer de Interiores', id: 12, theme: "common" },
-            { name: 'Designer de Unhas', id: 13, theme: "common" },
-            { name: 'Manicure', id: 14, theme: "common" },
-            { name: 'Pedicure', id: 15, theme: "common" },
-            { name: 'Cuidador Infantil', id: 16, theme: "common" },
-            { name: 'Cuidador de Idosos', id: 17, theme: "common" },
-            { name: 'Artes Visuais', id: 18, theme: "common" },
-            { name: 'Marketing', id: 19, theme: "common" },
-            { name: 'Servente', id: 20, theme: "common" },
-            { name: 'Vendedor', id: 21, theme: "common" },
-            { name: 'Feirante', id: 22, theme: "common" },
-            { name: 'Doméstica', id: 23, theme: "common" },
-            { name: 'Panfleteiro', id: 24, theme: "common" },
-            { name: 'Cozinheiro', id: 25, theme: "common" },
-            { name: 'Entregador', id: 26, theme: "common" },
-            { name: 'Motorista', id: 27, theme: "common" },
-            { name: 'Criador de Conteúdo', id: 28, theme: "common" },
-            { name: 'PCD 👨‍🦽', id: 29, theme: "common" },
-            { name: 'LGBTQIA+ 🌈', id: 30, theme: "common" },
-            { name: '#BlackLivesMatter ✊🏿', id: 31, theme: "common" },
-            { name: 'Porteiro', id: 32, theme: "common" },
-            { name: 'Vigia', id: 33, theme: "common" },
-            { name: 'Economista', id: 34, theme: "common" },
-            { name: 'Ator', id: 35, theme: "common" },
-            { name: 'Restaurante', id: 36, theme: "common" },
-            { name: 'Atendente', id: 37, theme: "common" },
-            { name: 'Cantor', id: 38, theme: "common" },
-            { name: 'Músico', id: 39, theme: "common" },
-            { name: 'Barbeiro', id: 40, theme: "common" },
-            { name: 'Informática', id: 41, theme: "common" },
-            { name: 'Eletricista', id: 42, theme: "common" },
-            { name: 'Encanador', id: 43, theme: "common" },
-            { name: 'Mecânico', id: 44, theme: "common" },
-            { name: 'COVID-19 😷', id: 45, theme: "common" },
-            { name: 'Coach', id: 46, theme: "common" },
-            { name: 'Enfermagem', id: 47, theme: "common" },
-            { name: 'Atleta', id: 48, theme: "common" },
-            { name: 'Ilustração', id: 49, theme: "common" },
-            { name: 'Animação', id: 50, theme: "common" },
-            { name: 'Fotografia', id: 51, theme: "common" },
-            { name: 'Teatro', id: 51, theme: "common" },
-        ]
-    };
 
     return (
         <Card class={cardstyles.card_s_100 + " card mb-3"}>
