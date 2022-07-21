@@ -9,35 +9,21 @@ import Link from 'next/link'
 import responsive from '../styles/Responsive.module.css'
 import Head from 'next/head'
 import Multiselect from 'multiselect-react-dropdown';
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { axiosInstance } from '../config/axios'
 
-const articles = [
-    {
-        id: 1,
-        title: 'Escrevendo teste',
-        content: 'Alo',
-        tags: [
-            { name: 'PCD 👨‍🦽', id: 29, theme: "common" },
-            { name: 'LGBTQIA+ 🌈', id: 30, theme: "common" },
-            { name: '#BlackLivesMatter ✊🏿', id: 31, theme: "common" },
-            { name: 'Porteiro', id: 32, theme: "common" }
-        ]
-    },
-    {
-        id: 2,
-        title: 'JoJo',
-        content: 'Luva de Pedreiro',
-        tags: [
-            { name: 'Entregador', id: 29, theme: "common" },
-            { name: 'Diversão', id: 30, theme: "common" },
-            { name: 'Animação', id: 31, theme: "common" },
-            { name: 'Porteiro', id: 32, theme: "common" }
-        ]
-    },
-]
-
 export default function Main(props) {
+
+    const [articles, setArticles] = useState([])
+
+    useEffect(() => {
+
+        axiosInstance.get('/article/articles-list/')
+            .then((response) => {
+                setArticles(response.data.data.data)
+            })
+
+    }, [])
 
     return (
         <div className="bg-light">
@@ -88,16 +74,13 @@ export default function Main(props) {
                                             <br />
                                             <div className='mt-3'>
                                                 <span className={jobeestyles.ad_badge + " badge rounded-pill text-dark mx-1"}>Anúncio📢</span>
-                                                <span className={badgestyles.badge_bg_rainbow + " badge rounded-pill text-dark mx-1"}>LGBTQIA+ 🌈</span>
-                                                <span className={badgestyles.badge_bg_rainbow + " badge rounded-pill text-dark mx-1"}>PCD 👨‍🦽</span>
-                                                <span className={badgestyles.badge_bg_rainbow + " badge rounded-pill text-dark mx-1"}>#BlackLivesMatter ✊🏿</span>
                                             </div>
                                         </div>
                                     </Card>
                                 </a>
                             </Link>
 
-                            <WriteArticle />
+                            <WriteArticle articles={articles} setArticles={setArticles} />
 
                             {articles.map((article) => {
                                 return (
@@ -119,7 +102,7 @@ export default function Main(props) {
 export const ShowArticle = (props) => {
 
     return (
-        <Link href={"/article/"+props.id}>
+        <Link href={"/article/" + props.id}>
             <a>
                 <Card class={cardstyles.card_s_100 + " card mb-3"}>
                     <div className="card-body">
@@ -127,11 +110,20 @@ export const ShowArticle = (props) => {
                         {props.content}
                         <br />
                         <div className='mt-3'>
-                            {props.tags.map((tag) => {
-                                return (
-                                    <span className={badgestyles.badge_bg_rainbow + " badge rounded-pill text-dark mx-1"}>{tag.name}</span>
-                                )
-                            })}
+                            {
+                                !Array.isArray(props.tags) ?
+                                    JSON.parse(props.tags).map((tag) => {
+                                        return (
+                                            <span className={badgestyles.badge_bg_rainbow + " badge rounded-pill text-dark mx-1"}>{tag.name}</span>
+                                        )
+                                    })
+                                    :
+                                    props.tags.map((tag) => {
+                                        return (
+                                            <span className={badgestyles.badge_bg_rainbow + " badge rounded-pill text-dark mx-1"}>{tag.name}</span>
+                                        )
+                                    })
+                            }
                         </div>
                     </div>
                 </Card>
@@ -141,7 +133,10 @@ export const ShowArticle = (props) => {
 
 }
 
-export const WriteArticle = () => {
+export const WriteArticle = (props) => {
+
+    const articles = props.articles
+    const setArticles = props.setArticles
 
     const [writtenArticle, setWrittenArticle] = useState({
         title: '',
@@ -155,6 +150,7 @@ export const WriteArticle = () => {
         axiosInstance.post('/article/create-article', { ...writtenArticle, status: 'publicado' })
             .then((response) => {
                 console.log(response)
+                setArticles([...articles, response.data.data.data])
             })
 
     }
