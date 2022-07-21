@@ -149,8 +149,12 @@ export const WriteArticle = (props) => {
 
         axiosInstance.post('/article/create-article', { ...writtenArticle, status: 'publicado' })
             .then((response) => {
-                console.log(response)
-                setArticles([...articles, response.data.data.data])
+                setWrittenArticle({
+                    title: '',
+                    content: '',
+                    tags: []
+                })
+                setArticles([response.data.data.data, ...articles])
             })
 
     }
@@ -227,6 +231,7 @@ export const WriteArticle = (props) => {
                         onChange={(e) => setWrittenArticle({ ...writtenArticle, content: e.target.value })} value={writtenArticle.content} type="email" className="form-control-plaintext" id="floatingEmptyPlaintextInput" placeholder="O que está acontecendo?" />
                 </div>
                 <Multiselect
+                    selectedValues={writtenArticle.tags}
                     onSelect={(e) => setWrittenArticle({ ...writtenArticle, tags: e })}
                     onRemove={(e) => setWrittenArticle({ ...writtenArticle, tags: e })}
                     placeholder="Tags"
