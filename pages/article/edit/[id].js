@@ -15,7 +15,7 @@ import { useRouter } from 'next/router';
 export default function EditArticle() {
 
     const router = useRouter()
-    const {id} = router.query
+    const { id } = router.query
 
     const [writtenArticle, setWrittenArticle] = useState({
         title: '',
@@ -23,21 +23,22 @@ export default function EditArticle() {
         tags: []
     })
 
-    useEffect(()=>{
-        axiosInstance.get('/article/find-article/'+id)
-        .then((response)=>{
-            setWrittenArticle({
-                title: response.data.data.data.title,
-                content: response.data.data.data.content,
-                tags: JSON.parse(response.data.data.data.tags)
+    useEffect(() => {
+        if(id == undefined) return
+        axiosInstance.get('/article/find-article/' + id)
+            .then((response) => {
+                setWrittenArticle({
+                    title: response.data.data.data.title,
+                    content: response.data.data.data.content,
+                    tags: JSON.parse(response.data.data.data.tags)
+                })
             })
-        })
-    },[])
+    }, [id])
 
     function submitArticle(e) {
         e.preventDefault()
 
-        axiosInstance.post('/article/create-article', { ...writtenArticle, status: 'publicado' })
+        axiosInstance.post('/article/update-article', { id: id, ...writtenArticle, status: 'publicado' })
             .then((response) => {
 
             })
