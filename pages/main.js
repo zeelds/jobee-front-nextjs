@@ -194,6 +194,7 @@ export const msConfig = {
         { name: 'Animação', id: 50, theme: "common" },
         { name: 'Fotografia', id: 51, theme: "common" },
         { name: 'Teatro', id: 51, theme: "common" },
+        { name: 'Orgulho Trans 🏳️‍⚧️', id: 30, theme: "common" },
     ]
 };
 
@@ -201,6 +202,8 @@ export const WriteArticle = (props) => {
 
     const articles = props.articles
     const setArticles = props.setArticles
+
+    const [options, setOptions] = useState(msConfig.options)
 
     const [writtenArticle, setWrittenArticle] = useState({
         title: '',
@@ -242,9 +245,10 @@ export const WriteArticle = (props) => {
                     onRemove={(e) => setWrittenArticle({ ...writtenArticle, tags: e })}
                     placeholder="Tags"
                     className={`mb-3 ${responsive.responsive_select}`}
-                    options={msConfig.options}
+                    options={options}
                     displayValue="name"
                     selectionLimit="4"
+                    showCheckbox={true}
                     emptyRecordMsg="Nenhuma tag foi encontrada."
                     style={{
                         chips: {

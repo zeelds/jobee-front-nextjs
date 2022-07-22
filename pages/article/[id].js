@@ -50,6 +50,7 @@ export const EditArticle = () => {
                     options={msConfig.options}
                     displayValue="name"
                     selectionLimit="4"
+                    showCheckbox={true}
                     emptyRecordMsg="Nenhuma tag foi encontrada."
                     style={{
                         chips: {
