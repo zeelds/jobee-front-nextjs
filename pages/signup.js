@@ -37,11 +37,9 @@ export default function SignUp() {
             password: password,
             repassword: repassword,
             unlettered: false,
-            pronouns: "Ele",
+            pronouns: "Ele/Dele",
             color_blindness: "Nenhum"
         }
-
-        console.log(dataForm)
 
         axiosInstance.post('/client/register', dataForm)
             .then((response) => {

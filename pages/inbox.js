@@ -26,7 +26,7 @@ export default function Inbox() {
 
                         <br />
 
-                        <div className={"container w-50 "+responsive.w75_on_sm}>
+                        <div className={"container w-50 " + responsive.w75_on_sm}>
                             <div className="list-group">
                                 <a className="list-group-item">
                                     <div className="d-flex w-100 justify-content-between ">
