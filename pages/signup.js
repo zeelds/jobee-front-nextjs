@@ -78,7 +78,7 @@ export default function SignUp() {
                 <div className='mb-5 float-start container'>
                     <Link href='/signin'>
                         <a>
-                            <img className={styles.clickable + ' ' + styles.fixed_arrow} src='/arrow.png' />
+                            <img alt="" className={styles.clickable + ' ' + styles.fixed_arrow} src='/arrow.png' />
                         </a>
                     </Link>
 

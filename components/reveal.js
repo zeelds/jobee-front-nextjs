@@ -34,7 +34,7 @@ export default function Reveal(props) {
     return (
         <>
             <a className={styles.item_nobg} onClick={toggleReveal}>
-                <img id="eye" src={`/icons/reveal/frame${reveal}.png`} width="32" height="32" />
+                <img alt="" id="eye" src={`/icons/reveal/frame${reveal}.png`} width="32" height="32" />
             </a>
         </>
     )

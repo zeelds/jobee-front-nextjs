@@ -12,6 +12,12 @@ import { axiosInstance } from '../../config/axios'
 
 export default function Accessibility() {
 
+    const [oldAccessibility, setOldAccessibility] = useState({
+        pronouns: 'Ele/Dele',
+        color_blindness: 'Nenhum',
+        unlettered: false
+    })
+
     const [accessibility, setAccessibility] = useState({
         pronouns: 'Ele/Dele',
         color_blindness: 'Nenhum',
@@ -21,12 +27,34 @@ export default function Accessibility() {
     useEffect(() => {
 
         axiosInstance.get(('/client/get-accessibility'))
-        .then((response)=>{
-            console.log(response)
-        })
+            .then(async (response) => {
+
+                setAccessibility({
+                    pronouns: response.data.body.data.pronouns,
+                    color_blindness: response.data.body.data.color_blindness,
+                    unlettered: response.data.body.data.unlettered
+                })
+
+                setOldAccessibility({
+                    pronouns: response.data.body.data.pronouns,
+                    color_blindness: response.data.body.data.color_blindness,
+                    unlettered: response.data.body.data.unlettered
+                })
+
+            })
 
     }, [])
 
+    function submitForm(e) {
+        e.preventDefault()
+        axiosInstance.post(('/client/redefine-accessibility'), accessibility)
+            .then(async (response) => {
+
+                console.log(accessibility)
+                setOldAccessibility(accessibility)
+
+            })
+    }
 
     return (
         <div className="bg-light">
@@ -49,40 +77,42 @@ export default function Accessibility() {
                             Configure a acessibilidade para obter uma melhor experiência
                         </a>
 
-                        <div class="form-floating mt-3 mb-3">
-                            <select onChange={(e) => setAccessibility({ ...accessibility, pronouns: e.target.value })} value={accessibility.pronouns} class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                        <div className="form-floating mt-3 mb-3">
+                            <select onChange={(e) => setAccessibility({ ...accessibility, pronouns: e.target.value })} value={accessibility.pronouns} className="form-select" id="floatingSelect" aria-label="Floating label select example">
                                 <option value="Ele/Dele">Ele/Dele</option>
                                 <option value="Ela/Dela">Ela/Dela</option>
                                 <option value="Elu/Delu">Elu/Delu</option>
                             </select>
-                            <label for="floatingSelect">Pronome de Preferência</label>
+                            <label htmlFor="floatingSelect">Pronome de Preferência</label>
                         </div>
 
-                        <div class="form-floating mt-3 mb-3">
-                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                                <option selected>Nenhum</option>
-                                <option value="1">Deuteranomalia</option>
-                                <option value="2">Protanomalia</option>
-                                <option value="3">Protanopia</option>
-                                <option value="4">Deuteranopia</option>
-                                <option value="5">Tritanomalia</option>
-                                <option value="6">Tritanopia</option>
-                                <option value="7">Total</option>
+                        <div className="form-floating mt-3 mb-3">
+                            <select className="form-select" id="floatingSelect" onChange={(e) => setAccessibility({ ...accessibility, color_blindness: e.target.value })} value={accessibility.color_blindness} aria-label="Floating label select example">
+                                <option value="Nenhum">Nenhum</option>
+                                <option value="Deuteranomalia">Deuteranomalia</option>
+                                <option value="Protanomalia">Protanomalia</option>
+                                <option value="Protanopia">Protanopia</option>
+                                <option value="Deuteranopia">Deuteranopia</option>
+                                <option value="Tritanomalia">Tritanomalia</option>
+                                <option value="Tritanopia">Tritanopia</option>
+                                <option value="Total">Total</option>
                             </select>
-                            <label for="floatingSelect">Grau de Daltonismo</label>
+                            <label htmlFor="floatingSelect">Grau de Daltonismo</label>
                         </div>
 
-                        <div class="form-check float-start">
-                            <input onChange={() => setAccessibility({ ...accessibility, unlettered: !accessibility.unlettered })} checked={accessibility.unlettered} class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                            <label class="form-check-label" for="flexCheckDefault">
+                        <div className="form-check float-start">
+                            <input onChange={() => setAccessibility({ ...accessibility, unlettered: !accessibility.unlettered })} checked={accessibility.unlettered} className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                            <label className="form-check-label" htmlFor="flexCheckDefault">
                                 Eu sou {pronounFix(accessibility.pronouns, 'iliterado/iliterada/iliterade')}
                             </label>
                         </div>
 
                         <br />
 
-                        <button className="w-100 btn btn-dark mt-2"><b>Salvar alterações</b></button>
-                        <button className="w-100 btn mt-2"><b>Descartar</b></button>
+                        <button onClick={submitForm} className="w-100 btn btn-dark mt-2"><b>Salvar alterações</b></button>
+                        <button onClick={() => {
+                            setAccessibility(oldAccessibility)
+                        }} className="w-100 btn mt-2"><b>Descartar</b></button>
 
                     </div>
 

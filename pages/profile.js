@@ -7,11 +7,13 @@ import Navbar from '../components/navbar'
 import Card from '../components/smart/card'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useSearch } from './_app'
+import { useAppContext } from './_app'
 
 export default function Profile() {
 
-    const { search, setSearch } = useSearch()
+
+    const { search } = useAppContext()
+    const [searchValue, setSearchValue] = search
 
     return (
         <div className="bg-light">
@@ -30,13 +32,13 @@ export default function Profile() {
                         <div className='mt-3'>
 
                             <div className="d-inline-flex w-100 mb-3">
-                                <input onChange={(e) => setSearch(e.target.value)} value={search} className={styles.item_spacing + " form-control rounded-0"} id="search-bar" placeholder="🔍︎ Tente buscar algo" />
+                                <input onChange={(e) => setSearchValue(e.target.value)} value={searchValue} className={styles.item_spacing + " form-control rounded-0"} id="search-bar" placeholder="🔍︎ Tente buscar algo" />
                                 <button className="btn btn-dark rounded-0">Pesquisar</button>
                             </div>
 
                             <br />
 
-                            <img className={`mx-3 rounded-circle ${navstyles.dropdown_avatar}`} src="/avatar/komi.jpg" width="128" height="128" />
+                            <img alt="" className={`mx-3 rounded-circle ${navstyles.dropdown_avatar}`} src="/avatar/komi.jpg" width="128" height="128" />
 
                             <div className="ms-3">
                                 <b>Dona Célia</b>
@@ -57,7 +59,7 @@ export default function Profile() {
                                 <div className="col">
                                     <Link href="/account/accessibility">
                                         <div className={navstyles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
-                                            <Image className={navstyles.item_icon} src="/icons/accessibility.png" width="32" height="32" />
+                                            <Image alt="" className={navstyles.item_icon} src="/icons/accessibility.png" width="32" height="32" />
                                             <br />
                                             <b>Acessibilidade</b>
                                         </div>
@@ -66,7 +68,7 @@ export default function Profile() {
                                 <div className="col">
                                     <Link href="/account/language">
                                         <div className={navstyles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
-                                            <Image className={navstyles.item_icon} src="/icons/language.png" width="32" height="32" />
+                                            <Image alt="" className={navstyles.item_icon} src="/icons/language.png" width="32" height="32" />
                                             <br />
                                             <b>Idiomas</b>
                                         </div>
@@ -75,7 +77,7 @@ export default function Profile() {
                                 <div className="col">
                                     <Link href="/account/configurations">
                                         <div className={navstyles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
-                                            <Image className={navstyles.item_icon} src="/icons/gear.png" width="32" height="32" />
+                                            <Image alt="" className={navstyles.item_icon} src="/icons/gear.png" width="32" height="32" />
                                             <br />
                                             <b>Configurações de Conta</b>
                                         </div>
@@ -87,7 +89,7 @@ export default function Profile() {
                                 <div className="col">
                                     <Link href="/account/privacy">
                                         <div className={navstyles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
-                                            <Image className={navstyles.item_icon} src="/icons/lock.gif" width="32" height="32" />
+                                            <Image alt="" className={navstyles.item_icon} src="/icons/lock.gif" width="32" height="32" />
                                             <br />
                                             <b>Privacidade</b>
                                         </div>
@@ -96,7 +98,7 @@ export default function Profile() {
                                 <div className="col">
                                     <Link href="/help">
                                         <div className={navstyles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
-                                            <Image className={navstyles.item_icon} src="/icons/help.png" width="32" height="32" />
+                                            <Image alt="" className={navstyles.item_icon} src="/icons/help.png" width="32" height="32" />
                                             <br />
                                             <b>Ajuda</b>
                                         </div>
@@ -105,7 +107,7 @@ export default function Profile() {
                                 <div className="col">
                                     <Link href="/signin">
                                         <div className={navstyles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
-                                            <Image className={navstyles.item_icon} src="/icons/exit.png" width="32" height="32" />
+                                            <Image alt="" className={navstyles.item_icon} src="/icons/exit.png" width="32" height="32" />
                                             <br />
                                             <b>Sair</b>
                                         </div>

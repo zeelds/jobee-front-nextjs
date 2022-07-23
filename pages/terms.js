@@ -9,7 +9,7 @@ export default function Terms() {
     const { scrollYProgress } = useViewportScroll();
     const [opacity, setOpacity] = useState(0)
 
-    scrollYProgress.onChange((e) => setOpacity(e*200))
+    scrollYProgress.onChange((e) => setOpacity(e * 200))
 
     return (
         <motion.div
@@ -24,7 +24,7 @@ export default function Terms() {
                     <Link href='/start'>
                         <a>
                             <motion.img
-                                animate={{opacity: 1-opacity}}
+                                animate={{ opacity: 1 - opacity }}
                                 className={styles.clickable + ' ' + styles.fixed_arrow} src='/arrow.png' />
                         </a>
                     </Link>
@@ -40,7 +40,7 @@ export default function Terms() {
                         <p> </p>
                         <p>Seja bem-vindo ao nosso site. Leia com muita atenção todos os termos abaixo.</p>
                         <p> </p>
-                        <p>Este documento, e todo o conteúdo do site é oferecido por <strong>Jobee</strong>, neste termo representado apenas por "EMPRESA", que regulamenta todos os direitos e obrigações com todos que acessam o site, denominado neste termo como "VISITANTE", reguardado todos os direitos previstos na legislação, trazem as cláusulas abaixo como requisito para acesso e visita do mesmo, situado no endereço <strong>https://jobee-platform.herokuapp.com/.</strong></p>
+                        <p>Este documento, e todo o conteúdo do site é oferecido por <strong>Jobee</strong>, neste termo representado apenas por &#34;EMPRESA&#34;, que regulamenta todos os direitos e obrigações com todos que acessam o site, denominado neste termo como &#34;VISITANTE&#34;, reguardado todos os direitos previstos na legislação, trazem as cláusulas abaixo como requisito para acesso e visita do mesmo, situado no endereço <strong>https://jobee-platform.herokuapp.com/.</strong></p>
                         <p> </p>
                         <p>A permanência no website implica-se automaticamente na leitura e aceitação tácita do presente termos de uso a seguir. Este termo foi atualizado pela última vez em 14 de setembro de 2021.</p>
                         <p> </p>
@@ -58,7 +58,7 @@ export default function Terms() {
                         <p> </p>
                         <h3>2. <strong>DO ACEITE DOS TERMOS</strong></h3>
                         <p> </p>
-                        <p>Este documento, chamado "Termos de Uso", aplicáveis a todos os visitantes do site, foi desenvolvido por <a href="https://diegocastro.adv.br/">Diego Castro</a> Advogado - OAB/PI 15.613, modificado com permissão para este site.</p>
+                        <p>Este documento, chamado &#34;Termos de Uso&#34;, aplicáveis a todos os visitantes do site, foi desenvolvido por <a href="https://diegocastro.adv.br/">Diego Castro</a> Advogado - OAB/PI 15.613, modificado com permissão para este site.</p>
                         <p> </p>
                         <p>Este termo especifica e exige que todo usuário ao acessar o site da EMPRESA, leia e compreenda todas as cláusulas do mesmo, visto que ele estabelece entre a EMPRESA e o VISITANTE direitos e obrigações entre ambas as partes, aceitos expressamente pelo VISITANTE a permanecer navegando no site da EMPRESA.</p>
                         <p> </p>
@@ -78,66 +78,6 @@ export default function Terms() {
                             <li><strong>HIPERLINKS: </strong>São links clicáveis que podem aparecer pelo site ou no conteúdo, que levam para outra página da EMPRESA ou site externo.</li>
                             <li><strong>OFFLINE:</strong> Quando o site ou plataforma se encontra indisponível, não podendo ser acessado externamente por nenhum usuário.</li>
                         </ul>
-                        <p> </p>
-                        <p>Em caso de dúvidas sobre qualquer palavra utilizada neste termo, o VISITANTE deverá entrar em contato com a EMPRESA através dos canais de comunicação encontradas no site.</p>
-                        <p> </p>
-                        <h3>4<strong>. DO ACESSO AO SITE</strong></h3>
-                        <p> </p>
-                        <p>O Site e plataforma funcionam normalmente 24 (vinte e quatro) horas por dia, porém podem ocorrer pequenas interrupções de forma temporária para ajustes, manutenção, mudança de servidores, falhas técnicas ou por ordem de força maior, que podem deixar o site indisponível por tempo limitado.</p>
-                        <p> </p>
-                        <p>A EMPRESA não se responsabiliza por nenhuma perda de oportunidade ou prejuízos que esta indisponibilidade temporária possa gerar aos usuários.</p>
-                        <p> </p>
-                        <p>Em caso de manutenção que exigirem um tempo maior, a EMPRESA irá informar previamente aos clientes da necessidade e do tempo previsto em que o site ou plataforma ficará offline.</p>
-                        <p> </p>
-                        <p>O acesso ao site só é permitido a maiores de 18 anos de idade ou que possuírem capacidade civil plena. Para acesso de menores de idade, é necessária a expressa autorização dos pais ou tutores, ficando o mesmo responsáveis sobre qualquer compra ou acesso efetuados pelo mesmo.</p>
-                        <p> </p>
-                        <p>Caso seja necessário realizar um cadastro junto a plataforma, onde o VISITANTE deverá preencher um formulário com seus dados e informações, para ter acesso a alguma parte restrita, ou realizar alguma compra.</p>
-                        <p> </p>
-                        <p>Todos os dados estão protegidos conforme a Lei Geral de Proteção de Dados, e ao realizar o cadastro junto ao site, o VISITANTE concorda integralmente com a coleta de dados conforme a Lei e com a Política de Privacidade da EMPRESA.</p>
-                        <p> </p>
-                        <h3><strong>5. DA LICENÇA DE USO E CÓPIA</strong></h3>
-                        <p> </p>
-                        <p>O visitante poderá acessar todo o conteúdo do website, como artigos, vídeos, imagens, produtos e serviços, não significando nenhum tipo de cessão de direito ou permissão de uso, ou de cópia dos mesmo.</p>
-                        <p> </p>
-                        <p>Todos os direitos são preservados, conforme a legislação brasileira, principalmente na Lei de Direitos Autorais (regulamentada na <a href="http://www.planalto.gov.br/ccivil_03/leis/l9610.htm">Lei nº 9.610/18</a>), assim como no Código Civil brasileiro (regulamentada na <a href="http://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm">Lei nº 10.406/02</a>), ou quaisquer outras legislações aplicáveis.</p>
-                        <p> </p>
-                        <p>Todo o conteúdo do site é protegido por direitos autorais, e seu uso, cópia, transmissão, venda, cessão ou revenda, deve seguir a lei brasileira, tendo a EMPRESA todos os seus direitos reservados, e não permitindo a cópia ou utilização de nenhuma forma e meio, sem autorização expressa e por escrita da mesma.</p>
-                        <p> </p>
-                        <p>A EMPRESA poderá em casos concretos permitir pontualmente exceções a este direito, que serão claramente destacados no mesmo, com a forma e permissão de uso do conteúdo protegido. Este direito é revogável e limitado as especificações de cada caso.</p>
-                        <p> </p>
-                        <h3>6.<strong> DAS OBRIGAÇÕES</strong></h3>
-                        <p> </p>
-                        <p>O VISITANTE ao utilizar o website da EMPRESA, concorda integralmente em:</p>
-                        <p> </p>
-                        <ul>
-                            <li>De nenhuma forma ou meio realizar qualquer tipo de ação que tente invadir, hacker, destruir ou prejudicar a estrutura do site, plataforma da EMPRESA ou de seus parceiros comerciais. Incluindo-se, mas não se limitando, ao envio de vírus de computador, de ataques de DDOS, de acesso indevido por falhas da mesma ou quaisquer outras forma e meio.</li>
-                            <li>De não realizar divulgação indevida nos comentários do site de conteúdo de SPAM, empresas concorrentes, vírus, conteúdo que não possua direitos autorais ou quaisquer outros que não seja pertinente a discussão daquele texto, vídeo ou imagem.</li>
-                            <li>Da proibição em reproduzir qualquer conteúdo do site ou plataforma sem autorização expressa, podendo responder civil e criminalmente pelo mesmo.</li>
-                            <li>Com a Política de Privacidade do site, assim como tratamos os dados referentes ao cadastro e visita no site, podendo a qualquer momento e forma, requerer a exclusão dos mesmos, através do formulário de contato.</li>
-                        </ul>
-                        <p> </p>
-                        <h3><strong>7. DA MONETIZAÇÃO E PUBLICIDADE</strong></h3>
-                        <p> </p>
-                        <p>A EMPRESA pode alugar ou vender espaços publicitários na plataforma, ou no site, diretamente aos anunciantes, ou através de empresas especializadas com o Adsense (<a href="https://www.google.com/">Google</a>), Taboola ou outras plataformas especializadas como o <a href="https://eletrocriticas.com/">Eletro Críticas.</a></p>
-                        <p> </p>
-                        <p>Essas publicidades não significam nenhuma forma de endosso ou responsabilidade pelos mesmos, ficando o VISITANTE responsável pelas compras, visitas, acessos ou quaisquer ações referentes as estas empresas.</p>
-                        <p> </p>
-                        <p>Todas as propagandas no site ou plataforma serão claramente destacadas como publicidade, como forma de disclaimer da EMPRESA e de conhecimento do VISITANTE.</p>
-                        <p> </p>
-                        <p>Em casos de compra de produtos ou serviços, será possível a devolução em até 07 (sete) dias, conforme o Código de Defesa do Consumidor.</p>
-                        <p> </p>
-                        <p>Estes anúncios podem ser selecionados pela empresa de publicidade automaticamente, conforme as visitas recentes do VISITANTE, assim como baseado no seu histórico de busca, conforme as políticas de acesso da plataforma.</p>
-                        <p> </p>
-                        <h3>8. <strong>DOS TERMOS GERAIS</strong></h3>
-                        <p> </p>
-                        <p>O Site irá apresentar hiperlinks durante toda a sua navegação, que podem levar diretamente para outra página da EMPRESA ou para sites externos.</p>
-                        <p> </p>
-                        <p>Apesar da EMPRESA apenas criar links para sites externos de extrema confiança, caso o usuário acesse um site externo, a EMPRESA não tem nenhuma responsabilidade pelo meio, sendo uma mera indicação de complementação de conteúdo, ficando o mesmo responsável pelo acesso, assim como sobre quaisquer ações que venham a realizar neste site.</p>
-                        <p> </p>
-                        <p>Em caso que ocorra eventuais conflitos judiciais entre o VISITANTE e a EMPRESA, o foro elegido para a devida ação será o da comarca da Empresa, mesmo que haja outro mais privilegiado.</p>
-                        <p> </p>
-                        <p>Este Termo de uso é valido a partir de 14 de setembro de 2021.</p>
-                        <p> </p>
 
                     </div>
 

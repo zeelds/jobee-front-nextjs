@@ -53,7 +53,7 @@ export default function SignIn() {
                 <div className='mb-5 float-start container'>
                     <Link href='/start'>
                         <a>
-                            <img className={styles.clickable + ' ' + styles.fixed_arrow} src='/arrow.png' />
+                            <img alt="" className={styles.clickable + ' ' + styles.fixed_arrow} src='/arrow.png' />
                         </a>
                     </Link>
 

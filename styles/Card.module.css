@@ -4,8 +4,9 @@
 }
 
 .card_s_75 {
-    width: 75%;
+    width: 25vw;
     border-radius: 15px;
+    margin-right: 25px;
 }
 
 .card_s_50 {

@@ -44,7 +44,7 @@ export default function Inbox() {
                                         <h5 className="mb-1">Uma dica!</h5>
                                         <small className="text-muted">3 dias atrás</small>
                                     </div>
-                                    <p className="mb-1">Você sabia que há muitas vagas para você? Tente buscar por 'pintor'.</p>
+                                    <p className="mb-1">Você sabia que há muitas vagas para você? Tente buscar por &apos;pintor&apos;.</p>
                                     <small className="text-muted">Enviado por The Jobee Team.</small>
                                     <span className="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
                                         <span className="visually-hidden">New alerts</span>

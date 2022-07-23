@@ -26,7 +26,7 @@ export default function People() {
 
                     <div className={"d-flex justify-content-center container-fluid w-75 " + responsive.dblock_on_sm}>
 
-                        <Card class={cardstyles.card_s_50 + " card mb-3 me-2 " + responsive.w100_on_sm} img="/avatar/komi.jpg">
+                        <Card class={cardstyles.card_s_50 + " card mb-3 me-2 " + responsive.w100_on_sm} img="/avatar/avatar.png">
                             <div className="card-body text-center">
 
                                 <h4>Marília Santos</h4>

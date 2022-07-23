@@ -6,10 +6,42 @@ import { motion } from "framer-motion"
 import Navbar from '../components/navbar'
 import Card from '../components/smart/card'
 import Link from 'next/link'
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { Pie } from 'react-chartjs-2';
+
+ChartJS.register(ArcElement, Tooltip, Legend);
 
 //Abre o perfil do usuário
 
 export default function People() {
+
+    const data = {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [
+            {
+                label: '# of Votes',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                ],
+                borderWidth: 1,
+            },
+        ]
+    }
+
     return (
         <div className="bg-light">
 
@@ -25,7 +57,7 @@ export default function People() {
 
                     <div className={"d-flex justify-content-center container-fluid w-75 " + responsive.dblock_on_sm}>
 
-                        <Card class={cardstyles.card_s_50 + " card mb-3 me-2 " + responsive.w100_on_sm} img="/avatar/komi.jpg">
+                        <Card class={cardstyles.card_s_50 + " card mb-3 me-2 " + responsive.w100_on_sm} img="/avatar/avatar.png">
                             <div className="card-body text-center">
 
                                 <h4>
@@ -58,9 +90,9 @@ export default function People() {
                                     <div className="vr ms-2 me-2" />
 
                                     <div className='ms-2 text-center'>
-                                        <b>8</b>
+                                        <b>8 meses</b>
                                         <br />
-                                        anos
+                                        Serviço
                                     </div>
 
                                 </div>
@@ -85,6 +117,9 @@ export default function People() {
                         <Card class={cardstyles.card_s_50 + " card mb-3 " + responsive.w100_on_sm}>
                             <div className="card-body">
                                 Marília tem 72 comentários. Marília costuma interagir com as seguintes tags. Marília é avaliada positivamente 72% das vezes. Marília é avaliada negativamente 10% das vezes.
+                                <Pie
+                                    data={data}
+                                />
                             </div>
                         </Card>
 

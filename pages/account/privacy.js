@@ -26,9 +26,9 @@ export default function Privacy() {
 
                         Mas se você não quiser
 
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
-                                <label class="form-check-label" for="flexCheckChecked">
+                        <div className="form-check">
+                            <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
+                                <label className="form-check-label" htmlFor="flexCheckChecked">
                                     Eu desejo não compartilhar os meus dados pessoais de uso.
                                 </label>
                         </div>

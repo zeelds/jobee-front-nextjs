@@ -41,16 +41,16 @@ export default function Main(props) {
 
                         <div>
 
-                            <Card class={cardstyles.card_s_75 + " card mb-3 " + responsive.w100_on_sm} img="/avatar/komi.jpg">
+                            <Card class={cardstyles.card_s_75 + " card mb-3 " + responsive.w100_on_sm} img="/avatar/avatar.png">
                                 <div className="card-body">
-                                    <h4>Dona Célia</h4>
+                                    <h4>Marília Santos</h4>
                                     <h6><b>Sobre mim</b></h6>
                                     <p>
-                                        Dona Célia é uma ótima costureira de 63 anos que tem um amor muito grande pelo que faz.
+                                        Marília Santos é uma ótima designer de 26 anos que tem um amor muito grande pelo que faz.
                                     </p>
-                                    <h6><b>Qualificações</b></h6>
+                                    <h6><b>Contato</b></h6>
                                     <p>
-                                        Esse usuário não inseriu nenhuma qualificação no momento.
+                                        Esse usuário não inseriu nenhuma informação de contato no momento.
                                     </p>
                                     <button className={'btn w-100 ' + jobeestyles.btn_yellow}>
                                         <b>Escrever artigo</b>
@@ -82,9 +82,9 @@ export default function Main(props) {
 
                             <WriteArticle articles={articles} setArticles={setArticles} />
 
-                            {articles.map((article) => {
+                            {articles.map((article, index) => {
                                 return (
-                                    <ShowArticle id={article.id} title={article.title} content={article.content} tags={article.tags} />
+                                    <ShowArticle key={'article-' + index} id={article.id} title={article.title} content={article.content} tags={article.tags} />
                                 )
                             })}
 
@@ -118,15 +118,15 @@ export const ShowArticle = (props) => {
                         <div className='mt-3'>
                             {
                                 !Array.isArray(props.tags) ?
-                                    JSON.parse(props.tags).map((tag) => {
+                                    JSON.parse(props.tags).map((tag, index) => {
                                         return (
-                                            <span className={badgestyles.badge_bg_rainbow + " badge rounded-pill text-dark mx-1"}>{tag.name}</span>
+                                            <span key={'tags-' + index} className={badgestyles.badge_bg_rainbow + " badge rounded-pill text-dark mx-1"}>{tag.name}</span>
                                         )
                                     })
                                     :
-                                    props.tags.map((tag) => {
+                                    props.tags.map((tag, index) => {
                                         return (
-                                            <span className={badgestyles.badge_bg_rainbow + " badge rounded-pill text-dark mx-1"}>{tag.name}</span>
+                                            <span key={'tags-' + index} className={badgestyles.badge_bg_rainbow + " badge rounded-pill text-dark mx-1"}>{tag.name}</span>
                                         )
                                     })
                             }
@@ -145,8 +145,8 @@ export const msConfig = {
         { name: 'Pintor', id: 1, theme: "common" },
         { name: 'Pedreiro', id: 2, theme: "common" },
         { name: 'Costura', id: 3, theme: "common" },
-        { name: 'Desenvolvedor', id: 4, theme: "common" },
-        { name: 'Designer Gráfico', id: 5, theme: "common" },
+        { name: 'Desenvolvedor Front end', id: 4, theme: "common" },
+        { name: 'Desenvolvedor Back end', id: 5, theme: "common" },
         { name: 'Cabeleleiro', id: 6, theme: "common" },
         { name: 'Trancista', id: 7, theme: "common" },
         { name: 'Vaga', id: 8, theme: "common" },

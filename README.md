@@ -88,16 +88,16 @@ Se você deseja visualizar a prototipação do Jobee, você pode [clicar aqui](h
 
 **Web**
 <div style='display: inline-flex;'>
-	<img src='https://user-images.githubusercontent.com/98771718/177074319-53af867e-524b-45be-be87-11c557644cb2.png' style="width: 30%;">
-	<img src='https://user-images.githubusercontent.com/98771718/177074379-753a176f-d715-4193-a57e-057b593cc72f.png' style="width: 30%">
+	<img alt="" src='https://user-images.githubusercontent.com/98771718/177074319-53af867e-524b-45be-be87-11c557644cb2.png' style="width: 30%;">
+	<img alt="" src='https://user-images.githubusercontent.com/98771718/177074379-753a176f-d715-4193-a57e-057b593cc72f.png' style="width: 30%">
 </div>
-<img src='https://user-images.githubusercontent.com/98771718/177074402-573def9f-1a17-4982-9865-a8c7cd4474ae.png' style="width: 30%">
+<img alt="" src='https://user-images.githubusercontent.com/98771718/177074402-573def9f-1a17-4982-9865-a8c7cd4474ae.png' style="width: 30%">
 
 **Mobile**
 <div style='display: inline-flex;'>
-	<img src='https://user-images.githubusercontent.com/98771718/177074208-cdca2feb-ed35-4964-8c99-a0e4f9b223f5.png' style="width: 15%;">
-	<img src='https://user-images.githubusercontent.com/98771718/177075753-98da3674-d120-4f62-ae2e-7c86ba1587fe.png' style="width: 15%">
-	<img src='https://user-images.githubusercontent.com/98771718/177074283-b9744c7b-a032-425b-ad5c-1341efff4630.png' style="width: 15%">
+	<img alt="" src='https://user-images.githubusercontent.com/98771718/177074208-cdca2feb-ed35-4964-8c99-a0e4f9b223f5.png' style="width: 15%;">
+	<img alt="" src='https://user-images.githubusercontent.com/98771718/177075753-98da3674-d120-4f62-ae2e-7c86ba1587fe.png' style="width: 15%">
+	<img alt="" src='https://user-images.githubusercontent.com/98771718/177074283-b9744c7b-a032-425b-ad5c-1341efff4630.png' style="width: 15%">
 </div>
 
 ## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Contribuidores
@@ -112,11 +112,11 @@ Se você deseja visualizar a prototipação do Jobee, você pode [clicar aqui](h
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/raqsanta"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/98771718?v=4" width="100px;" alt=""/><br /><sub><b>Thulio Alves</b></sub></a><br /><a href="https://github.com/Girl-React#Thulio-Alves" target="_blank"><img src='https://user-images.githubusercontent.com/98771718/177053131-0e11208a-49c8-4d7a-b7fd-64e19b4f9753.png' href="https://google.com.br/" title="Girl React"></img></a></td>
-    <td align="center"><a href="https://github.com/antonymatheus"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/105078467?v=4" width="100px;" alt=""/><br /><sub><b>Antony Matheus</b></sub></a><br /><a href="https://github.com/Girl-React#Antony-Matheus" target="_blank"><img src='https://user-images.githubusercontent.com/98771718/177053131-0e11208a-49c8-4d7a-b7fd-64e19b4f9753.png' href="https://google.com.br/" title="Girl React"></img></a></td>
-    <td align="center"><a href="https://github.com/larysilvaak"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/101149582?v=4" width="100px;" alt=""/><br /><sub><b>Laryssa Kaylane</b></sub></a><br /><a href="https://github.com/Girl-React#Laryssa-Kaylane" target="_blank"><img src='https://user-images.githubusercontent.com/98771718/177053131-0e11208a-49c8-4d7a-b7fd-64e19b4f9753.png' href="https://google.com.br/" title="Girl React"></img></a></td>
-    <td align="center"><a href="https://github.com/zeelds"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/104655761?v=4" width="100px;" alt=""/><br /><sub><b>Mariana Pereira</b></sub></a><br /><a href="https://github.com/Girl-React#Mariana-Pereira" target="_blank"><img src='https://user-images.githubusercontent.com/98771718/177053131-0e11208a-49c8-4d7a-b7fd-64e19b4f9753.png' href="https://google.com.br/" title="Girl React"></img></a></td>
-    <td align="center"><a href="https://github.com/thayannestella"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/102566766?v=4" width="100px;" alt=""/><br /><sub><b>Thayanne Stella</b></sub></a><br /><a href="https://github.com/Girl-React#Thayanne-Stella" target="_blank"><img src='https://user-images.githubusercontent.com/98771718/177053131-0e11208a-49c8-4d7a-b7fd-64e19b4f9753.png'></img></a></td>
+    <td align="center"><a href="https://github.com/raqsanta"><img alt="" style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/98771718?v=4" width="100px;" alt=""/><br /><sub><b>Thulio Alves</b></sub></a><br /><a href="https://github.com/Girl-React#Thulio-Alves" target="_blank"><img alt="" src='https://user-images.githubusercontent.com/98771718/177053131-0e11208a-49c8-4d7a-b7fd-64e19b4f9753.png' href="https://google.com.br/" title="Girl React"></img></a></td>
+    <td align="center"><a href="https://github.com/antonymatheus"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/105078467?v=4" width="100px;" alt=""/><br /><sub><b>Antony Matheus</b></sub></a><br /><a href="https://github.com/Girl-React#Antony-Matheus" target="_blank" rel="noreferrer"><img alt="" src='https://user-images.githubusercontent.com/98771718/177053131-0e11208a-49c8-4d7a-b7fd-64e19b4f9753.png' href="https://google.com.br/" title="Girl React"></img></a></td>
+    <td align="center"><a href="https://github.com/larysilvaak"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/101149582?v=4" width="100px;" alt=""/><br /><sub><b>Laryssa Kaylane</b></sub></a><br /><a href="https://github.com/Girl-React#Laryssa-Kaylane" target="_blank" rel="noreferrer"><img alt="" src='https://user-images.githubusercontent.com/98771718/177053131-0e11208a-49c8-4d7a-b7fd-64e19b4f9753.png' href="https://google.com.br/" title="Girl React"></img></a></td>
+    <td align="center"><a href="https://github.com/zeelds"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/104655761?v=4" width="100px;" alt=""/><br /><sub><b>Mariana Pereira</b></sub></a><br /><a href="https://github.com/Girl-React#Mariana-Pereira" target="_blank" rel="noreferrer"><img alt="" src='https://user-images.githubusercontent.com/98771718/177053131-0e11208a-49c8-4d7a-b7fd-64e19b4f9753.png' href="https://google.com.br/" title="Girl React"></img></a></td>
+    <td align="center"><a href="https://github.com/thayannestella"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/102566766?v=4" width="100px;" alt=""/><br /><sub><b>Thayanne Stella</b></sub></a><br /><a href="https://github.com/Girl-React#Thayanne-Stella" target="_blank" rel="noreferrer"><img alt="" src='https://user-images.githubusercontent.com/98771718/177053131-0e11208a-49c8-4d7a-b7fd-64e19b4f9753.png'></img></a></td>
   </tr>
 </table>
 
