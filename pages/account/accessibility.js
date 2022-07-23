@@ -9,48 +9,23 @@ import Link from 'next/link'
 import pronounFix from '../../utils/pronounFix'
 import { useEffect, useState } from 'react'
 import { axiosInstance } from '../../config/axios'
+import { useAppContext } from '../_app'
 
 export default function Accessibility() {
 
-    const [oldAccessibility, setOldAccessibility] = useState({
-        pronouns: 'Ele/Dele',
-        color_blindness: 'Nenhum',
-        unlettered: false
-    })
+    const {accessibility} = useAppContext()
+    const [accessibilityDefault, setAccessibility] = accessibility
 
-    const [accessibility, setAccessibility] = useState({
-        pronouns: 'Ele/Dele',
-        color_blindness: 'Nenhum',
-        unlettered: false
-    })
+    const [oldAccessibility, setOldAccessibility] = useState({...accessibilityDefault})
 
-    useEffect(() => {
-
-        axiosInstance.get(('/client/get-accessibility'))
-            .then(async (response) => {
-
-                setAccessibility({
-                    pronouns: response.data.body.data.pronouns,
-                    color_blindness: response.data.body.data.color_blindness,
-                    unlettered: response.data.body.data.unlettered
-                })
-
-                setOldAccessibility({
-                    pronouns: response.data.body.data.pronouns,
-                    color_blindness: response.data.body.data.color_blindness,
-                    unlettered: response.data.body.data.unlettered
-                })
-
-            })
-
-    }, [])
+    const [newAccessibility, setNewAccessibility] = useState({...accessibilityDefault})
 
     function submitForm(e) {
         e.preventDefault()
-        axiosInstance.post(('/client/redefine-accessibility'), accessibility)
+        axiosInstance.post(('/client/redefine-accessibility'), newAccessibility)
             .then(async (response) => {
 
-                console.log(accessibility)
+                setAccessibility(newAccessibility)
                 setOldAccessibility(accessibility)
 
             })
@@ -78,7 +53,7 @@ export default function Accessibility() {
                         </a>
 
                         <div className="form-floating mt-3 mb-3">
-                            <select onChange={(e) => setAccessibility({ ...accessibility, pronouns: e.target.value })} value={accessibility.pronouns} className="form-select" id="floatingSelect" aria-label="Floating label select example">
+                            <select onChange={(e) => setNewAccessibility({ ...newAccessibility, pronouns: e.target.value })} value={newAccessibility.pronouns} className="form-select" id="floatingSelect" aria-label="Floating label select example">
                                 <option value="Ele/Dele">Ele/Dele</option>
                                 <option value="Ela/Dela">Ela/Dela</option>
                                 <option value="Elu/Delu">Elu/Delu</option>
@@ -87,7 +62,7 @@ export default function Accessibility() {
                         </div>
 
                         <div className="form-floating mt-3 mb-3">
-                            <select className="form-select" id="floatingSelect" onChange={(e) => setAccessibility({ ...accessibility, color_blindness: e.target.value })} value={accessibility.color_blindness} aria-label="Floating label select example">
+                            <select className="form-select" id="floatingSelect" onChange={(e) => setNewAccessibility({ ...newAccessibility, color_blindness: e.target.value })} value={newAccessibility.color_blindness} aria-label="Floating label select example">
                                 <option value="Nenhum">Nenhum</option>
                                 <option value="Deuteranomalia">Deuteranomalia</option>
                                 <option value="Protanomalia">Protanomalia</option>
@@ -101,9 +76,9 @@ export default function Accessibility() {
                         </div>
 
                         <div className="form-check float-start">
-                            <input onChange={() => setAccessibility({ ...accessibility, unlettered: !accessibility.unlettered })} checked={accessibility.unlettered} className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                            <input onChange={() => setNewAccessibility({ ...newAccessibility, unlettered: !newAccessibility.unlettered })} checked={newAccessibility.unlettered} className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                             <label className="form-check-label" htmlFor="flexCheckDefault">
-                                Eu sou {pronounFix(accessibility.pronouns, 'iliterado/iliterada/iliterade')}
+                                Eu sou {pronounFix(newAccessibility.pronouns, 'iliterado/iliterada/iliterade')}
                             </label>
                         </div>
 
@@ -111,7 +86,7 @@ export default function Accessibility() {
 
                         <button onClick={submitForm} className="w-100 btn btn-dark mt-2"><b>Salvar alterações</b></button>
                         <button onClick={() => {
-                            setAccessibility(oldAccessibility)
+                            setNewAccessibility(oldAccessibility)
                         }} className="w-100 btn mt-2"><b>Descartar</b></button>
 
                     </div>

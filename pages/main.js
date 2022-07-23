@@ -11,8 +11,12 @@ import Head from 'next/head'
 import Multiselect from 'multiselect-react-dropdown';
 import { useEffect, useState } from 'react'
 import { axiosInstance } from '../config/axios'
+import { useAppContext } from './_app'
 
 export default function Main(props) {
+
+    const { user } = useAppContext()
+    const [userValue, setUserValue] = user
 
     const [articles, setArticles] = useState([])
 
@@ -40,22 +44,21 @@ export default function Main(props) {
                     <div className={styles.display_flex + ' container mb-5 ' + responsive.dblock_on_sm}>
 
                         <div>
-
-                            <Card class={cardstyles.card_s_75 + " card mb-3 " + responsive.w100_on_sm} img="/avatar/avatar.png">
+                            <Card class={cardstyles.card_s_75 + " card mb-3 " + responsive.w100_on_sm} img={userValue.avatar || '/avatar/avatar.png'}>
                                 <div className="card-body">
-                                    <h4>Marília Santos</h4>
+                                    <h4>{userValue.name}</h4>
                                     <h6><b>Sobre mim</b></h6>
                                     <p>
-                                        Marília Santos é uma ótima designer de 26 anos que tem um amor muito grande pelo que faz.
+                                        {userValue.biography ? userValue.biography : "Esse usuário não inseriu a biografia no momento." }
                                     </p>
-                                    <h6><b>Contato</b></h6>
+                                    <h6><b>Contatos</b></h6>
                                     <p>
-                                        Esse usuário não inseriu nenhuma informação de contato no momento.
+                                        {userValue.contact ? userValue.contact : "Esse usuário não inseriu nenhuma informação de contato no momento." }
                                     </p>
                                     <button className={'btn w-100 ' + jobeestyles.btn_yellow}>
                                         <b>Escrever artigo</b>
                                     </button>
-                                    <button className={'btn w-100 '}>
+                                    <button className={'btn w-100 mt-2 '}>
                                         <b>Buscar vagas</b>
                                     </button>
                                 </div>

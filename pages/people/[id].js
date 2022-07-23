@@ -7,10 +7,16 @@ import { motion } from "framer-motion"
 import Navbar from '../../components/navbar'
 import Card from '../../components/smart/card'
 import Link from 'next/link'
+import { useAppContext } from '../_app'
 
 //Abre o perfil do usuário
 
 export default function People() {
+
+    const { user, accessibility } = useAppContext()
+    const [userValue, setUserValue] = user
+    const [accessibilityValue, setAccessibilityValue] = accessibility
+
     return (
         <div className="bg-light">
 
@@ -63,13 +69,13 @@ export default function People() {
 
                                 <div align="center">
                                     <div className="text-start w-75">
-                                        <h6><b>Um pouco sobre Marília</b></h6>
+                                        <h6><b>Um pouco sobre {userValue.name.split(' ')[0]}</b></h6>
                                         <p>
-                                            Marília é uma ótima costureira de 63 anos que tem um amor muito grande pelo que faz.
+                                            {userValue.biography}
                                         </p>
-                                        <h6><b>Qualificações</b></h6>
+                                        <h6><b>Contatos</b></h6>
                                         <p>
-                                            Esse usuário não inseriu nenhuma qualificação no momento.
+                                            {userValue.contact}
                                         </p>
                                         <button className={'btn w-100 mb-2 ' + jobeestyles.btn_yellow}>
                                             <b>Avaliar

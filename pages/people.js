@@ -8,12 +8,17 @@ import Card from '../components/smart/card'
 import Link from 'next/link'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
+import { useAppContext } from './_app'
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 //Abre o perfil do usuário
 
 export default function People() {
+
+    const { user, accessibility } = useAppContext()
+    const [userValue, setUserValue] = user
+    const [accessibilityValue, setAccessibilityValue] = accessibility
 
     const data = {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
@@ -57,11 +62,11 @@ export default function People() {
 
                     <div className={"d-flex justify-content-center container-fluid w-75 " + responsive.dblock_on_sm}>
 
-                        <Card class={cardstyles.card_s_50 + " card mb-3 me-2 " + responsive.w100_on_sm} img="/avatar/avatar.png">
+                        <Card class={cardstyles.card_s_50 + " card mb-3 me-2 " + responsive.w100_on_sm} img={userValue.avatar}>
                             <div className="card-body text-center">
 
                                 <h4>
-                                    Marília Santos
+                                    {userValue.name}
                                     <svg className="ms-2 bi bi-pencil-fill position-top" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                                         <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
                                     </svg>
@@ -70,7 +75,7 @@ export default function People() {
                                 <div className={'d-flex justify-content-center mb-3 text-break ' + responsive.font_smaller_on_sm}>
 
                                     <div className='me-3 text-center'>
-                                        <b>Ele/dele</b>
+                                        <b>{accessibilityValue.pronouns}</b>
                                         <br />
                                         Pronome
                                     </div>
@@ -101,11 +106,11 @@ export default function People() {
                                     <div className="text-start w-75">
                                         <h6><b>Um pouco sobre você</b></h6>
                                         <p>
-                                            Marília é uma ótima costureira de 63 anos que tem um amor muito grande pelo que faz.
+                                            {userValue.biography ? userValue.biography : "Esse usuário não inseriu a biografia no momento."}
                                         </p>
-                                        <h6><b>Qualificações</b></h6>
+                                        <h6><b>Contatos</b></h6>
                                         <p>
-                                            Esse usuário não inseriu nenhuma qualificação no momento.
+                                            {userValue.contact ? userValue.contact : "Esse usuário não inseriu nenhuma informação de contato no momento."}
                                         </p>
                                     </div>
                                 </div>

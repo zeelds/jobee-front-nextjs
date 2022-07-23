@@ -11,8 +11,9 @@ import { useEffect } from 'react'
 
 export default function Navbar() {
 
-    const { search } = useAppContext()
+    const { search, user } = useAppContext()
     const [searchValue, setSearchValue] = search
+    const [userValue, setUserValue] = user
 
     useEffect(() => {
         if (!isAuth()) {
@@ -91,12 +92,14 @@ export default function Navbar() {
                                 <div className='container mb-3'>
                                     <div className='mt-3'>
 
-                                        <img alt="" className={`mx-3 rounded-circle ${styles.dropdown_avatar}`} src="/avatar/avatar.png" width="128" height="128" />
+                                        <img alt="" className={`mx-3 rounded-circle ${styles.dropdown_avatar}`} src={userValue.avatar} width="128" height="128" />
 
                                         <div className="ms-3">
-                                            <b>Dona Célia</b>
+                                            <b>{userValue.name}</b>
                                             <br />
-                                            <span>Técnica em n sei das quantas lorem ipsum mussum ipsum calcidis cacildis cacildis radiologia biologia matemática portugues</span>
+                                            <span>
+                                                {userValue.title ? userValue.title : "Você não inseriu títulos no momento."}
+                                            </span>
                                             <br />
                                         </div>
 
