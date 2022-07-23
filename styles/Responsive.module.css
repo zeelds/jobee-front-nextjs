@@ -61,10 +61,13 @@
         margin-left: 0 !important;
     }
     .m25l_on_sm {
-        margin-left: 25% !important;
+        margin-left: 28vw !important;
     }
     .p1em_on_sm {
         padding: 1em 0 !important;
+    }
+    .font_smaller_on_sm {
+        font-size: 2.5vw !important;
     }
 }
 

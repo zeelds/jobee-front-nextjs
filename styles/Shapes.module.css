@@ -1,0 +1,18 @@
+
+.rectangle {
+    width: 70px;
+    height: 30px;
+    background-color: red;
+}
+
+.bg_yellow {
+    background-color: #F5C417;
+}
+
+.bg_green {
+    background-color: #18dd43;
+}
+
+.bg_red {
+    background-color: #da2a24;
+}

@@ -19,3 +19,8 @@
 .clickable {
   cursor: pointer;
 }
+
+.big_text {
+  font-size: 50px;
+  font-weight: 100;
+}
