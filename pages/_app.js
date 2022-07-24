@@ -11,20 +11,20 @@ function MyApp({ Component, pageProps }) {
 
   const [search, setSearch] = useState("")
   const [userData, setUserData] = useState({
-    name: 'Marília Santos',
-    title: 'Designer Gráfica / Empresária / Compradora',
-    biography: 'Marília Santos é uma ótima designer de 26 anos que tem um amor muito grande pelo que faz.',
-    avatar: '/avatar/avatar.png',
+    name: '',
+    title: '',
+    biography: '',
+    avatar: '/avatar/default.png',
     isverified: false,
-    gender: 'Feminino',
-    birthday: '22/02/1996',
-    contact: 'Zarizap amor',
-    tags: 'Nenhuma',
-    ban_info: 'Nenhuma'
+    gender: '',
+    birthday: '',
+    contact: '',
+    tags: '',
+    ban_info: ''
   })
   const [accessibilityData, setAccessibilityData] = useState({
-    pronouns: 'Ela/Dela',
-    color_blindness: 'Nenhuma',
+    pronouns: 'Ele/Dela',
+    color_blindness: 'Nenhum',
     unlettered: false
   })
   const [proData, setProData] = useState({
@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }) {
     professional: false
   })
   const [inboxData, setInboxData] = useState([
-    
+
   ])
 
   useEffect(() => {

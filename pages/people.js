@@ -9,6 +9,10 @@ import Link from 'next/link'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 import { useAppContext } from './_app'
+import { useEffect, useState } from 'react'
+import { axiosInstance } from '../config/axios'
+import ReactStars from "react-rating-stars-component";
+import Image from 'next/image'
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -19,6 +23,7 @@ export default function People() {
     const { user, accessibility } = useAppContext()
     const [userValue, setUserValue] = user
     const [accessibilityValue, setAccessibilityValue] = accessibility
+    const [review, setReview] = useState()
 
     const data = {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
@@ -46,6 +51,12 @@ export default function People() {
             },
         ]
     }
+
+    useEffect(() => {
+        axiosInstance.get('/client/reviews-list').then((response) => {
+            console.log(response)
+        })
+    }, [])
 
     return (
         <div className="bg-light">
@@ -125,6 +136,36 @@ export default function People() {
                                 <Pie
                                     data={data}
                                 />
+                            </div>
+                        </Card>
+
+                    </div>
+
+                    <div className='d-flex justify-content-center'>
+                        <hr className='w-75' />
+                    </div>
+
+                    <div className={" container-fluid w-75 " + responsive.dblock_on_sm}>
+
+                        <h4 className='mb-4'>Avaliações recebidas</h4>
+
+                        <Card class={cardstyles.card_s_100 + " card mb-3 " + responsive.w100_on_sm}>
+                            <div className="card-body">
+                                <ReactStars
+                                    count={5}
+                                    size={24}
+                                    edit={false}
+                                    value={5}
+                                    activeColor="black"
+                                    color="rgb(188,188,188)"
+                                />
+                                <b className='mt-2'>
+                                    Esse cara é nota dez! De verdade!
+                                </b>
+                                <br className='mb-2' />
+                                <span>
+                                    - Avaliação realizada em Jan 17, 2022
+                                </span>
                             </div>
                         </Card>
 

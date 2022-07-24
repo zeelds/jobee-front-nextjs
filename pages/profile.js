@@ -11,9 +11,9 @@ import { useAppContext } from './_app'
 
 export default function Profile() {
 
-
-    const { search } = useAppContext()
+    const { search, user } = useAppContext()
     const [searchValue, setSearchValue] = search
+    const [userValue, setUserValue] = user
 
     return (
         <div className="bg-light">
@@ -38,12 +38,14 @@ export default function Profile() {
 
                             <br />
 
-                            <img alt="" className={`mx-3 rounded-circle ${navstyles.dropdown_avatar}`} src="/avatar/komi.jpg" width="128" height="128" />
+                            <img alt="" className={`mx-3 rounded-circle ${navstyles.dropdown_avatar}`} src={userValue.avatar} width="128" height="128" />
 
                             <div className="ms-3">
-                                <b>Dona Célia</b>
+                                <b>{userValue.name}</b>
                                 <br />
-                                <span>Técnica em n sei das quantas lorem ipsum mussum ipsum calcidis cacildis cacildis radiologia biologia matemática portugues</span>
+                                <span>
+                                    {userValue.title ? userValue.title : "Você não inseriu títulos no momento."}
+                                </span>
                                 <br />
                             </div>
 
