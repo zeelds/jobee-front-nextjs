@@ -7,6 +7,7 @@ import Navbar from '../components/navbar'
 import Card from '../components/smart/card'
 import Link from 'next/link'
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+import { axiosInstance } from '../config/axios'
 
 export default function Help() {
 
@@ -209,7 +210,10 @@ const DarkButton = (props) => {
             onApprove={(data, actions) => {
                 return actions.order.capture().then((details) => {
                     const name = details.payer.name.given_name;
-                    console.log(name)
+                    axiosInstance.post('/inbox/create-inbox', {
+                        title: 'Parabéns',
+                        content: 'Você se tornou um/uma/ume Usuário/Usuária/Usuárie PRO! Você acaba de adquirir diversas vantagens que usuários padrões não têm acesso, acesse a aba PRO para saber mais.'
+                    })
                 });
             }}
 

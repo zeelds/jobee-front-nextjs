@@ -6,21 +6,45 @@ import { motion } from "framer-motion"
 import Navbar from '../components/navbar'
 import Link from 'next/link'
 import { axiosInstance } from '../config/axios'
+import { useEffect, useState } from 'react'
+
+import pronounFix from '../utils/pronounFix'
+import { useAppContext } from './_app'
 
 export default function GetInbox() {
 
-    const mails = [
-        {
-            title: 'Esse é um mail template!',
-            content: 'Ele não ficará aqui por muito tempo, então aproveite.',
-            seen: false
-        }
-    ]
+    const { accessibility } = useAppContext()
+    const [accessibilityValue, setAccessibility] = accessibility
 
-    //faz acontecer algum erro no localstorage, ver amanhã
-    // axiosInstance.get('/inbox/get-inbox').then((response) => {
-    //     console.log(response)
-    // })
+    const [mails, setMails] = useState([
+        {
+            title: '',
+            content: 'Sua caixa de entrada está vazia no momento.',
+            seen: true,
+            notDeletable: true
+        }
+    ])
+
+    // ? faz acontecer algum erro no localstorage, ver amanhã
+    useEffect(() => {
+        axiosInstance.get('/inbox/get-inbox').then((response) => {
+            if (!response.data) return
+            const foundMails = response.data
+            setMails(foundMails)
+        })
+    }, [])
+
+    function correctPronoun(string) {
+        const renewedText = string.split(" ")
+            .map((e) => {
+                if (e.includes('/')) {
+                    return pronounFix(accessibilityValue.pronouns, e)
+                }
+                return e
+            })
+
+        return renewedText.join(" ")
+    }
 
     return (
         <div className="bg-light">
@@ -48,17 +72,20 @@ export default function GetInbox() {
                                         <a key={'mail-' + index} className="list-group-item">
                                             <div className="d-flex w-100 justify-content-between ">
                                                 <h5 className="mb-1">{mail.title}</h5>
+                                                {
+                                                    mail.notDeletable ?
+                                                        <></>
+                                                        :
+                                                        <small>
+                                                            <span className="text-danger" href="#">
+                                                                Descartar
+                                                            </span>
+                                                        </small>
+                                                }
                                             </div>
-                                            <p className="mb-1">{mail.content}</p>
-                                            <small className="text-muted">Enviado por The Jobee Team.</small>
-                                            {
-                                                !mail.seen ?
-                                                    <span className="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
-                                                        <span className="visually-hidden">New alerts</span>
-                                                    </span>
-                                                    :
-                                                    <></>
-                                            }
+                                            <p className="mb-1">{correctPronoun(mail.content)}</p>
+                                            <small className="text-muted">Enviado por The Jobee Team.
+                                            </small>
                                         </a>
                                     )
                                 })}
