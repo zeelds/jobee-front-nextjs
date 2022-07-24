@@ -25,7 +25,6 @@ export default function GetInbox() {
         }
     ])
 
-    // ? faz acontecer algum erro no localstorage, ver amanhã
     useEffect(() => {
         axiosInstance.get('/inbox/get-inbox').then((response) => {
             if (!response.data) return

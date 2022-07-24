@@ -11,6 +11,7 @@ import { useAppContext } from '../_app'
 import pronounFix from '../../utils/pronounFix'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
+import { axiosInstance } from '../../config/axios'
 
 //Abre o perfil do usuário
 
@@ -24,6 +25,13 @@ export default function People() {
     useEffect(() => {
         setFormData(userValue)
     }, [user])
+
+    function submitForm(e){
+        e.preventDefault()
+        axiosInstance.post('/client/redefine-user', formData).then((response)=>{
+            setUserValue(formData)
+        })
+    }
 
     return (
 
@@ -49,22 +57,47 @@ export default function People() {
 
                         <Card class={cardstyles.card_s_50 + " card mb-3 me-2 " + responsive.w100_on_sm}>
 
-                            <div className='text-center mt-4 position-relative'>
-                                <Image style={{ filter: 'brightness(0.6)' }} className={'rounded-circle card-img-top position-absolute ' + styles.clickable} src={formData.avatar} width="128" height="128" />
-                                <div className='position-absolute top-50 start-50 translate-middle text-light'>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className={"bi bi-camera-fill " + styles.clickable} viewBox="0 0 16 16">
-                                        <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
-                                        <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z" />
-                                    </svg>
-                                </div>
+                            <div className='d-flex justify-content-center'>
+                                <img className={'mt-4 rounded-circle'} src={formData.avatar} width="128" height="128" />
                             </div>
 
                             <div className="card-body container text-start">
 
+
+
+                                <label class="btn btn-dark w-100 mt-2 mb-3">
+                                    <b>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="mb-1 me-1 bi bi-camera-fill" viewBox="0 0 16 16">
+                                            <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                            <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z" />
+                                        </svg>
+                                        Adicionar Imagem
+                                    </b>
+
+                                    <input onChange={(e) => {
+
+                                        const formSend = new FormData();
+                                        formSend.append("avatar", e.target.files[0]);
+
+                                        axiosInstance.post('/client/upload-avatar', formSend, {
+                                            headers: {
+                                                "Content-Type": "multipart/form-data"
+                                            }
+                                        }).then((response) => {
+                                            setFormData({
+                                                ...formData,
+                                                avatar: process.env.NEXT_PUBLIC_BASEURL + '/media/uploads/' + response.data.filename
+                                            })
+                                        })
+
+                                    }} hidden type="file" id="formFile" />
+
+                                </label>
+
                                 <div class="form-floating mb-3">
                                     <input
                                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                        value={formData.name||""}
+                                        value={formData.name || ""}
                                         maxLength={60}
                                         type="email" class="form-control" id="floatingInput" placeholder="Nome" />
                                     <label for="floatingInput">Seu nome</label>
@@ -73,7 +106,7 @@ export default function People() {
                                 <div class="form-floating mb-3">
                                     <input
                                         onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                                        value={formData.title||""}
+                                        value={formData.title || ""}
                                         maxLength={60}
                                         type="email" class="form-control" id="floatingInput" placeholder="Nome" />
                                     <label for="floatingInput">Título</label>
@@ -82,7 +115,7 @@ export default function People() {
                                 <div class="form-floating mb-3">
                                     <textarea
                                         onChange={(e) => setFormData({ ...formData, biography: e.target.value })}
-                                        value={formData.biography||""}
+                                        value={formData.biography || ""}
                                         class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
                                     <label for="floatingTextarea">Biografia</label>
                                 </div>
@@ -111,12 +144,12 @@ export default function People() {
                                 <div class="form-floating mb-3">
                                     <textarea
                                         onChange={(e) => setFormData({ ...formData, contact: e.target.value })}
-                                        value={formData.contact||""}
+                                        value={formData.contact || ""}
                                         class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
                                     <label for="floatingTextarea">Contato</label>
                                 </div>
 
-                                <button className='btn btn-dark w-100 mb-2'>
+                                <button onClick={submitForm} className='btn btn-dark w-100 mb-2'>
                                     <b>Editar</b>
                                 </button>
 

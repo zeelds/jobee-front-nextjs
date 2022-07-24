@@ -4,7 +4,7 @@ import '../styles/globals.css'
 import Head from 'next/head';
 import axios from 'axios';
 import { axiosInstance } from '../config/axios';
-import { isAuth } from '../config/auth';
+import { getToken, isAuth, logout } from '../config/auth';
 
 const AppContext = createContext("")
 
@@ -37,9 +37,12 @@ function MyApp({ Component, pageProps }) {
   ])
 
   useEffect(() => {
-    if(!isAuth()) return
-    axiosInstance.get('/client/refresh-token').then((response)=>{
-      console.log(response.data)
+    if (!isAuth()) return
+    axiosInstance.get('/client/refresh-token').then((response) => {
+      if (response.status(500)) {
+        logout()
+        Router.push('/start')
+      }
     })
     axiosInstance.get('/client/get-user').then((response) => {
       setProData({

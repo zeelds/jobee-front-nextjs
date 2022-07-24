@@ -11,12 +11,23 @@ import Reveal from '../components/reveal'
 import Revealer from '../components/smart/revealer';
 import { axiosInstance } from '../config/axios'
 import { isAuth, login } from '../config/auth'
+import { useAppContext } from './_app'
 
 export default function SignIn() {
 
     const router = useRouter()
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+
+    const {
+        user,
+        accessibility,
+        pro
+    } = useAppContext()
+
+    const [userValue, setUserValue] = user
+    const [accessibilityValue, setAccessibilityValue] = accessibility
+    const [proValue, setProValue] = pro
 
     useEffect(() => {
         if (isAuth()) {
@@ -35,6 +46,22 @@ export default function SignIn() {
                 }
                 else if (response.data.auth == true) {
                     login(response.data.token)
+
+                    axiosInstance.get('/client/get-user').then((response) => {
+                        setProValue({
+                            invested: response.data.data.invested,
+                            professional: response.data.data.isPro
+                        })
+                        setUserValue(response.data.data.foundUser.data)
+                    })
+                    axiosInstance.get('/client/get-accessibility').then((response) => {
+                        setAccessibilityValue({
+                            pronouns: response.data.data.data.pronouns,
+                            color_blindness: response.data.data.data.color_blindness,
+                            unlettered: response.data.data.data.unlettered
+                        })
+                    })
+
                     router.push("/main")
                 }
             })
