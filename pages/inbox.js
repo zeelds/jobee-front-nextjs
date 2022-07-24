@@ -5,8 +5,23 @@ import responsive from '../styles/Responsive.module.css'
 import { motion } from "framer-motion"
 import Navbar from '../components/navbar'
 import Link from 'next/link'
+import { axiosInstance } from '../config/axios'
 
-export default function Inbox() {
+export default function GetInbox() {
+
+    const mails = [
+        {
+            title: 'Esse é um mail template!',
+            content: 'Ele não ficará aqui por muito tempo, então aproveite.',
+            seen: false
+        }
+    ]
+
+    //faz acontecer algum erro no localstorage, ver amanhã
+    // axiosInstance.get('/inbox/get-inbox').then((response) => {
+    //     console.log(response)
+    // })
+
     return (
         <div className="bg-light">
 
@@ -28,34 +43,29 @@ export default function Inbox() {
 
                         <div className={"container w-50 " + responsive.w75_on_sm}>
                             <div className="list-group">
-                                <a className="list-group-item">
-                                    <div className="d-flex w-100 justify-content-between ">
-                                        <h5 className="mb-1">Estamos com saudades...</h5>
-                                        <small className="text-muted">10 minutos atrás</small>
-                                    </div>
-                                    <p className="mb-1">Você está ausente por três dias. Gostaria de nos dar um feedback?</p>
-                                    <small className="text-muted">Enviado por The Jobee Team.</small>
-                                    <span className="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
-                                        <span className="visually-hidden">New alerts</span>
-                                    </span>
-                                </a>
-                                <a className="list-group-item">
-                                    <div className="d-flex w-100 justify-content-between">
-                                        <h5 className="mb-1">Uma dica!</h5>
-                                        <small className="text-muted">3 dias atrás</small>
-                                    </div>
-                                    <p className="mb-1">Você sabia que há muitas vagas para você? Tente buscar por &apos;pintor&apos;.</p>
-                                    <small className="text-muted">Enviado por The Jobee Team.</small>
-                                    <span className="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
-                                        <span className="visually-hidden">New alerts</span>
-                                    </span>
-                                </a>
+                                {mails.map((mail, index) => {
+                                    return (
+                                        <a key={'mail-' + index} className="list-group-item">
+                                            <div className="d-flex w-100 justify-content-between ">
+                                                <h5 className="mb-1">{mail.title}</h5>
+                                            </div>
+                                            <p className="mb-1">{mail.content}</p>
+                                            <small className="text-muted">Enviado por The Jobee Team.</small>
+                                            {
+                                                !mail.seen ?
+                                                    <span className="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                                                        <span className="visually-hidden">New alerts</span>
+                                                    </span>
+                                                    :
+                                                    <></>
+                                            }
+                                        </a>
+                                    )
+                                })}
                             </div>
                         </div>
 
-
                     </div>
-
 
                 </main>
 
