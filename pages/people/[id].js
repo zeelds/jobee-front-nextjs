@@ -8,6 +8,7 @@ import Navbar from '../../components/navbar'
 import Card from '../../components/smart/card'
 import Link from 'next/link'
 import { useAppContext } from '../_app'
+import pronounFix from '../../utils/pronounFix'
 
 //Abre o perfil do usuário
 
@@ -32,7 +33,14 @@ export default function People() {
 
                     <div className={"d-flex justify-content-center container-fluid w-75 " + responsive.dblock_on_sm}>
 
-                        <Card class={cardstyles.card_s_50 + " card mb-3 me-2 " + responsive.w100_on_sm} img={userValue.avatar}>
+                        <Card class={cardstyles.card_s_50 + " card mb-3 me-2 " + responsive.w100_on_sm} img={userValue.avatar} proBorder={true}>
+                            
+                            <button className={'position-absolute rounded-0 btn w-100 mb-2 ' + jobeestyles.premium_badge}>
+                                <b>{pronounFix(accessibilityValue.pronouns, "Usuário/Usuária/Usuárie") + ' PRO'}
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="ms-1 bi bi-star-fill align-text-top" viewBox="0 0 16 16"><path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" /></svg>
+                                </b>
+                            </button>
+
                             <div className="card-body text-center">
 
                                 <h4>

@@ -9,6 +9,10 @@
     margin-right: 25px;
 }
 
+.pro_border {
+    border-color: #874df3 !important;
+}
+
 .card_s_50 {
     width: 50%;
     border-radius: 15px;

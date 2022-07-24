@@ -16,9 +16,13 @@ export default function Accessibility() {
     const {accessibility} = useAppContext()
     const [accessibilityDefault, setAccessibility] = accessibility
 
-    const [oldAccessibility, setOldAccessibility] = useState({...accessibilityDefault})
+    const [oldAccessibility, setOldAccessibility] = useState(accessibilityDefault)
+    const [newAccessibility, setNewAccessibility] = useState(accessibilityDefault)
 
-    const [newAccessibility, setNewAccessibility] = useState({...accessibilityDefault})
+    useEffect(()=>{
+        setOldAccessibility(accessibilityDefault)
+        setNewAccessibility(accessibilityDefault)
+    },accessibility)
 
     function submitForm(e) {
         e.preventDefault()
@@ -26,7 +30,7 @@ export default function Accessibility() {
             .then(async (response) => {
 
                 setAccessibility(newAccessibility)
-                setOldAccessibility(accessibility)
+                setOldAccessibility(newAccessibility)
 
             })
     }
