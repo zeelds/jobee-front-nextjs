@@ -25,12 +25,12 @@ export default function Article() {
 
     useEffect(() => {
 
-        if(!id) return
+        if (!id) return
 
-        (async ()=>{
+        (async () => {
             const foundArticle = await axiosInstance.get('/article/find-article/' + id)
             setArticle(foundArticle.data.data.data)
-            const foundOp = await axiosInstance.get('/client/get-user/'+foundArticle.data.data.data.author_id)
+            const foundOp = await axiosInstance.get('/client/get-user/' + foundArticle.data.data.data.author_id)
             setOwner(foundOp.data.data.foundUser.data)
         })()
 
@@ -73,7 +73,7 @@ export default function Article() {
 
                         <Card class={cardstyles.card_s_100 + " card mb-3"}>
                             <div className="card-body">
-                                <small>Postado por {owner.name}</small>
+                                <small>Postado por <a href={"/people/" + owner.id}>{owner.name}</a> · {new Date(article.createdAt).toLocaleDateString('en-GB')}</small>
                                 <h4>{article && article.title}</h4>
                                 {article && article.content}
                                 <br />
@@ -103,6 +103,16 @@ export default function Article() {
                                 </button>
                                 <a className='ms-2'>como Mariliana</a>
                                 <hr />
+
+                                <div className='mt-2 mb-2'>
+                                    <img className='rounded-circle' src='/avatar/default.png' width="32" height="32" />
+                                    <span className='ms-2'><a href="#">Username</a> · {new Date(article.createdAt).toLocaleDateString('en-GB')}</span>
+                                    <div style={{ marginLeft: '40px' }}>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris gravida purus nec nisl ullamcorper ultrices. Praesent venenatis felis ut ligula luctus rutrum.
+                                        </p>
+                                    </div>
+                                </div>
 
                             </div>
                         </Card>
