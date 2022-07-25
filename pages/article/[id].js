@@ -41,12 +41,8 @@ export default function Article() {
 
             const allComments = getAllComments.data.data.data
 
-            // const allComments = [
-            //     {
-            //         content: 'poneis malditos',
-            //         author_id: '464e098a-d833-4847-b619-117ab1c5c865'
-            //     }
-            // ]
+            // ! tem um problema onde os comentários vêm duplicados se vc tá vindo de outra rota
+            // ! tenta não dar f5 pra ver
 
             await allComments.forEach(async (comment) => {
                 const foundUser = await axiosInstance.get('/client/get-user/' + comment.author_id)
