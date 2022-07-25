@@ -23,6 +23,10 @@ export default function Article() {
     const [comments, setComments] = useState([])
     const [owner, setOwner] = useState({})
 
+    const [message, setMessage] = useState('')
+
+    let returnedComments = []
+
     useEffect(() => {
 
         if (!id) return
@@ -34,24 +38,32 @@ export default function Article() {
             setOwner(foundOp.data.data.foundUser.data)
 
             const getAllComments = await axiosInstance.get('/article/article-comments-list/' + id)
-            
-            //const allComments = getAllComments.data.data.data
 
-            const allComments = [
-                {
-                    content: 'poneis malditos',
-                    author_id: '464e098a-d833-4847-b619-117ab1c5c865'
-                }
-            ]
+            const allComments = getAllComments.data.data.data
+
+            // const allComments = [
+            //     {
+            //         content: 'poneis malditos',
+            //         author_id: '464e098a-d833-4847-b619-117ab1c5c865'
+            //     }
+            // ]
 
             await allComments.forEach(async (comment) => {
                 const foundUser = await axiosInstance.get('/client/get-user/' + comment.author_id)
-                setComments([{...comments, user: foundUser.data.data.foundUser.data, comment: comment }])
+                const completeComment = { user: foundUser.data.data.foundUser.data, comment: comment }
+                setComments(comments => [...comments, completeComment])
             })
 
         })()
 
     }, [id])
+
+    function submitComment(e) {
+        e.preventDefault()
+        axiosInstance.post('/article/create-comment', { content: message, article_id: id }).then((response) => {
+            console.log(response)
+        })
+    }
 
     if (!article) {
         return (
@@ -112,10 +124,12 @@ export default function Article() {
                                 <hr />
                                 <div className="form-floating mb-3">
                                     <textarea
-                                        maxLength={60}
+                                        maxLength={50}
+                                        value={message}
+                                        onChange={(e) => setMessage(e.target.value)}
                                         type="email" className="form-control-plaintext" id="floatingEmptyPlaintextInput" placeholder="Quais são seus pensamentos?" />
                                 </div>
-                                <button className='btn btn-dark'>
+                                <button onClick={submitComment} className='btn btn-dark'>
                                     <b>Comentar</b>
                                 </button>
                                 <a className='ms-2'>como Mariliana</a>
@@ -125,7 +139,7 @@ export default function Article() {
                                     Array.isArray(comments) &&
                                     comments.map((comment, index) => {
                                         return (
-                                            <div key={"comment-"+index} className='mt-2 mb-2'>
+                                            <div key={"comment-" + index} className='mt-2 mb-2'>
                                                 <img className='rounded-circle' src={comment.user.avatar} width="32" height="32" />
                                                 <span className='ms-2'><a href={'/people/' + comment.user.id}>{comment.user.name}</a> · {new Date(comment.comment.createdAt).toLocaleDateString('en-GB')}</span>
                                                 <div style={{ marginLeft: '40px' }}>
