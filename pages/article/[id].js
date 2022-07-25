@@ -104,6 +104,27 @@ export default function Article() {
                                 <a className='ms-2'>como Mariliana</a>
                                 <hr />
 
+                                {
+                                    comments.map((comment) => {
+                                        return (
+                                            <div className='mt-2 mb-2'>
+                                                <img className='rounded-circle' src='/avatar/default.png' width="32" height="32" />
+                                                <span className='ms-2'>{
+                                                    (async () => {
+                                                        const foundOp = await axiosInstance.get('/client/get-user/' + comment.author_id)
+                                                        return <a href={"/people/" + foundOp.data.data.foundUser.data.id}>{foundOp.data.data.foundUser.data.name}</a>
+                                                    })()
+                                                } · {new Date(comment.createdAt).toLocaleDateString('en-GB')}</span>
+                                                <div style={{ marginLeft: '40px' }}>
+                                                    <p>
+                                                        {comments.content}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        )
+                                    })
+                                }
+
                                 <div className='mt-2 mb-2'>
                                     <img className='rounded-circle' src='/avatar/default.png' width="32" height="32" />
                                     <span className='ms-2'><a href="#">Username</a> · {new Date(article.createdAt).toLocaleDateString('en-GB')}</span>
