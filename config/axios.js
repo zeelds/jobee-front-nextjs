@@ -21,6 +21,5 @@ axiosInstance.interceptors.request.use((config) => {
 })
 
 axiosInstance.interceptors.response.use((response) => {
-    console.log(response)
     return response
 })

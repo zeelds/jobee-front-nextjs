@@ -40,7 +40,6 @@ export default function EditArticle() {
 
         axiosInstance.post('/article/update-article', { id: id, ...writtenArticle, status: 'publicado' })
             .then((response) => {
-                console.log(response)
             })
 
     }

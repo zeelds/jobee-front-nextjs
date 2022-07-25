@@ -138,9 +138,9 @@ export default function People() {
                             </div>
                         </Card>
 
-                        <Card class={cardstyles.card_s_50 + " card mb-3 " + responsive.w100_on_sm}>
+                        <Card class={cardstyles.card_s_50 + " rounded-0 card mb-3 " + responsive.w100_on_sm}>
                             <div className="card-body">
-                                Últimos comentários
+                                Últimos artigos / Últimos comentários / Últimas avaliações 
                             </div>
                         </Card>
 

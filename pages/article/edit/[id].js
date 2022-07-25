@@ -40,7 +40,6 @@ export default function EditArticle() {
 
         axiosInstance.post('/article/update-article', { id: id, ...writtenArticle, status: 'publicado' })
             .then((response) => {
-                console.log(response)
             })
 
     }
@@ -65,7 +64,6 @@ export default function EditArticle() {
                     <br />
 
                     <div className="d-flex justify-content-center">
-
 
                         <Card class={cardstyles.card_s_50 + " card mb-3 " + responsive.w75_on_sm}>
 
