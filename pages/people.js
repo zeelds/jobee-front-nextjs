@@ -13,6 +13,8 @@ import { useEffect, useState } from 'react'
 import { axiosInstance } from '../config/axios'
 import ReactStars from "react-rating-stars-component";
 import Image from 'next/image'
+import pronounFix from '../utils/pronounFix'
+import starsAverage from '../utils/starsAvg'
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -23,7 +25,10 @@ export default function People() {
     const { user, accessibility } = useAppContext()
     const [userValue, setUserValue] = user
     const [accessibilityValue, setAccessibilityValue] = accessibility
-    const [review, setReview] = useState()
+    const [review, setReview] = useState({
+        average: 0,
+        list: []
+    })
 
     const data = {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
@@ -53,10 +58,12 @@ export default function People() {
     }
 
     useEffect(() => {
-        axiosInstance.get('/client/reviews-list').then((response) => {
-            console.log(response)
+        axiosInstance.get('/client/reviews-list').then(async (response) => {
+            const stars = await starsAverage(response.data.data.data)
+            setReview({ ...review, average: stars })
+            setReview({ ...review, list: response.data.data.data })
         })
-    }, [])
+    }, [user])
 
     return (
         <div className="bg-light">
@@ -79,7 +86,7 @@ export default function People() {
                                 <h4>
                                     {userValue.name}
                                     <Link href="/profile/edit">
-                                        <svg className={"ms-2 bi bi-pencil-fill position-top "+styles.clickable} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                        <svg className={"ms-2 bi bi-pencil-fill position-top " + styles.clickable} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                                             <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
                                         </svg>
                                     </Link>
@@ -96,7 +103,7 @@ export default function People() {
                                     <div className="vr ms-2 me-2" />
 
                                     <div className='ms-2 me-3 text-center'>
-                                        <b>4.8
+                                        <b>{review.average}
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className={"ms-1 bi bi-star-fill align-text-top " + responsive.hide_on_sm} viewBox="0 0 16 16">
                                                 <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                                             </svg>
@@ -108,9 +115,9 @@ export default function People() {
                                     <div className="vr ms-2 me-2" />
 
                                     <div className='ms-2 text-center'>
-                                        <b>8 meses</b>
+                                        <b>{new Date(userValue.createdAt).toLocaleDateString('en-GB')}</b>
                                         <br />
-                                        Serviço
+                                        {pronounFix(accessibilityValue.pronouns, 'Usuário/Usuária/Usuárie') + ' desde'}
                                     </div>
 
                                 </div>
@@ -128,16 +135,12 @@ export default function People() {
                                     </div>
                                 </div>
 
-
                             </div>
                         </Card>
 
                         <Card class={cardstyles.card_s_50 + " card mb-3 " + responsive.w100_on_sm}>
                             <div className="card-body">
-                                Marília tem 72 comentários. Marília costuma interagir com as seguintes tags. Marília é avaliada positivamente 72% das vezes. Marília é avaliada negativamente 10% das vezes.
-                                <Pie
-                                    data={data}
-                                />
+                                Últimos comentários
                             </div>
                         </Card>
 
@@ -151,25 +154,31 @@ export default function People() {
 
                         <h4 className='mb-4'>Avaliações recebidas</h4>
 
-                        <Card class={cardstyles.card_s_100 + " card mb-3 " + responsive.w100_on_sm}>
-                            <div className="card-body">
-                                <ReactStars
-                                    count={5}
-                                    size={24}
-                                    edit={false}
-                                    value={5}
-                                    activeColor="black"
-                                    color="rgb(188,188,188)"
-                                />
-                                <b className='mt-2'>
-                                    Esse cara é nota dez! De verdade!
-                                </b>
-                                <br className='mb-2' />
-                                <span>
-                                    - Avaliação realizada em Jan 17, 2022
-                                </span>
-                            </div>
-                        </Card>
+                        {review.list.map((element) => {
+                            return (
+                                <Card class={cardstyles.card_s_100 + " card mb-3 " + responsive.w100_on_sm}>
+                                    <div className="card-body">
+                                        <ReactStars
+                                            count={5}
+                                            size={24}
+                                            edit={false}
+                                            value={Math.round(element.stars)}
+                                            activeColor="black"
+                                            color="rgb(188,188,188)"
+                                        />
+                                        <b className='mt-2'>
+                                            {element.content}
+                                        </b>
+                                        <br className='mb-2' />
+                                        <span>
+                                            - Avaliação realizada em {new Date(element.createdAt).toLocaleDateString('en-GB')}
+                                        </span>
+                                    </div>
+                                </Card>
+                            )
+                        })}
+
+
 
                     </div>
 

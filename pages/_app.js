@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     if (!isAuth()) return
     axiosInstance.get('/client/refresh-token').then((response) => {
-      if (response.status(500)) {
+      if (response.status == 500) {
         logout()
         Router.push('/start')
       }

@@ -105,7 +105,7 @@ export default function Main(props) {
 export const ShowArticle = (props) => {
 
     return (
-        <Link href={"/find-article/" + props.id}>
+        <Link href={"/article/" + props.id}>
             <a>
                 <Card class={cardstyles.card_s_100 + " card mb-3"}>
                     <div className="card-body">

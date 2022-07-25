@@ -24,7 +24,11 @@ export default function Article() {
 
                 <main className={styles.main_white + ' ' + responsive.p1em_on_sm}>
 
-                alo
+                    <div className="text-center mb-3">
+                        <h3>Artigo</h3>
+                    </div>
+
+                    <br />
 
                 </main>
 

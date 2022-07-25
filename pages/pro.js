@@ -8,6 +8,7 @@ import Card from '../components/smart/card'
 import Link from 'next/link'
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import { axiosInstance } from '../config/axios'
+import { useAppContext } from './_app'
 
 export default function Help() {
 
@@ -190,6 +191,9 @@ export default function Help() {
 
 const DarkButton = (props) => {
 
+    const {pro} = useAppContext()
+    const [proValue, setProValue] = pro
+
     return (
 
         <PayPalButtons
@@ -214,6 +218,7 @@ const DarkButton = (props) => {
                         title: 'Parabéns',
                         content: 'Você se tornou um/uma/ume Usuário/Usuária/Usuárie PRO! Você acaba de adquirir diversas vantagens que usuários padrões não têm acesso, acesse a aba PRO para saber mais.'
                     })
+
                 });
             }}
 
