@@ -32,6 +32,23 @@ export default function Article() {
             setArticle(foundArticle.data.data.data)
             const foundOp = await axiosInstance.get('/client/get-user/' + foundArticle.data.data.data.author_id)
             setOwner(foundOp.data.data.foundUser.data)
+
+            const getAllComments = await axiosInstance.get('/article/article-comments-list/' + id)
+            
+            //const allComments = getAllComments.data.data.data
+
+            const allComments = [
+                {
+                    content: 'poneis malditos',
+                    author_id: '464e098a-d833-4847-b619-117ab1c5c865'
+                }
+            ]
+
+            await allComments.forEach(async (comment) => {
+                const foundUser = await axiosInstance.get('/client/get-user/' + comment.author_id)
+                setComments([{...comments, user: foundUser.data.data.foundUser.data, comment: comment }])
+            })
+
         })()
 
     }, [id])
@@ -105,35 +122,21 @@ export default function Article() {
                                 <hr />
 
                                 {
-                                    comments.map((comment) => {
+                                    Array.isArray(comments) &&
+                                    comments.map((comment, index) => {
                                         return (
-                                            <div className='mt-2 mb-2'>
-                                                <img className='rounded-circle' src='/avatar/default.png' width="32" height="32" />
-                                                <span className='ms-2'>{
-                                                    (async () => {
-                                                        const foundOp = await axiosInstance.get('/client/get-user/' + comment.author_id)
-                                                        return <a href={"/people/" + foundOp.data.data.foundUser.data.id}>{foundOp.data.data.foundUser.data.name}</a>
-                                                    })()
-                                                } · {new Date(comment.createdAt).toLocaleDateString('en-GB')}</span>
+                                            <div key={"comment-"+index} className='mt-2 mb-2'>
+                                                <img className='rounded-circle' src={comment.user.avatar} width="32" height="32" />
+                                                <span className='ms-2'><a href={'/people/' + comment.user.id}>{comment.user.name}</a> · {new Date(comment.comment.createdAt).toLocaleDateString('en-GB')}</span>
                                                 <div style={{ marginLeft: '40px' }}>
                                                     <p>
-                                                        {comments.content}
+                                                        {comment.comment.content}
                                                     </p>
                                                 </div>
                                             </div>
                                         )
                                     })
                                 }
-
-                                <div className='mt-2 mb-2'>
-                                    <img className='rounded-circle' src='/avatar/default.png' width="32" height="32" />
-                                    <span className='ms-2'><a href="#">Username</a> · {new Date(article.createdAt).toLocaleDateString('en-GB')}</span>
-                                    <div style={{ marginLeft: '40px' }}>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris gravida purus nec nisl ullamcorper ultrices. Praesent venenatis felis ut ligula luctus rutrum.
-                                        </p>
-                                    </div>
-                                </div>
 
                             </div>
                         </Card>
