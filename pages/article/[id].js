@@ -44,11 +44,13 @@ export default function Article() {
             // ! tem um problema onde os comentários vêm duplicados se vc tá vindo de outra rota
             // ! tenta não dar f5 pra ver
 
-            await allComments.forEach(async (comment) => {
+            const formatComments = await Promise.all(allComments.map(async (comment) => {
                 const foundUser = await axiosInstance.get('/client/get-user/' + comment.author_id)
                 const completeComment = { user: foundUser.data.data.foundUser.data, comment: comment }
-                setComments(comments => [...comments, completeComment])
-            })
+                return completeComment
+            }))
+
+            setComments(formatComments)
 
         })()
 
