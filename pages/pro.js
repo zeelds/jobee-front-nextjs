@@ -9,8 +9,39 @@ import Link from 'next/link'
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import { axiosInstance } from '../config/axios'
 import { useAppContext } from './_app'
+import { useEffect } from 'react'
 
 export default function Help() {
+
+    const { pro } = useAppContext()
+    const [proValue, setProValue] = pro
+
+    if (proValue.invested || proValue.professional) {
+        return (
+            <div className="bg-light">
+
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: '100%' }}
+                    exit={{ opacity: 0 }}
+                >
+
+                    <Navbar />
+
+                    <main className={styles.main_white}>
+
+                        <div className={styles.display_flex + ' container'}>
+
+
+                        </div>
+
+
+                    </main>
+
+                </motion.div>
+            </div>
+        )
+    }
 
     return (
         <PayPalScriptProvider options={{ "client-id": process.env.NEXT_PUBLIC_PAYPAL, currency: "BRL" }}>
@@ -191,7 +222,7 @@ export default function Help() {
 
 const DarkButton = (props) => {
 
-    const {pro} = useAppContext()
+    const { pro } = useAppContext()
     const [proValue, setProValue] = pro
 
     return (
@@ -218,7 +249,12 @@ const DarkButton = (props) => {
                         title: 'Parabéns',
                         content: 'Você se tornou um/uma/ume Usuário/Usuária/Usuárie PRO! Você acaba de adquirir diversas vantagens que usuários padrões não têm acesso, acesse a aba PRO para saber mais.'
                     })
-
+                    axiosInstance.post('/payment/checkout', {
+                        plan: 'Profissional',
+                        payment_data: details
+                    }).then((response) => {
+                        setProValue({ invested: true, professional: true })
+                    })
                 });
             }}
 

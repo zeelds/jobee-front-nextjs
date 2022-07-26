@@ -46,8 +46,8 @@ function MyApp({ Component, pageProps }) {
     })
     axiosInstance.get('/client/get-user').then((response) => {
       setProData({
-        invested: response.data.data.invested,
-        professional: response.data.data.isPro
+        invested: response.data.data.proStatus.invested,
+        professional: response.data.data.proStatus.professional
       })
       setUserData(response.data.data.foundUser.data)
     })

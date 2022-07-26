@@ -76,7 +76,29 @@ export default function GetInbox() {
                                                         <></>
                                                         :
                                                         <small>
-                                                            <span className="text-danger" href="#">
+                                                            <span onClick={async () => {
+                                                                const userChoice = await confirm(`Você tem certeza que deseja deletar "${mail.title}"?`)
+                                                                if (userChoice) {
+                                                                    await axiosInstance.post('/inbox/delete-inbox', { id: mail.id })
+
+                                                                    axiosInstance.get('/inbox/get-inbox').then((response) => {
+                                                                        if (!response.data) {
+                                                                            setMails([
+                                                                                {
+                                                                                    title: '',
+                                                                                    content: 'Sua caixa de entrada está vazia no momento.',
+                                                                                    seen: true,
+                                                                                    notDeletable: true
+                                                                                }
+                                                                            ])
+                                                                            
+                                                                            return
+                                                                        }
+                                                                        const foundMails = response.data
+                                                                        setMails(foundMails)
+                                                                    })
+                                                                }
+                                                            }} className={"text-danger " + styles.clickable} href="#">
                                                                 Descartar
                                                             </span>
                                                         </small>

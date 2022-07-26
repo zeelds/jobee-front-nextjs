@@ -20,7 +20,7 @@ export default function Article() {
     const router = useRouter()
     const { id } = router.query
 
-    const {user} = useAppContext()
+    const { user } = useAppContext()
     const [userValue] = user
 
     const [article, setArticle] = useState()
@@ -57,12 +57,26 @@ export default function Article() {
 
     }, [id])
 
-    function submitComment(e) {
+    async function submitComment(e) {
         e.preventDefault()
-        axiosInstance.post('/article/create-comment', { content: message, article_id: id }).then((response) => {
+
+        await axiosInstance.post('/article/create-comment', { content: message, article_id: id }).then((response) => {
             console.log(response)
         })
         setMessage('')
+
+        const getAllComments = await axiosInstance.get('/article/article-comments-list/' + id)
+
+        const allComments = getAllComments.data.data.data
+
+        const formatComments = await Promise.all(allComments.map(async (comment) => {
+            const foundUser = await axiosInstance.get('/client/get-user/' + comment.author_id)
+            const completeComment = { user: foundUser.data.data.foundUser.data, comment: comment }
+            return completeComment
+        }))
+
+        setComments(formatComments)
+
     }
 
     if (!article) {
