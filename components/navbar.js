@@ -47,7 +47,7 @@ export default function Navbar() {
                             </div>
                         </Link>
 
-                        <Link href="/people/2342389192">
+                        <Link href="/people/464e098a-d833-4847-b619-117ab1c5c865">
                             <div className={styles.item_holder + ' mx-3 nav-item'}>
                                 <Image alt="" className={styles.item_icon} src="/icons/person.png" width="32" height="32" />
                                 <br />
