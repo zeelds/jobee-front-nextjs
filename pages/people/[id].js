@@ -37,6 +37,7 @@ export default function People() {
         if (!id) return
         (async () => {
             const foundUser = await axiosInstance.get('/client/get-user/' + id)
+            // ? Se nenhum usuário é encontrado, retorna para /people
             if(foundUser.data.data.foundUser.data == null){
                 Router.push('/people')
                 return
