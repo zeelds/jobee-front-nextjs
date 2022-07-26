@@ -2,12 +2,11 @@ import styles from '../styles/Main.module.css'
 import cardstyles from '../styles/Card.module.css'
 import responsive from '../styles/Responsive.module.css'
 import jobeestyles from '../styles/Jobee.module.css'
+import badgestyles from '../styles/Badges.module.css'
 import { motion } from "framer-motion"
 import Navbar from '../components/navbar'
 import Card from '../components/smart/card'
 import Link from 'next/link'
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-import { Pie } from 'react-chartjs-2';
 import { useAppContext } from './_app'
 import { useEffect, useState } from 'react'
 import { axiosInstance } from '../config/axios'
@@ -15,8 +14,6 @@ import ReactStars from "react-rating-stars-component";
 import Image from 'next/image'
 import pronounFix from '../utils/pronounFix'
 import starsAverage from '../utils/starsAvg'
-
-ChartJS.register(ArcElement, Tooltip, Legend);
 
 //Abre o perfil do usuário
 
@@ -30,39 +27,19 @@ export default function People() {
         list: []
     })
 
-    const data = {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [
-            {
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)',
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)',
-                ],
-                borderWidth: 1,
-            },
-        ]
-    }
+    const [latest, setLatest] = useState([])
 
     useEffect(() => {
-        axiosInstance.get('/client/reviews-list').then(async (response) => {
-            const stars = await starsAverage(response.data.data.data)
-            setReview({ ...review, average: stars })
-            setReview({ ...review, list: response.data.data.data })
-        })
+        (async () => {
+            await axiosInstance.get('/client/reviews-list').then(async (response) => {
+                const stars = await starsAverage(response.data.data.data)
+                setReview({ ...review, average: stars })
+                setReview({ ...review, list: response.data.data.data })
+            })
+            await axiosInstance.get('/article/articles-list').then(async (response) => {
+                setLatest(response.data.data.data)
+            })
+        })()
     }, [user])
 
     return (
@@ -139,8 +116,40 @@ export default function People() {
                         </Card>
 
                         <Card class={cardstyles.card_s_50 + " rounded-0 card mb-3 " + responsive.w100_on_sm}>
-                            <div className="card-body">
-                                Últimos artigos / Últimos comentários / Últimas avaliações 
+                            <div className="card-body text-center">
+
+                                <div className='mt-3'>
+
+                                    <h5 className='mb-3'>Últimos artigos</h5>
+
+                                    {latest.slice(0,4).map((article, index) => {
+                                        return (
+                                            <Link href={"/article/" + article.id}>
+                                                <a>
+                                                    <div className='w-100 mt-2 mb-2'>
+                                                        <Card class={cardstyles.card_s_100 + " card mb-3 container p-3 rounded-2"}>
+                                                            <b>{article.title}</b>
+                                                            <div className='mt-3'>
+
+                                                                {
+                                                                    JSON.parse(article.tags).map((tag, index) => {
+                                                                        return (
+                                                                            <span key={'tags-' + index} className={badgestyles.badge_bg_rainbow + " badge rounded-pill text-dark mx-1"}>{tag.name}</span>
+                                                                        )
+                                                                    })
+                                                                }
+                                                            </div>
+                                                        </Card>
+                                                    </div>
+                                                </a>
+                                            </Link>
+
+                                        )
+                                    })}
+
+                                </div>
+
+
                             </div>
                         </Card>
 

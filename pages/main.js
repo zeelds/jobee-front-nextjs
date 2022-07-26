@@ -55,12 +55,6 @@ export default function Main(props) {
                                     <p>
                                         {userValue.contact ? userValue.contact : "Esse usuário não inseriu nenhuma informação de contato no momento." }
                                     </p>
-                                    <button className={'btn w-100 ' + jobeestyles.btn_yellow}>
-                                        <b>Escrever artigo</b>
-                                    </button>
-                                    <button className={'btn w-100 mt-2 '}>
-                                        <b>Buscar vagas</b>
-                                    </button>
                                 </div>
                             </Card>
 

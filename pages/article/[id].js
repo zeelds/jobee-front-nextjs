@@ -11,6 +11,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { axiosInstance } from '../../config/axios'
+import { useAppContext } from '../_app'
 
 //Abre o perfil do usuário
 
@@ -18,6 +19,9 @@ export default function Article() {
 
     const router = useRouter()
     const { id } = router.query
+
+    const {user} = useAppContext()
+    const [userValue] = user
 
     const [article, setArticle] = useState()
     const [comments, setComments] = useState([])
@@ -41,9 +45,6 @@ export default function Article() {
 
             const allComments = getAllComments.data.data.data
 
-            // ! tem um problema onde os comentários vêm duplicados se vc tá vindo de outra rota
-            // ! tenta não dar f5 pra ver
-
             const formatComments = await Promise.all(allComments.map(async (comment) => {
                 const foundUser = await axiosInstance.get('/client/get-user/' + comment.author_id)
                 const completeComment = { user: foundUser.data.data.foundUser.data, comment: comment }
@@ -61,6 +62,7 @@ export default function Article() {
         axiosInstance.post('/article/create-comment', { content: message, article_id: id }).then((response) => {
             console.log(response)
         })
+        setMessage('')
     }
 
     if (!article) {
@@ -130,7 +132,7 @@ export default function Article() {
                                 <button onClick={submitComment} className='btn btn-dark'>
                                     <b>Comentar</b>
                                 </button>
-                                <a className='ms-2'>como Mariliana</a>
+                                <a className='ms-2'>como {userValue.name.split(' ')[0]}</a>
                                 <hr />
 
                                 {
