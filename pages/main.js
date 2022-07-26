@@ -15,8 +15,9 @@ import { useAppContext } from './_app'
 
 export default function Main(props) {
 
-    const { user } = useAppContext()
+    const { user, pro } = useAppContext()
     const [userValue, setUserValue] = user
+    const [proValue] = pro
 
     const [articles, setArticles] = useState([])
 
@@ -49,11 +50,11 @@ export default function Main(props) {
                                     <h4>{userValue.name}</h4>
                                     <h6><b>Sobre mim</b></h6>
                                     <p>
-                                        {userValue.biography ? userValue.biography : "Esse usuário não inseriu a biografia no momento." }
+                                        {userValue.biography ? userValue.biography : "Esse usuário não inseriu a biografia no momento."}
                                     </p>
                                     <h6><b>Contatos</b></h6>
                                     <p>
-                                        {userValue.contact ? userValue.contact : "Esse usuário não inseriu nenhuma informação de contato no momento." }
+                                        {userValue.contact ? userValue.contact : "Esse usuário não inseriu nenhuma informação de contato no momento."}
                                     </p>
                                 </div>
                             </Card>
@@ -62,20 +63,25 @@ export default function Main(props) {
 
                         <div className={cardstyles.card_s_100}>
 
-                            <Link href="/pro">
-                                <a>
-                                    <Card class={cardstyles.card_s_100 + " card mb-3"}>
-                                        <div className="card-body">
-                                            <h4>Assine o Jobee PRO</h4>
-                                            O Jobee PRO é uma experiência adquirida por pagamento único que oferece aos nossos clientes mais fiéis acesso exclusivo a recursos premium e personalizações adicionais.
-                                            <br />
-                                            <div className='mt-3'>
-                                                <span className={jobeestyles.ad_badge + " badge rounded-pill text-dark mx-1"}>Anúncio📢</span>
-                                            </div>
-                                        </div>
-                                    </Card>
-                                </a>
-                            </Link>
+                            {
+                                !proValue.invested && !proValue.professional ?
+                                    <Link href="/pro">
+                                        <a>
+                                            <Card class={cardstyles.card_s_100 + " card mb-3"}>
+                                                <div className="card-body">
+                                                    <h4>Assine o Jobee PRO</h4>
+                                                    O Jobee PRO é uma experiência adquirida por pagamento único que oferece aos nossos clientes mais fiéis acesso exclusivo a recursos premium e personalizações adicionais.
+                                                    <br />
+                                                    <div className='mt-3'>
+                                                        <span className={jobeestyles.ad_badge + " badge rounded-pill text-dark mx-1"}>Anúncio📢</span>
+                                                    </div>
+                                                </div>
+                                            </Card>
+                                        </a>
+                                    </Link>
+                                    :
+                                    <></>
+                            }
 
                             <WriteArticle articles={articles} setArticles={setArticles} />
 
