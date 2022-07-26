@@ -9,10 +9,14 @@ import Navbar from '../../../components/navbar';
 import ReactStars from "react-rating-stars-component";
 import Image from 'next/image'
 import Router, { useRouter } from 'next/router';
+import { useAppContext } from '../../_app'
 
 //Ele abre um perfil em específico
 
 export default function CreateReview() {
+
+    const {user} = useAppContext()
+    const [userValue] = user
 
     const router = useRouter()
     const { id } = router.query
@@ -22,14 +26,27 @@ export default function CreateReview() {
         stars: 0
     })
 
+    const [targetUser, setTargetUser] = useState()
+
+    useEffect(()=>{
+        (async()=>{
+            const foundUser = await axiosInstance.get('/client/get-user/'+id)
+            setTargetUser(foundUser.data.data.foundUser.data)
+        })()
+    },[id])
+
     function submitForm(e){
         e.preventDefault()
         axiosInstance.post('/client/write-review', {
             ...writtenReview,
-            reviewer_id: id,
-        }).then(()=>{
+            reviewed_id: id,
+        }).then((response)=>{
             Router.push('/people/'+id)
         })
+    }
+
+    if(!targetUser){
+        return
     }
 
     return (
@@ -46,7 +63,7 @@ export default function CreateReview() {
                 <main className={styles.main_white}>
 
                     <div className="text-center mb-3">
-                        <h3>Avaliar João</h3>
+                        <h3>Avaliar {targetUser.name.split(' ')[0]}</h3>
                     </div>
 
                     <br />
@@ -58,7 +75,7 @@ export default function CreateReview() {
                             <div className="card-body">
 
                                 <div className="text-center">
-                                    <Image alt="" className="rounded-circle" src="/avatar/default.png" width="128" height="128" />
+                                    <img alt="" className="rounded-circle" src={targetUser.avatar} width="128" height="128" />
                                 </div>
 
                                 <div className="d-flex justify-content-center">

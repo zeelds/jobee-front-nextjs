@@ -33,8 +33,7 @@ export default function People() {
         (async () => {
             await axiosInstance.get('/client/reviews-list').then(async (response) => {
                 const stars = await starsAverage(response.data.data.data)
-                setReview({ ...review, average: stars })
-                setReview({ ...review, list: response.data.data.data })
+                setReview({ average: stars, list: response.data.data.data })
             })
             await axiosInstance.get('/article/articles-list').then(async (response) => {
                 setLatest(response.data.data.data)
@@ -122,7 +121,7 @@ export default function People() {
 
                                     <h5 className='mb-3'>Últimos artigos</h5>
 
-                                    {latest.slice(0,4).map((article, index) => {
+                                    {latest.slice(0, 4).map((article, index) => {
                                         return (
                                             <Link href={"/article/" + article.id}>
                                                 <a>

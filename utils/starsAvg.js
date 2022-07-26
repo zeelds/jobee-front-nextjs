@@ -1,6 +1,6 @@
 
 export default async function starsAverage(stars) {
-    const average = stars.reduce((sum, current)=>{
+    const average = await stars.reduce((sum, current)=>{
         return sum+current.stars
     }, 0) / stars.length
 
