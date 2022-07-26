@@ -38,7 +38,7 @@ export default function People() {
         (async () => {
             const foundUser = await axiosInstance.get('/client/get-user/' + id)
             // ? Se nenhum usuário é encontrado, retorna para /people
-            if(foundUser.data.data.foundUser.data == null){
+            if (foundUser.data.data.foundUser.data == null) {
                 Router.push('/people')
                 return
             }
@@ -46,6 +46,7 @@ export default function People() {
             const foundAccessibility = await axiosInstance.get('/client/get-accessibility/' + id)
             setAccessibilityValue(foundAccessibility.data.data.data)
             await axiosInstance.get('/client/reviews-list/' + id).then(async (response) => {
+                if (response.data.data == undefined) return
                 const stars = await starsAverage(response.data.data.data)
                 setReview({ average: stars, list: response.data.data.data })
             })
@@ -120,6 +121,16 @@ export default function People() {
                                             {userValue.contact ? userValue.contact : "Esse usuário não inseriu nenhuma informação de contato no momento."}
                                         </p>
                                     </div>
+
+                                    <Link href={"/review/create/"+userValue.id}>
+                                        <button className='btn btn-dark w-75'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="me-1 align-text-top bi bi-star-fill" viewBox="0 0 16 16">
+                                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+                                            <b>Avaliar</b>
+                                        </button>
+                                    </Link>
+
                                 </div>
 
                             </div>

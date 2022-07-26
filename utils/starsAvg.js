@@ -4,5 +4,5 @@ export default async function starsAverage(stars) {
         return sum+current.stars
     }, 0) / stars.length
 
-    return average
+    return average.toFixed(1)
 }

@@ -38,12 +38,6 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     if (!isAuth()) return
-    axiosInstance.get('/client/refresh-token').then((response) => {
-      if (response.status == 500) {
-        logout()
-        Router.push('/start')
-      }
-    })
     axiosInstance.get('/client/get-user').then((response) => {
       setProData({
         invested: response.data.data.proStatus.invested,

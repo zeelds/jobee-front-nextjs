@@ -8,6 +8,7 @@ import styles from '../styles/Navbar.module.css'
 import responsive from '../styles/Responsive.module.css'
 import { isAuth, logout } from '../config/auth'
 import { useEffect } from 'react'
+import { axiosInstance } from '../config/axios'
 
 export default function Navbar() {
 
@@ -16,9 +17,15 @@ export default function Navbar() {
     const [userValue, setUserValue] = user
 
     useEffect(() => {
-        if (!isAuth()) {
-            Router.push('/start')
-        }
+
+        (async () => {
+            await axiosInstance.get('/client/refresh-token')
+                .catch(() => {
+                    logout()
+                    Router.push('/start')
+                })
+        })()
+        
     }, [])
 
     return (
