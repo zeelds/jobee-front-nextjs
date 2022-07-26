@@ -14,18 +14,18 @@ import ReactStars from "react-rating-stars-component";
 import Image from 'next/image'
 import pronounFix from '../../utils/pronounFix'
 import starsAverage from '../../utils/starsAvg'
-import { useRouter } from 'next/router'
+import Router, { useRouter } from 'next/router'
 
 //Abre o perfil do usuário
 
 export default function People() {
 
     const router = useRouter()
-    const {id} = router.query
+    const { id } = router.query
 
     const [userValue, setUserValue] = useState()
     const [accessibilityValue, setAccessibilityValue] = useState()
-    
+
     const [review, setReview] = useState({
         average: 0,
         list: []
@@ -34,23 +34,27 @@ export default function People() {
     const [latest, setLatest] = useState([])
 
     useEffect(() => {
-        if(!id) return
+        if (!id) return
         (async () => {
-            const foundUser = await axiosInstance.get('/client/get-user/'+id)
+            const foundUser = await axiosInstance.get('/client/get-user/' + id)
+            if(foundUser.data.data.foundUser.data == null){
+                Router.push('/people')
+                return
+            }
             setUserValue(foundUser.data.data.foundUser.data)
-            const foundAccessibility = await axiosInstance.get('/client/get-accessibility/'+id)
+            const foundAccessibility = await axiosInstance.get('/client/get-accessibility/' + id)
             setAccessibilityValue(foundAccessibility.data.data.data)
-            await axiosInstance.get('/client/reviews-list/'+id).then(async (response) => {
+            await axiosInstance.get('/client/reviews-list/' + id).then(async (response) => {
                 const stars = await starsAverage(response.data.data.data)
                 setReview({ average: stars, list: response.data.data.data })
             })
-            await axiosInstance.get('/article/articles-list/'+id).then(async (response) => {
+            await axiosInstance.get('/article/articles-list/' + id).then(async (response) => {
                 setLatest(response.data.data.data)
             })
         })()
     }, [id])
 
-    if(!userValue||!accessibilityValue) return
+    if (!userValue || !accessibilityValue) return
 
     return (
         <div className="bg-light">
