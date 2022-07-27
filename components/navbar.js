@@ -41,7 +41,11 @@ export default function Navbar() {
                                 </div>
                             </a>
                         </Link>
-                        <input onChange={(e) => setSearchValue(e.target.value)} value={searchValue} className={styles.item_spacing + " form-control"} id="search-bar" placeholder="🔍︎ Tente buscar algo" />
+                        <input onKeyDown={(e)=>{
+                            if(e.key=="Enter"){
+                                Router.push('/search/'+searchValue)
+                            }
+                        }} onChange={(e) => setSearchValue(e.target.value)} value={searchValue} className={styles.item_spacing + " form-control"} id="search-bar" placeholder="🔍︎ Tente buscar algo" />
                     </div>
 
                     <div className={'d-flex ' + responsive.center_on_sm}>

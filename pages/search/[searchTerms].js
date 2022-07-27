@@ -23,6 +23,18 @@ export default function Search() {
     const router = useRouter()
     const { searchTerms } = router.query
 
+    useEffect(() => {
+        (
+            async () => {
+                
+                if (!searchTerms) return
+
+                const searchResults = await axiosInstance.post('/search', { searchTerms: searchTerms.split(' ') })
+                console.log(searchResults)
+            }
+        )()
+    }, [searchTerms])
+
     return (
         <div className="bg-light">
 
