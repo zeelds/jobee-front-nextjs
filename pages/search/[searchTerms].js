@@ -51,27 +51,90 @@ export default function Search() {
 
                 <Navbar />
 
-                <main className={styles.main_white + ' ' + responsive.p1em_on_sm}>
+                <main className={styles.main_white + ' w-75 container ' + responsive.p1em_on_sm}>
 
-                    <div className={"d-flex justify-content-center container-fluid w-75 " + responsive.dblock_on_sm}>
+                    <h4 className='mb-3'>
+                        Pessoas
+                    </h4>
+
+                    <div className={"row"}>
+
+                        {!result.people.length ? <a>Não encontramos nenhuma pessoa para estes termos.</a> : <></>}
 
                         {result.people.map((result, index) => {
                             return (
 
-                                <Card class={cardstyles.card_s_50 + " card mb-3 me-2 " + responsive.w100_on_sm}>
-                                    <div className="card-body text-center">
+                                <div class="col-sm-6">
 
-                                        <img src={result.avatar} width="64" height="64" className='rounded-circle' />
+                                    <Card class={cardstyles.card_s_100 + " card mb-3 me-2 " + responsive.w100_on_sm}>
+                                        <div className="card-body text-center">
 
-                                        <Link href={"/people/"+result.id}>
-                                            <h4>
-                                                {result.name}
-                                            </h4>
-                                        </Link>
+                                            <img src={result.avatar} width="64" height="64" className='rounded-circle' />
 
-                                        {result.title}
-                                    </div>
-                                </Card>
+                                            <Link href={"/people/" + result.id}>
+                                                <a>
+                                                    <h4>
+                                                        {result.name}
+                                                    </h4>
+                                                </a>
+                                            </Link>
+
+                                            {result.title}
+                                        </div>
+                                    </Card>
+
+                                </div>
+
+                            )
+                        })}
+
+                    </div>
+
+                    <h4 className='mb-3 mt-3'>
+                        Artigos
+                    </h4>
+
+                    <div className={"row"}>
+
+                        {!result.articles.length ? <a>Não encontramos nenhum artigo para estes termos.</a> : <></>}
+
+                        {result.articles.map((result, index) => {
+                            return (
+
+                                <div class="col-sm-6">
+
+                                    <Card class={cardstyles.card_s_100 + " card mb-3 me-2 " + responsive.w100_on_sm}>
+                                        <div className="card-body text-center">
+
+                                            <Link href={"/article/" + result.id}>
+                                                <a>
+                                                    <h4>
+                                                        {result.title}
+                                                    </h4>
+                                                </a>
+                                            </Link>
+
+                                            <Link href={"/article/" + result.id}>
+                                                <a>
+                                                    {result.content}
+                                                </a>
+                                            </Link>
+
+
+                                            <br className='mb-3' />
+
+                                            {
+                                                JSON.parse(result.tags).map((tag, index) => {
+                                                    return (
+                                                        <span key={'tags-' + index} className={badgestyles.badge_bg_rainbow + " badge rounded-pill text-dark mx-1"}>{tag.name}</span>
+                                                    )
+                                                })
+                                            }
+
+                                        </div>
+                                    </Card>
+
+                                </div>
 
                             )
                         })}
