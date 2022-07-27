@@ -23,14 +23,19 @@ export default function Search() {
     const router = useRouter()
     const { searchTerms } = router.query
 
+    const [result, setResult] = useState({
+        people: [],
+        articles: []
+    })
+
     useEffect(() => {
         (
             async () => {
-                
+
                 if (!searchTerms) return
 
                 const searchResults = await axiosInstance.post('/search', { searchTerms: searchTerms.split(' ') })
-                console.log(searchResults)
+                setResult({ people: searchResults.data.filteredUsers, articles: searchResults.data.filteredArticles })
             }
         )()
     }, [searchTerms])
@@ -50,7 +55,26 @@ export default function Search() {
 
                     <div className={"d-flex justify-content-center container-fluid w-75 " + responsive.dblock_on_sm}>
 
-                        {searchTerms}
+                        {result.people.map((result, index) => {
+                            return (
+
+                                <Card class={cardstyles.card_s_50 + " card mb-3 me-2 " + responsive.w100_on_sm}>
+                                    <div className="card-body text-center">
+
+                                        <img src={result.avatar} width="64" height="64" className='rounded-circle' />
+
+                                        <Link href={"/people/"+result.id}>
+                                            <h4>
+                                                {result.name}
+                                            </h4>
+                                        </Link>
+
+                                        {result.title}
+                                    </div>
+                                </Card>
+
+                            )
+                        })}
 
                     </div>
 
