@@ -1,29 +1,71 @@
-.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-    background-color: #F5C417 !important;
-  }
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+  background-color: #F5C417 !important;
+}
 
-  .btn_yellow, .btn_yellow:hover, .btn_yellow:active, .btn_yellow:visited {
-    background-color: #F5C417 !important;
-    width: 40%;
-  }
+.btn_yellow,
+.btn_yellow:hover,
+.btn_yellow:active,
+.btn_yellow:visited {
+  background-color: #F5C417 !important;
+  width: 40%;
+}
 
-  .premium_badge {
-    background-color: #874df3 !important;
-    color: white !important;
-  }
+.premium_badge {
+  background-color: #874df3 !important;
+  color: white !important;
+}
 
-  .default_badge {
-    background-color: #f34d84 !important;
-    color: white !important;
-  }
+.default_badge {
+  background-color: #f34d84 !important;
+  color: white !important;
+}
 
-  .ad_badge {
-    background-color: #EE4423 !important;
-    color: white !important;
-  }
+.ad_badge {
+  background-color: #EE4423 !important;
+  color: white !important;
+}
 
-  .input_default {
-    background-color: #F5C417 !important;
-    border: 3px solid black !important;
-    border-radius: 7px !important;
-  }
+.ad_badge[color-theme="Deuteranomalia"] {
+  background-color: rgb(149, 14, 212) !important;
+  color: white !important;
+}
+
+.ad_badge[color-theme="Protanomalia"] {
+  background-color: rgb(137, 69, 214) !important;
+  color: white !important;
+}
+
+.ad_badge[color-theme="Protanopia"] {
+  background-color: rgb(44, 53, 182) !important;
+  color: white !important;
+}
+
+.ad_badge[color-theme="Deuteranopia"] {
+  background-color: rgb(44, 53, 182) !important;
+  color: white !important;
+}
+
+.ad_badge[color-theme="Tritanomalia"] {
+  background-color: rgb(235,70,112) !important;
+  color: white !important;
+}
+
+.ad_badge[color-theme="Tritanopia"] {
+  background-color: #ff4693 !important;
+  color: white !important;
+}
+
+.ad_badge[color-theme="Total"] {
+  background-color: #414141 !important;
+  color: white !important;
+}
+
+
+.input_default {
+  background-color: #F5C417 !important;
+  border: 3px solid black !important;
+  border-radius: 7px !important;
+}

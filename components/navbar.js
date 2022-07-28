@@ -12,20 +12,22 @@ import { axiosInstance } from '../config/axios'
 
 export default function Navbar() {
 
-    const { search, user } = useAppContext()
+    const { search, user, accessibility } = useAppContext()
     const [searchValue, setSearchValue] = search
     const [userValue, setUserValue] = user
+    const [accessibilityValue, setAccessibilityValue] = accessibility
 
     useEffect(() => {
 
         (async () => {
+
             await axiosInstance.get('/client/refresh-token')
                 .catch(() => {
                     logout()
                     Router.push('/start')
                 })
         })()
-        
+
     }, [])
 
     return (
@@ -36,14 +38,14 @@ export default function Navbar() {
                     <div className={styles.centered_bar + " navbar-brand " + responsive.hide_on_sm} href="#">
                         <Link href="/main">
                             <a>
-                                <div className={styles.navbar_brand}>
+                                <div className={styles.navbar_brand} color-theme={accessibilityValue.color_blindness}>
                                     <Image width="64" height="64" id='logo-image' className='d-inline-block align-text-top' src="/jobee.png" alt="Jobee Logo" />
                                 </div>
                             </a>
                         </Link>
-                        <input onKeyDown={(e)=>{
-                            if(e.key=="Enter"){
-                                Router.push('/search/'+searchValue)
+                        <input onKeyDown={(e) => {
+                            if (e.key == "Enter") {
+                                Router.push('/search/' + searchValue)
                             }
                         }} onChange={(e) => setSearchValue(e.target.value)} value={searchValue} className={styles.item_spacing + " form-control"} id="search-bar" placeholder="🔍︎ Tente buscar algo" />
                     </div>
@@ -79,7 +81,7 @@ export default function Navbar() {
                                 <Image alt="" className={styles.item_icon} src="/icons/email.png" width="32" height="32" />
                                 <br />
                                 <b className={responsive.hide_on_sm}>Avisos</b>
-                                <span className={`position-absolute top-0 start-100 ${responsive.badge_on_sm} translate-middle badge rounded-pill bg-danger`}>
+                                <span className={`position-absolute top-0 start-100 ${responsive.badge_on_sm} translate-middle badge rounded-pill ${styles.alertbadge}`} color-theme={accessibilityValue.color_blindness}>
                                     !
                                 </span>
                             </div>

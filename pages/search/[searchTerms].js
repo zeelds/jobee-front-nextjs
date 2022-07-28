@@ -32,7 +32,10 @@ export default function Search() {
         (
             async () => {
 
-                if (!searchTerms) return
+                if (!searchTerms || searchTerms.length <= 3) {
+                    setResult({ people: [], articles: [] })
+                    return
+                }
 
                 const searchResults = await axiosInstance.post('/search', { searchTerms: searchTerms.split(' ') })
                 setResult({ people: searchResults.data.filteredUsers, articles: searchResults.data.filteredArticles })
@@ -64,7 +67,7 @@ export default function Search() {
                         {result.people.map((result, index) => {
                             return (
 
-                                <div class="col-sm-6">
+                                <div key={"result-" + index} class="col-sm-6">
 
                                     <Card class={cardstyles.card_s_100 + " card mb-3 me-2 " + responsive.w100_on_sm}>
                                         <div className="card-body text-center">
@@ -101,7 +104,7 @@ export default function Search() {
                         {result.articles.map((result, index) => {
                             return (
 
-                                <div class="col-sm-6">
+                                <div key={'result-' + index} className="col-sm-6">
 
                                     <Card class={cardstyles.card_s_100 + " card mb-3 me-2 " + responsive.w100_on_sm}>
                                         <div className="card-body text-center">

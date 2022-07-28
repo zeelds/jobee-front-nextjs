@@ -100,7 +100,7 @@ export default function People() {
                                         value={formData.name || ""}
                                         maxLength={60}
                                         type="email" class="form-control" id="floatingInput" placeholder="Nome" />
-                                    <label for="floatingInput">Seu nome</label>
+                                    <label htmlFor="floatingInput">Seu nome</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
@@ -109,7 +109,7 @@ export default function People() {
                                         value={formData.title || ""}
                                         maxLength={60}
                                         type="email" class="form-control" id="floatingInput" placeholder="Nome" />
-                                    <label for="floatingInput">Título</label>
+                                    <label htmlFor="floatingInput">Título</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
@@ -117,7 +117,7 @@ export default function People() {
                                         onChange={(e) => setFormData({ ...formData, biography: e.target.value })}
                                         value={formData.biography || ""}
                                         class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                                    <label for="floatingTextarea">Biografia</label>
+                                    <label htmlFor="floatingTextarea">Biografia</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
@@ -130,7 +130,7 @@ export default function People() {
                                         <option value="Outros">Outros</option>
                                         <option value="Prefiro não dizer">Prefiro não dizer</option>
                                     </select>
-                                    <label for="floatingSelect">Gênero</label>
+                                    <label htmlFor="floatingSelect">Gênero</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
@@ -138,7 +138,7 @@ export default function People() {
                                         disabled
                                         value={new Date(formData.birthday).toLocaleDateString('en-GB')}
                                         type="email" class="form-control" id="floatingInput" placeholder="Nome" />
-                                    <label for="floatingInput">Data de Nascimento</label>
+                                    <label htmlFor="floatingInput">Data de Nascimento</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
@@ -146,7 +146,7 @@ export default function People() {
                                         onChange={(e) => setFormData({ ...formData, contact: e.target.value })}
                                         value={formData.contact || ""}
                                         class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                                    <label for="floatingTextarea">Contato</label>
+                                    <label htmlFor="floatingTextarea">Contato</label>
                                 </div>
 
                                 <button onClick={submitForm} className='btn btn-dark w-100 mb-2'>

@@ -19,6 +19,94 @@
     text-align: center;
 }
 
+.navbar_brand[color-theme="Deuteranomalia"] {
+    background-color: hwb(56 20% 6%);
+    border-radius: 15%;
+    width: 64px;
+    height: 64px;
+    text-align: center;
+}
+
+.navbar_brand[color-theme="Protanomalia"] {
+    background-color: hwb(76 25% 1%);
+    border-radius: 15%;
+    width: 64px;
+    height: 64px;
+    text-align: center;
+}
+
+.navbar_brand[color-theme="Protanopia"] {
+    background-color: hwb(56 20% 6%);
+    border-radius: 15%;
+    width: 64px;
+    height: 64px;
+    text-align: center;
+}
+
+.navbar_brand[color-theme="Deuteranopia"] {
+    background-color: #e0b642;
+    border-radius: 15%;
+    width: 64px;
+    height: 64px;
+    text-align: center;
+}
+
+.navbar_brand[color-theme="Tritanomalia"] {
+    background-color: rgb(252,188,127);
+    border-radius: 15%;
+    width: 64px;
+    height: 64px;
+    text-align: center;
+}
+
+.navbar_brand[color-theme="Tritanopia"] {
+    background-color: rgb(252,163,169);
+    border-radius: 15%;
+    width: 64px;
+    height: 64px;
+    text-align: center;
+}
+
+.navbar_brand[color-theme="Total"] {
+    background-color: rgb(199, 199, 199);
+    border-radius: 15%;
+    width: 64px;
+    height: 64px;
+    text-align: center;
+}
+
+.alertbadge {
+    background-color: rgb(212, 14, 14) !important;
+}
+
+.alertbadge[color-theme="Deuteranomalia"] {
+    background-color: rgb(149, 14, 212) !important;
+}
+
+.alertbadge[color-theme="Protanomalia"] {
+    background-color: rgb(137, 69, 214) !important;
+}
+
+.alertbadge[color-theme="Protanopia"] {
+    background-color: rgb(44, 53, 182) !important;
+}
+
+.alertbadge[color-theme="Deuteranopia"] {
+    background-color: rgb(44, 53, 182) !important;
+}
+
+.alertbadge[color-theme="Tritanomalia"] {
+    background-color: rgb(235,70,112) !important;
+}
+
+.alertbadge[color-theme="Tritanopia"] {
+    background-color: #ff4693 !important;
+}
+
+.alertbadge[color-theme="Total"] {
+    background-color: #414141 !important;
+}
+
 .dropdown_large {
     width: 710% !important;
 

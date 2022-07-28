@@ -145,7 +145,7 @@ export default function People() {
 
                                     {latest.slice(0, 4).map((article, index) => {
                                         return (
-                                            <Link href={"/article/" + article.id}>
+                                            <Link id={index+'-article'} href={"/article/" + article.id}>
                                                 <a>
                                                     <div className='w-100 mt-2 mb-2'>
                                                         <Card class={cardstyles.card_s_100 + " card mb-3 container p-3 rounded-2"}>
@@ -184,9 +184,9 @@ export default function People() {
 
                         <h4 className='mb-4'>Avaliações recebidas</h4>
 
-                        {review.list.map((element) => {
+                        {review.list.map((element, index) => {
                             return (
-                                <Card class={cardstyles.card_s_100 + " card mb-3 " + responsive.w100_on_sm}>
+                                <Card key={"review-"+index} class={cardstyles.card_s_100 + " card mb-3 " + responsive.w100_on_sm}>
                                     <div className="card-body">
                                         <ReactStars
                                             count={5}

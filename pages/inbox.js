@@ -98,7 +98,7 @@ export default function GetInbox() {
                                                                         setMails(foundMails)
                                                                     })
                                                                 }
-                                                            }} className={"text-danger " + styles.clickable} href="#">
+                                                            }} className={styles.clickable+" "+styles.discardlink} color-theme={accessibilityValue.color_blindness} href="#">
                                                                 Descartar
                                                             </span>
                                                         </small>

@@ -1,13 +1,45 @@
 .main_white {
-    background-color: #F6F6F6;
-    min-height: 100vh;
-    padding: 4rem 0;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    
-  }
-  
+  background-color: #F6F6F6;
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.discardlink {
+  color: rgb(212, 14, 14) !important;
+}
+
+.discardlink[color-theme="Deuteranomalia"] {
+  color: rgb(149, 14, 212) !important;
+}
+
+.discardlink[color-theme="Protanomalia"] {
+  color: rgb(137, 69, 214) !important;
+}
+
+.discardlink[color-theme="Protanopia"] {
+  color: rgb(44, 53, 182) !important;
+}
+
+.discardlink[color-theme="Deuteranopia"] {
+  color: rgb(44, 53, 182) !important;
+}
+
+.discardlink[color-theme="Tritanomalia"] {
+  color: rgb(235,70,112) !important;
+}
+
+.discardlink[color-theme="Tritanopia"] {
+  color: #ff4693 !important;
+}
+
+.discardlink[color-theme="Total"] {
+  color: #414141 !important;
+}
+
 .display_flex {
   display: inline-flex;
 }

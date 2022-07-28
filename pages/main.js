@@ -15,9 +15,10 @@ import { useAppContext } from './_app'
 
 export default function Main(props) {
 
-    const { user, pro } = useAppContext()
+    const { user, pro, accessibility } = useAppContext()
     const [userValue, setUserValue] = user
     const [proValue] = pro
+    const [accessibilityValue, setAccessibilityValue] = accessibility
 
     const [articles, setArticles] = useState([])
 
@@ -73,7 +74,7 @@ export default function Main(props) {
                                                     O Jobee PRO é uma experiência adquirida por pagamento único que oferece aos nossos clientes mais fiéis acesso exclusivo a recursos premium e personalizações adicionais.
                                                     <br />
                                                     <div className='mt-3'>
-                                                        <span className={jobeestyles.ad_badge + " badge rounded-pill text-dark mx-1"}>Anúncio📢</span>
+                                                        <span color-theme={accessibilityValue.color_blindness} className={jobeestyles.ad_badge + " badge rounded-pill text-dark mx-1"}>Anúncio📢</span>
                                                     </div>
                                                 </div>
                                             </Card>
