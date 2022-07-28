@@ -86,7 +86,7 @@ export default function People() {
                                         }).then((response) => {
                                             setFormData({
                                                 ...formData,
-                                                avatar: process.env.NEXT_PUBLIC_BASEURL + '/media/uploads/' + response.data.filename
+                                                avatar: (process.env.NEXT_PUBLIC_BASEURL||'https://api-jobee.herokuapp.com') + '/media/uploads/' + response.data.filename
                                             })
                                         })
 

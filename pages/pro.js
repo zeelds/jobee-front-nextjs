@@ -45,7 +45,7 @@ export default function Help() {
     }
 
     return (
-        <PayPalScriptProvider options={{ "client-id": process.env.NEXT_PUBLIC_PAYPAL, currency: "BRL" }}>
+        <PayPalScriptProvider options={{ "client-id": process.env.NEXT_PUBLIC_PAYPAL || 'AW70Z0WkRhmyEyZL6KYmFAvYhPuvvsmla7R0297g3uJ0xu8dZQdof5CUPhwSyKinY9C4mNqrdqYAy3PG', currency: "BRL" }}>
             <div className="bg-light">
 
                 <motion.div
