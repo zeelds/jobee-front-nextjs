@@ -10,10 +10,13 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Button from 'react-bootstrap/Button';
 import Tooltip from 'react-bootstrap/Tooltip';
 import useSound from 'use-sound';
+import { useRouter } from 'next/router';
 
 const AppContext = createContext("")
 
 function MyApp({ Component, pageProps }) {
+
+  const router = useRouter()
 
   const [search, setSearch] = useState("")
   const [userData, setUserData] = useState({
@@ -85,8 +88,6 @@ function MyApp({ Component, pageProps }) {
     })
   }, [])
 
-  console.log(Component)
-
   return (
     <AppContext.Provider value={{
       search: [search, setSearch],
@@ -111,8 +112,7 @@ function MyApp({ Component, pageProps }) {
               </Tooltip>
             }
           >
-            <Button disabled={!['Main', 'About', 'Accessibility', 'Inbox', 'People'].includes(Component.name)} onClick={() => {
-
+            <Button disabled={!['/main', '/about', '/accessibility', '/inbox', '/people'].includes(router.pathname)} onClick={() => {
               stopMain()
               stopAbout()
               stopAccessibility()
@@ -121,23 +121,23 @@ function MyApp({ Component, pageProps }) {
 
               setPlayingStatus(true)
 
-              if (Component.name == "Main") {
+              if (router.pathname == "/main") {
                 playMain()
               }
 
-              if (Component.name == "About") {
+              if (router.pathname == "/about") {
                 playAbout()
               }
 
-              if (Component.name == "Accessibility") {
+              if (router.pathname == "/accessibility") {
                 playAccessibility()
               }
 
-              if (Component.name == "Inbox") {
+              if (router.pathname == "/inbox") {
                 playInbox()
               }
 
-              if (Component.name == "People") {
+              if (router.pathname == "/people") {
                 playPeople()
               }
 
