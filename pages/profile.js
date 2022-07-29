@@ -8,6 +8,7 @@ import Card from '../components/smart/card'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useAppContext } from './_app'
+import Router from 'next/router'
 
 export default function Profile() {
 
@@ -32,8 +33,18 @@ export default function Profile() {
                         <div className='mt-3'>
 
                             <div className="d-inline-flex w-100 mb-3">
-                                <input onChange={(e) => setSearchValue(e.target.value)} value={searchValue} className={styles.item_spacing + " form-control rounded-0"} id="search-bar" placeholder="🔍︎ Tente buscar algo" />
-                                <button className="btn btn-dark rounded-0">Pesquisar</button>
+                                <input
+                                    onKeyDown={(e) => {
+                                        if (e.key == "Enter") {
+                                            Router.push('/search/' + searchValue)
+                                        }
+                                    }}
+                                    onChange={(e) => setSearchValue(e.target.value)} value={searchValue} className={styles.item_spacing + " form-control rounded-0"} id="search-bar" placeholder="🔍︎ Tente buscar algo" />
+                                <button
+                                    onClick={() => {
+                                        Router.push('/search/' + searchValue)
+                                    }}
+                                    className="btn btn-dark rounded-0">Pesquisar</button>
                             </div>
 
                             <br />
