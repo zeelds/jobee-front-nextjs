@@ -76,7 +76,7 @@ export default function People() {
                                         Pronome
                                     </div>
 
-                                    <div className="vr ms-2 me-2" />
+                                    <div className={"vr ms-2 me-2 "+responsive.hide_on_sm} />
 
                                     <div className='ms-2 me-3 text-center'>
                                         <b>{review.average}
@@ -88,7 +88,7 @@ export default function People() {
                                         Avaliação
                                     </div>
 
-                                    <div className="vr ms-2 me-2" />
+                                    <div className={"vr ms-2 me-2 "+responsive.hide_on_sm} />
 
                                     <div className='ms-2 text-center'>
                                         <b>{new Date(userValue.createdAt).toLocaleDateString('en-GB')}</b>

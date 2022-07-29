@@ -31,7 +31,6 @@
     "react-dom": "18.2.0",
     "react-number-format": "^4.9.3",
     "react-rating-stars-component": "^2.2.0",
-    "react-speech-recognition": "^3.9.1",
     "react-tiny-fab": "^4.0.4"
   },
   "devDependencies": {
