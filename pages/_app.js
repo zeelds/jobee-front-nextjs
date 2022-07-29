@@ -96,7 +96,7 @@ function MyApp({ Component, pageProps }) {
               </Tooltip>
             }
           >
-            <Button onClick={() => {
+            <Button disabled={!['Main','About'].includes(Component.name)} onClick={() => {
 
               stopMain()
               stopAbout()
