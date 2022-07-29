@@ -9,6 +9,7 @@ import { getToken, isAuth, logout } from '../config/auth';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Button from 'react-bootstrap/Button';
 import Tooltip from 'react-bootstrap/Tooltip';
+import useSound from 'use-sound';
 
 const AppContext = createContext("")
 
@@ -37,17 +38,24 @@ function MyApp({ Component, pageProps }) {
     professional: false
   })
   const [inboxData, setInboxData] = useState([
-
   ])
 
-  const [audioState, setAudioState] = useState({
-    audio: null,
-    paused: false
+  const [playingStatus, setPlayingStatus] = useState(false)
+  const [playMain, { stop: stopMain }] = useSound("/audio/Main.mp3", {
+    onend: ()=> {
+      console.log('alorr')
+      setPlayingStatus(false)
+    }
+  })
+  const [playAbout, { stop: stopAbout }] = useSound("/audio/About.mp3", {
+    onend: ()=> {
+      console.log('alorr')
+      setPlayingStatus(false)
+    }
   })
 
   useEffect(() => {
     if (!isAuth()) return
-    setAudioState({ ...audioState, audio: new Audio('https://github.com/prof3ssorSt3v3/media-sample-files/raw/master/fight-club.mp3') })
     axiosInstance.get('/client/get-user').then((response) => {
       setProData({
         invested: response.data.data.proStatus.invested,
@@ -84,13 +92,25 @@ function MyApp({ Component, pageProps }) {
             placement={'left'}
             overlay={
               <Tooltip id={`tooltip-top`}>
-                Ativar o assistente por voz em seu navegador.
+                Ativar o assistente por áudio em seu navegador.
               </Tooltip>
             }
           >
             <Button onClick={() => {
-              audioState.audio.paused ? audioState.audio.play() : audioState.audio.pause()
-              setAudioState({ ...audioState, paused: audioState.audio.paused })
+
+              stopMain()
+              stopAbout()
+
+              setPlayingStatus(true)
+
+              if (Component.name == "Main") {
+                playMain()
+              }
+
+              if (Component.name == "About") {
+                playAbout()
+              }
+
             }} className={'btn rounded-circle ' + styles.unletteredFAB} color-theme={accessibilityData.color_blindness} style={{
               position: 'fixed', bottom: 0, right: 0,
               width: '64px', height: '64px', margin: 5,
@@ -98,7 +118,7 @@ function MyApp({ Component, pageProps }) {
               zIndex: '999'
             }}>
               <ButtonText color_blindness={accessibilityData.color_blindness}>
-                {audioState.paused ?
+                {playingStatus == true ?
                   <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z" />
                   :
                   <>

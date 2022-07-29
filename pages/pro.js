@@ -11,7 +11,7 @@ import { axiosInstance } from '../config/axios'
 import { useAppContext } from './_app'
 import { useEffect } from 'react'
 
-export default function Help() {
+export default function Pro() {
 
     const { pro } = useAppContext()
     const [proValue, setProValue] = pro

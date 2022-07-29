@@ -31,7 +31,7 @@
     "react-dom": "18.2.0",
     "react-number-format": "^4.9.3",
     "react-rating-stars-component": "^2.2.0",
-    "react-tiny-fab": "^4.0.4"
+    "use-sound": "^4.0.1"
   },
   "devDependencies": {
     "eslint": "8.18.0",
