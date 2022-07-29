@@ -116,7 +116,7 @@ export default function Article() {
 
                         <Card class={cardstyles.card_s_100 + " card mb-3"}>
                             <div className="card-body">
-                                <small>Postado por <a href={"/people/" + owner.id}>{owner.name}</a> · {new Date(article.created_at).toLocaleDateString('en-GB')}</small>
+                                <small>Postado por <a href={"/people/" + owner.id}>{owner.name}</a> · {new Date(article.createdAt).toLocaleDateString('en-GB')}</small>
                                 <h4>{article && article.title}</h4>
                                 {article && article.content}
                                 <br />
@@ -155,7 +155,7 @@ export default function Article() {
                                         return (
                                             <div key={"comment-" + index} className='mt-2 mb-2'>
                                                 <img alt="" className='rounded-circle' src={comment.user.avatar} width="32" height="32" />
-                                                <span className='ms-2'><a href={'/people/' + comment.user.id}>{comment.user.name}</a> · {new Date(comment.comment.created_at).toLocaleDateString('en-GB')}</span>
+                                                <span className='ms-2'><a href={'/people/' + comment.user.id}>{comment.user.name}</a> · {new Date(comment.comment.createdAt).toLocaleDateString('en-GB')}</span>
                                                 <div style={{ marginLeft: '40px' }}>
                                                     <p>
                                                         {comment.comment.content}

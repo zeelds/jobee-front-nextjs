@@ -91,7 +91,7 @@ export default function People() {
                                     <div className="vr ms-2 me-2" />
 
                                     <div className='ms-2 text-center'>
-                                        <b>{new Date(userValue.created_at).toLocaleDateString('en-GB')}</b>
+                                        <b>{new Date(userValue.createdAt).toLocaleDateString('en-GB')}</b>
                                         <br />
                                         {pronounFix(accessibilityValue.pronouns, 'Usuário/Usuária/Usuárie') + ' desde'}
                                     </div>
@@ -179,7 +179,7 @@ export default function People() {
                                         </b>
                                         <br className='mb-2' />
                                         <span>
-                                            - Avaliação realizada em {new Date(element.created_at).toLocaleDateString('en-GB')}
+                                            - Avaliação realizada em {new Date(element.createdAt).toLocaleDateString('en-GB')}
                                         </span>
                                     </div>
                                 </Card>

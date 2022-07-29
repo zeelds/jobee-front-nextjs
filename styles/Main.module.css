@@ -40,6 +40,38 @@
   color: #414141 !important;
 }
 
+.unletteredFAB {
+  background-color: rgb(212, 14, 14) !important;
+}
+
+.unletteredFAB[color-theme="Deuteranomalia"] {
+  background-color: rgb(149, 14, 212) !important;
+}
+
+.unletteredFAB[color-theme="Protanomalia"] {
+  background-color: rgb(137, 69, 214) !important;
+}
+
+.unletteredFAB[color-theme="Protanopia"] {
+  background-color: rgb(44, 53, 182) !important;
+}
+
+.unletteredFAB[color-theme="Deuteranopia"] {
+  background-color: rgb(44, 53, 182) !important;
+}
+
+.unletteredFAB[color-theme="Tritanomalia"] {
+  background-color: rgb(235,70,112) !important;
+}
+
+.unletteredFAB[color-theme="Tritanopia"] {
+  background-color: #ff4693 !important;
+}
+
+.unletteredFAB[color-theme="Total"] {
+  background-color: #414141 !important;
+}
+
 .display_flex {
   display: inline-flex;
 }
