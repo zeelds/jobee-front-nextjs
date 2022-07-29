@@ -72,7 +72,7 @@ export default function Search() {
                                     <Card class={cardstyles.card_s_100 + " card mb-3 me-2 " + responsive.w100_on_sm}>
                                         <div className="card-body text-center">
 
-                                            <img src={result.avatar} width="64" height="64" className='rounded-circle' />
+                                            <img onError={"this.src='/avatar/default.png'"} src={result.avatar} width="64" height="64" className='rounded-circle' />
 
                                             <Link href={"/people/" + result.id}>
                                                 <a>

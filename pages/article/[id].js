@@ -154,7 +154,7 @@ export default function Article() {
                                     comments.map((comment, index) => {
                                         return (
                                             <div key={"comment-" + index} className='mt-2 mb-2'>
-                                                <img alt="" className='rounded-circle' src={comment.user.avatar} width="32" height="32" />
+                                                <img alt="" onError={"this.src='/avatar/default.png'"} className='rounded-circle' src={comment.user.avatar} width="32" height="32" />
                                                 <span className='ms-2'><a href={'/people/' + comment.user.id}>{comment.user.name}</a> · {new Date(comment.comment.createdAt).toLocaleDateString('en-GB')}</span>
                                                 <div style={{ marginLeft: '40px' }}>
                                                     <p>

@@ -49,7 +49,7 @@ export default function Profile() {
 
                             <br />
 
-                            <img alt="" className={`mx-3 rounded-circle ${navstyles.dropdown_avatar}`} src={userValue.avatar} width="128" height="128" />
+                            <img alt=""  onError={"this.src='/avatar/default.png'"} className={`mx-3 rounded-circle ${navstyles.dropdown_avatar}`} src={userValue.avatar} width="128" height="128" />
 
                             <div className="ms-3">
                                 <b>{userValue.name}</b>

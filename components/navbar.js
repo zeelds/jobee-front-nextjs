@@ -17,19 +17,6 @@ export default function Navbar() {
     const [userValue, setUserValue] = user
     const [accessibilityValue, setAccessibilityValue] = accessibility
 
-    useEffect(() => {
-
-        (async () => {
-
-            await axiosInstance.get('/client/refresh-token')
-                .catch(() => {
-                    logout()
-                    Router.push('/start')
-                })
-        })()
-
-    }, [])
-
     return (
         <div>
             <nav className="navbar bg-light shadow-sm">
@@ -105,7 +92,7 @@ export default function Navbar() {
                                 <div className='container mb-3'>
                                     <div className='mt-3'>
 
-                                        <img alt="" className={`mx-3 rounded-circle ${styles.dropdown_avatar}`} src={userValue.avatar} width="128" height="128" />
+                                        <img alt=""  onError={"this.src='/avatar/default.png'"} className={`mx-3 rounded-circle ${styles.dropdown_avatar}`} src={userValue.avatar} width="128" height="128" />
 
                                         <div className="ms-3">
                                             <b>{userValue.name}</b>

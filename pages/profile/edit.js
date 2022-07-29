@@ -58,7 +58,7 @@ export default function People() {
                         <Card class={cardstyles.card_s_50 + " card mb-3 me-2 " + responsive.w100_on_sm}>
 
                             <div className='d-flex justify-content-center'>
-                                <img className={'mt-4 rounded-circle'} src={formData.avatar} width="128" height="128" />
+                                <img onError={"this.src='/avatar/default.png'"} className={'mt-4 rounded-circle'} src={formData.avatar} width="128" height="128" />
                             </div>
 
                             <div className="card-body container text-start">

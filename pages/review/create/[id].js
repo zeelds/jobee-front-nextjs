@@ -75,7 +75,7 @@ export default function CreateReview() {
                             <div className="card-body">
 
                                 <div className="text-center">
-                                    <img alt="" className="rounded-circle" src={targetUser.avatar} width="128" height="128" />
+                                    <img alt="" onError={"this.src='/avatar/default.png'"} className="rounded-circle" src={targetUser.avatar} width="128" height="128" />
                                 </div>
 
                                 <div className="d-flex justify-content-center">
