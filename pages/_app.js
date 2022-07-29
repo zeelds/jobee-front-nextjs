@@ -42,14 +42,27 @@ function MyApp({ Component, pageProps }) {
 
   const [playingStatus, setPlayingStatus] = useState(false)
   const [playMain, { stop: stopMain }] = useSound("/audio/Main.mp3", {
-    onend: ()=> {
-      console.log('alorr')
+    onend: () => {
       setPlayingStatus(false)
     }
   })
   const [playAbout, { stop: stopAbout }] = useSound("/audio/About.mp3", {
-    onend: ()=> {
-      console.log('alorr')
+    onend: () => {
+      setPlayingStatus(false)
+    }
+  })
+  const [playAccessibility, { stop: stopAccessibility }] = useSound("/audio/Accessibility.mp3", {
+    onend: () => {
+      setPlayingStatus(false)
+    }
+  })
+  const [playInbox, { stop: stopInbox }] = useSound("/audio/Inbox.mp3", {
+    onend: () => {
+      setPlayingStatus(false)
+    }
+  })
+  const [playPeople, { stop: stopPeople }] = useSound("/audio/People.mp3", {
+    onend: () => {
       setPlayingStatus(false)
     }
   })
@@ -71,6 +84,8 @@ function MyApp({ Component, pageProps }) {
       })
     })
   }, [])
+
+  console.log(Component)
 
   return (
     <AppContext.Provider value={{
@@ -96,10 +111,13 @@ function MyApp({ Component, pageProps }) {
               </Tooltip>
             }
           >
-            <Button disabled={!['Main','About'].includes(Component.name)} onClick={() => {
+            <Button disabled={!['Main', 'About', 'Accessibility', 'Inbox', 'People'].includes(Component.name)} onClick={() => {
 
               stopMain()
               stopAbout()
+              stopAccessibility()
+              stopInbox()
+              stopPeople()
 
               setPlayingStatus(true)
 
@@ -109,6 +127,18 @@ function MyApp({ Component, pageProps }) {
 
               if (Component.name == "About") {
                 playAbout()
+              }
+
+              if (Component.name == "Accessibility") {
+                playAccessibility()
+              }
+
+              if (Component.name == "Inbox") {
+                playInbox()
+              }
+
+              if (Component.name == "People") {
+                playPeople()
               }
 
             }} className={'btn rounded-circle ' + styles.unletteredFAB} color-theme={accessibilityData.color_blindness} style={{
