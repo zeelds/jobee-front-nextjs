@@ -44,46 +44,43 @@ Projeto desenvolvido durante o **Start** oferecido pela Rede Cidadã.
 
 ## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Modelo de desenvolvimento
 
-Se você deseja visualizar a organização do projeto em nosso Trello, você pode [clicar aqui](https://github.com/Girl-React/jobee-front-nextjs/files/9036385/kanban.teste.pdf) para baixar o documento. 
+Se você deseja visualizar a organização do projeto em nosso Trello, você pode [clicar aqui](https://github.com/Girl-React/jobee-front-nextjs/files/9224006/kanban.pdf) para baixar o documento. 
 
-## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Tecnologias
+## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Tecnologias Principais
 
 #### **Website**  ([React](https://reactjs.org/)  +  [Next.js](https://www.typescriptlang.org/))
--   **[Bootstrap](https://react-icons.github.io/react-icons/)**
 -   **[Axios](https://github.com/axios/axios)**
--   **[Redux](https://react-leaflet.js.org/en/)**
--   **[Framer](https://react-leaflet.js.org/)**
+-   **[Framer](https://www.framer.com/docs/examples/)**
+-   **[Bootstrap](https://react-bootstrap.github.io/)**
+-   **[useSound](https://github.com/joshwcomeau/use-sound)**
 
-> Veja o arquivo  [package.json]()
+> Veja o arquivo  [package.json](https://github.com/Girl-React/jobee-front-nextjs/blob/main/package.json)
 
 #### **Server**  ([Node.js](https://nodejs.org/en/))
 
 -   **[Express](https://expressjs.com/)**
 -   **[CORS](https://expressjs.com/en/resources/middleware/cors.html)**
--   **[Sequelize](https://github.com/mapbox/node-sqlite3)**
--   **[MySQL2](https://github.com/expressjs/multer)**
--   **[Body-parser](https://github.com/expressjs/multer)**
+-   **[Sequelize](https://sequelize.org/)**
+-   **[MySQL2](https://www.npmjs.com/package/mysql2)**
+-   **[body-parser](https://www.npmjs.com/package/body-parser)**
+-   **[Jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)**
 -   **[E-Mail Validator](https://www.npmjs.com/package/email-validator)**
 -   **[dotENV](https://github.com/motdotla/dotenv)**
 -   **[Multer](https://github.com/expressjs/multer)**
 -   **[Nodemailer](https://github.com/expressjs/multer)**
 
-> Veja o arquivo  [package.json](https://github.com/tgmarinho/README-ecoleta/blob/master/server/package.json)
+> Veja o arquivo  [package.json](https://github.com/Girl-React/jobee-back/blob/main/package.json)
 
-#### [](https://github.com/tgmarinho/Ecoleta#utilit%C3%A1rios)**Utilitários**
+#### []()**Utilitários**
 
--   Protótipo:  **[Figma](https://www.figma.com/)**  →  **[Protótipo (Jobee)](https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28lB/Ecoleta)**
--   API:  **[IBGE API](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1)**  →  **[API de UFs](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1#api-UFs-estadosGet)**,  **[API de Municípios](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1#api-Municipios-estadosUFMunicipiosGet)**
+-   Protótipo:  **[Figma](https://www.figma.com/)**  →  **[Protótipo (Jobee)](https://www.figma.com/file/0VBNvVmFYIClu6WMkC9UmG/Girl-React-%2F-Jobee?node-id=0%3A1)**
 -   Editor:  **[Visual Studio Code](https://code.visualstudio.com/)**
 -   Markdown:  **[StackEdit](https://stackedit.io/)**,  **[Markdown Emoji](https://gist.github.com/rxaviers/7360908)**
--   Commit Conventional:  **[Commitlint](https://github.com/conventional-changelog/commitlint)**
 -   Teste de API:  **[Insomnia](https://insomnia.rest/)**
--   Ícones:  **[icons8](https://google.com)**
+-   Ícones:  **[icons8](https://icons8.com.br/)**
 -   Fontes:  **[Roboto](https://fonts.google.com/specimen/Roboto)**
 
 ## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Design
-
-Se você deseja visualizar a prototipação do Jobee, você pode [clicar aqui](https://www.figma.com/file/0VBNvVmFYIClu6WMkC9UmG/Girl-React-%2F-Jobee?node-id=0%3A1) para ser redirecionado. 
 
 **Web**
 <div style='display: inline-flex;'>
