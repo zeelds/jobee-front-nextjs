@@ -24,13 +24,11 @@ Projeto desenvolvido durante o **Start** oferecido pela Rede Cidadã.
 
 ## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Funcionalidades
 
-- [x] Ao abrir a aplicação pela primeira vez em um dispositivo, o usuário precisa informar:
+- [x] Ao abrir a aplicação em um dispositivo, o usuário poderá informar:
 	- [x] se o mesmo precisa de um auxílio para tornar a aplicação mais acessível
 
 - [x] Os usuários podem ingressar na plataforma ao enviar:
 	- [x] dados cadastrais básicos, como e-mail, senha, nome, gênero, etc;
-	- [x] informações de contatos adicionais, como número de celular;
-	- [x] cidades de interesse
 
 - [x] Os usuários conseguem publicar artigos onde podem:
 	- [x] divulgar oportunidades de emprego;
@@ -41,7 +39,8 @@ Projeto desenvolvido durante o **Start** oferecido pela Rede Cidadã.
 - [x] Os usuários acessam os perfis de outros usuários, onde podem:
 	- [x] contactar o autor através das informações de contato;
 	- [x] enviar uma avaliação para aquele perfil;
-	- [x] reportar conta
+	- [x] analisar seu histórico;
+	- [x] ver seus pronomes de preferência;
 
 ## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Modelo de desenvolvimento
 
