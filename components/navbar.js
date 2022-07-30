@@ -147,7 +147,7 @@ export default function Navbar() {
                                                 </Link>
                                             </div>
                                             <div className="col">
-                                                <Link href="/account/configurations">
+                                                <Link href="/profile/edit">
                                                     <div className={styles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
                                                         <Image alt="" className={styles.item_icon} src="/icons/gear.png" width="32" height="32" />
                                                         <br />
