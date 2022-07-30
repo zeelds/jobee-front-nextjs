@@ -5,7 +5,9 @@ export default function Card(props) {
     return (
         <div className={props.class || ''}>
             {props.img ?
-                <img onError={"this.src='/avatar/default.png'"} src={props.img} className={`card-img-top ${props.proBorder ? 'border border-1 ' + cardstyles.pro_border : ''}`} alt="" />
+                <img
+                    onError={(e) => { e.target.src = '/avatar/default.png'; e.target.onError = null; }}
+                    src={props.img} className={`card-img-top ${props.proBorder ? 'border border-1 ' + cardstyles.pro_border : ''}`} alt="" />
                 :
                 <></>
             }

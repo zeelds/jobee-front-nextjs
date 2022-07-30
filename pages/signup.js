@@ -98,7 +98,7 @@ export default function SignUp() {
                             <div>
                                 <form className='mt-4'>
                                     <div className="form-floating mb-3">
-                                        <input onChange={(e) => {
+                                        <input autocomplete="off" onChange={(e) => {
                                             document.getElementById('status').classList.add('d-none')
                                             setName(e.target.value)
                                         }} type="name" className={jobeestyles.input_default + " form-control border text-dark"} id="floatingInput" placeholder="name@example.com" />
@@ -116,6 +116,7 @@ export default function SignUp() {
                                             placeholder="name@example.com"
                                             type="birthday"
                                             id="birthday-field"
+                                            autocomplete="off"
                                         />
                                         <label htmlFor="birthday-field" className="text-dark">Data de Nascimento</label>
                                     </div>

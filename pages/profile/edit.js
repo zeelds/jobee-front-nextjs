@@ -26,9 +26,9 @@ export default function People() {
         setFormData(userValue)
     }, [user])
 
-    function submitForm(e){
+    function submitForm(e) {
         e.preventDefault()
-        axiosInstance.post('/client/redefine-user', formData).then((response)=>{
+        axiosInstance.post('/client/redefine-user', formData).then((response) => {
             setUserValue(formData)
         })
     }
@@ -58,7 +58,9 @@ export default function People() {
                         <Card class={cardstyles.card_s_50 + " card mb-3 me-2 " + responsive.w100_on_sm}>
 
                             <div className='d-flex justify-content-center'>
-                                <img onError={"this.src='/avatar/default.png'"} className={'mt-4 rounded-circle'} src={formData.avatar} width="128" height="128" />
+                                <img
+                                    onError={(e) => { e.target.src = '/avatar/default.png'; e.target.onError = null; }}
+                                    className={'mt-4 rounded-circle'} src={formData.avatar} width="128" height="128" />
                             </div>
 
                             <div className="card-body container text-start">
@@ -86,7 +88,7 @@ export default function People() {
                                         }).then((response) => {
                                             setFormData({
                                                 ...formData,
-                                                avatar: (process.env.NEXT_PUBLIC_BASEURL||'https://api-jobee.herokuapp.com') + '/media/uploads/' + response.data.filename
+                                                avatar: (process.env.NEXT_PUBLIC_BASEURL || 'https://api-jobee.herokuapp.com') + '/media/uploads/' + response.data.filename
                                             })
                                         })
 
