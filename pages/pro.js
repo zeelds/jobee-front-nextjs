@@ -141,24 +141,6 @@ export default function Pro() {
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="me-1 bi bi-check" viewBox="0 0 16 16">
                                                 <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
                                             </svg>
-                                            <a className={styles.small_text}>Você poderá editar artigos e comentários publicados por você.</a>
-                                        </li>
-                                        <li className="list-group-item"  >
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="me-1 bi bi-check" viewBox="0 0 16 16">
-                                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                                            </svg>
-                                            <a className={styles.small_text}>Seus artigos terão uma medalha de Usuário PRO.</a>
-                                        </li>
-                                        <li className="list-group-item"  >
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="me-1 bi bi-check" viewBox="0 0 16 16">
-                                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                                            </svg>
-                                            <a className={styles.small_text}>Você poderá buscar usuários pelo nome.</a>
-                                        </li>
-                                        <li className="list-group-item"  >
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="me-1 bi bi-check" viewBox="0 0 16 16">
-                                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                                            </svg>
                                             <a className={styles.small_text}>Nenhum anúncio será exibido para você.</a>
                                         </li>
                                     </ul>
@@ -174,11 +156,11 @@ export default function Pro() {
                                     </p>
 
                                     <h3>
-                                        R$137
+                                        R$55
                                         <a className={styles.small_text + ' ms-1'}>uma única vez</a>
                                     </h3>
 
-                                    <DarkButton price={28.00} />
+                                    <DarkButton price={55.00} />
 
                                     <ul className="list-group text-start">
                                         <li className="list-group-item"  >
@@ -191,19 +173,7 @@ export default function Pro() {
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="me-1 bi bi-check" viewBox="0 0 16 16">
                                                 <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
                                             </svg>
-                                            <a className={styles.small_text}>Seus artigos poderão conter imagens.</a>
-                                        </li>
-                                        <li className="list-group-item"  >
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="me-1 bi bi-check" viewBox="0 0 16 16">
-                                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                                            </svg>
                                             <a className={styles.small_text}>Você poderá enviar GIFs para sua foto de perfil.</a>
-                                        </li>
-                                        <li className="list-group-item"  >
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="me-1 bi bi-check" viewBox="0 0 16 16">
-                                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                                            </svg>
-                                            <a className={styles.small_text}>Seu perfil será recomendado como anúncio para usuários que não são Usuários PRO.</a>
                                         </li>
                                     </ul>
 
