@@ -49,7 +49,7 @@ export default function Profile() {
 
                             <br />
 
-                            <img alt=""  onError={"this.onerror=null; this.src='/avatar/default.png'"} className={`mx-3 rounded-circle ${navstyles.dropdown_avatar}`} src={userValue.avatar} width="128" height="128" />
+                            <img alt="" onError={"this.onerror=null; this.src='/avatar/default.png'"} className={`mx-3 rounded-circle ${navstyles.dropdown_avatar}`} src={userValue.avatar} width="128" height="128" />
 
                             <div className="ms-3">
                                 <b>{userValue.name}</b>
@@ -88,7 +88,7 @@ export default function Profile() {
                                     </Link>
                                 </div>
                                 <div className="col">
-                                    <Link href="/account/configurations">
+                                    <Link href="/profile/edit">
                                         <div className={navstyles.item_holder + ' mx-lg-3 mx-md-1 mx-0 nav-item'}>
                                             <Image alt="" className={navstyles.item_icon} src="/icons/gear.png" width="32" height="32" />
                                             <br />
