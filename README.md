@@ -96,14 +96,6 @@ Se você deseja visualizar a organização do projeto em nosso Trello, você pod
 	<img alt="" src='https://user-images.githubusercontent.com/98771718/177074283-b9744c7b-a032-425b-ad5c-1341efff4630.png' style="width: 15%">
 </div>
 
-## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Contribuidores
-
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/raqsanta"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/98771718?v=4" width="100px;" alt=""/><br /><sub><b>Nome Sobrenome</b></sub></a><br />🐝</td>
-  </tr>
-</table>
-
 ## ![symbol](https://user-images.githubusercontent.com/98771718/177051496-37b41aed-0ca1-4c26-832d-54e8c6dea11f.png) Autores
 
 <table>
