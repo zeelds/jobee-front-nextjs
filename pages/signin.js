@@ -111,14 +111,14 @@ export default function SignIn() {
                             }}
                             />
 
-                            <Link href="/forgot">
-                                <a className='text-dark'>Esqueci minha senha</a>
-                            </Link>
-
                             <button type="submit" className={styles.mid_button + " btn btn-dark w-100 mb-3"}><b>Entrar</b></button>
 
                             <Link href="/signup">
                                 <button className={styles.mid_button + " btn w-100 text-dark"}><b>Criar conta</b></button>
+                            </Link>
+
+                            <Link href="/forgot">
+                                <button className={styles.mid_button + " btn w-100 text-dark"}><b>Esqueci minha senha</b></button>
                             </Link>
 
                         </form>
