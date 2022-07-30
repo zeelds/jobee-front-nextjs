@@ -97,7 +97,7 @@ export default function SignIn() {
                         <form className={`mt-4`} onSubmit={submitForm}>
 
                             <div className="form-floating mb-3">
-                                <input onChange={(e) => {
+                                <input autocomplete="off" onChange={(e) => {
                                     document.getElementById('status').classList.add('d-none')
                                     setEmail(e.target.value)
                                 }
